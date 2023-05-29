@@ -90,3 +90,55 @@ df['근무지'].unique()
 
 df['근무지'] = df['근무지'].apply(lambda x: x.split(' ', 1)[1] if len(x.split(' ')) > 1 and x.split(' ')[0] == x.split(' ')[1] else x)
 
+
+# 같은 공고 판별하기
+# 프로그래머스와 원티드에서 공통되는 회사 구하기
+intersection = pd.Series(list(set(df1['회사명'].unique()) & set(df2['회사명'].unique())))
+# 공통 회사 공고 구하기
+filtered_df = df[df['회사명'].isin(intersection)]
+# 공고명에서 '신입'과 ()로 둘러싸인 부분 삭제
+filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r' \(신입.*?\)|신입|\[신입.*?\] ', '', x))
+
+# 공고문과 회사명이 일치하는 것들 뽑아냄
+duplicates = filtered_df[filtered_df.duplicated(subset=['공고명', '회사명'], keep=False)]
+find_df = pd.concat([filtered_df, duplicates]).drop_duplicates(keep=False)
+
+# 회사가 같고, 링크는 다르고, 한 공고문이 다른 공고문을 완전히 포함하고 있을 때 
+# 중복된 공고명을 가진 그룹 찾기
+grouped = find_df.groupby('회사명')
+
+# 필터링된 결과를 저장할 데이터프레임을 생성
+filtered_results = pd.DataFrame(columns=find_df.columns)
+
+# 각 그룹에서 필터링 작업 수행
+for _, group in grouped:
+    if len(group) > 1:
+        for i in range(len(group)):
+            prog_group = group.iloc[i]
+            for j in range(i + 1, len(group)):
+                wanted_group = group.iloc[j]
+                if ((prog_group['링크'].startswith('https://programmers.co.kr') and wanted_group['링크'].startswith('https://www.wanted.co.kr'))
+                    or (prog_group['링크'].startswith('https://www.wanted.co.kr') and wanted_group['링크'].startswith('https://programmers.co.kr'))):
+                    if pd.Series(prog_group['공고명']).str.contains(wanted_group['공고명'], regex=False).any() or pd.Series(wanted_group['공고명']).str.contains(prog_group['공고명'], regex=False).any():
+                        filtered_results = filtered_results.append(prog_group)
+                        filtered_results = filtered_results.append(wanted_group)
+
+filtered_results.reset_index(drop=True, inplace=True)
+
+# 프로그래머스와 원티드에 공통으로 올라와있는 것
+same = pd.concat([duplicates, filtered_results])
+# 공고문과 회사명 일치하는 건 프로그래머스로 통일
+same_pro_df = same[same['링크'].str.startswith('https://programmers.co.kr')]
+
+# 회사 공고가 양쪽에 다 올라왔지만 겹치지 않는 공고
+solo_df = filtered_df[~filtered_df.duplicated(subset=['공고명', '회사명'], keep=False)]
+solo_df = solo_df[~solo_df['링크'].isin(filtered_results['링크'])]
+
+# 최종 데이터
+excluded_links = filtered_df['링크'].tolist()
+final_df = df[~df['링크'].isin(excluded_links)]
+final_df = final_df.append(solo_df, ignore_index=True)
+final_df = final_df.append(same_pro_df, ignore_index=True)
+
+# 저장
+filtered_df.to_csv(r'C:\Users\Playdata\Desktop\programers+wanted_final.csv', index=False, encoding='cp949')
