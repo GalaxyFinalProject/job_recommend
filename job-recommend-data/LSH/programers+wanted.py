@@ -141,4 +141,4 @@ final_df = final_df.append(solo_df, ignore_index=True)
 final_df = final_df.append(same_pro_df, ignore_index=True)
 
 # 저장
-filtered_df.to_csv(r'C:\Users\Playdata\Desktop\programers+wanted_final.csv', index=False, encoding='cp949')
+final_df.to_csv(r'C:\Users\Playdata\Desktop\programers+wanted_final.csv', index=False, encoding='cp949')
