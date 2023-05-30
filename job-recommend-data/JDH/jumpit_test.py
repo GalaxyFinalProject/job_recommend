@@ -52,7 +52,7 @@ time.sleep(1)
 
 
 add_list = []
-pos = ['서버/백엔드', '프론트엔드', '웹개발', '안드로이드', 'IOS', '크로스플랫폼', '게임개발', '게임개발', 'DBA', '데이터 엔지니어', 'AL/ML', 'DevOps', '보안엔지니어', 'QA', '개발PM', 'HW/임베디드', '소프트웨어', '웹퍼블리셔', 'VR/AR/3D', '블록체인', '기술지원' ]
+pos = ['백엔드', '프론트엔드', '웹개발', '안드로이드', 'IOS', '크로스플랫폼', '게임개발', '게임개발', 'DBA', '데이터 엔지니어', 'AL/ML', 'DevOps', '보안엔지니어', 'QA', '개발PM', 'HW/임베디드', '소프트웨어', '웹퍼블리셔', 'VR/AR/3D', '블록체인', '기술지원' ]
 
 for i in range(2, 23):
     position = driver.find_element(By.CSS_SELECTOR, f'div.list_job_btn_wrap > button:nth-child({i})')
@@ -94,7 +94,7 @@ csv_save_path = 'C:/myPyCode/final_project/jumpit_page.csv'
 
 with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
     writer = csv.writer(file)
-    writer.writerow(['Title', 'Company', 'Position', 'Deadline', 'Employment Type', 'Salary', 'Work Location', 'Grade', 'Stack', 'Link'])
+    writer.writerow(['공고명', '회사명', '직무', '마감일', '고용형태', '연봉', '근무지', '학력', '기술스택', '링크'])
 
     for orig_url, position in add_list:
         driver.get(orig_url)
