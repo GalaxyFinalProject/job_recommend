@@ -7,7 +7,6 @@ import time
 import numpy as np
 
 # 직무 분류
-# 직무 분류
 def classify_position(position):
 #     if position in ['시스템 네트워크','시스템, 네트워크 관리자', '시스템 소프트웨어', '로보틱스 미들웨어', '사물인터넷(IoT)']:
 #         return '시스템/네트워크'
