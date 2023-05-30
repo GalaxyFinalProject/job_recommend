@@ -341,7 +341,7 @@ for i in range(0,len(positions)):
                         position_stack[position].add(classified_skill)
                     else:
                         position_stack[position] = set([classified_skill])
-                        
+
                 #추출한 정보를 데이터프레임에 추가
                 job_postings_df.loc[len(job_postings_df)] = [title, company, position, deadline, None, None, work_location, None, stack, URL]
                 print(f"{position}의 {n}번째 공고 정보 끝!")
