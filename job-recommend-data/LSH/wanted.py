@@ -9,10 +9,11 @@ import json
 import numpy as np
 
 # 직무 분류
+# 직무 분류
 def classify_position(position):
-    if position in ['시스템 네트워크','시스템, 네트워크 관리자', '시스템 소프트웨어', '로보틱스 미들웨어', '사물인터넷(IoT)']:
-        return '시스템/네트워크'
-    elif position in ['모바일 게임', '게임 클라이언트', '게임 서버']:
+#     if position in ['시스템 네트워크','시스템, 네트워크 관리자', '시스템 소프트웨어', '로보틱스 미들웨어', '사물인터넷(IoT)']:
+#         return '시스템/네트워크'
+    if position in ['모바일 게임', '게임 클라이언트', '게임 서버']:
         return '게임개발'
     elif position in ['머신러닝', '인공지능', '머신러닝 엔지니어']:
         return 'AI/ML'
@@ -22,40 +23,38 @@ def classify_position(position):
         return '데이터 엔지니어'
     elif position in ['데브옵스','DevOps/시스템 관리자']:
         return 'DevOps'
-    elif position in ['인터넷 보안','보안 엔지니어']:
-        return '보안엔지니어'
-    elif position in ['임베디드 소프트웨어','임베디드 개발자','하드웨어 엔지니어']:
-        return 'HW/임베디드'
-    elif position in ['크로스 플랫폼', '크로스플랫폼 앱 개발자']:
-        return '크로스플랫폼'
-    elif position in ['그래픽스','영상,음성 엔지니어', '그래픽스 엔지니어']:
-        return '멀티미디어 엔지니어'
-    elif position in ['소프트웨어 엔지니어','.NET 개발자']:
-        return '소프트웨어'
-    elif position in ['서버/백엔드', '서버 개발자', '자바 개발자', 'C,C++ 개발자','파이썬 개발자','Node.js 개발자']:
-        return '서버/백엔드'
+#     elif position in ['인터넷 보안','보안 엔지니어']:
+#         return '보안엔지니어'
+#     elif position in ['임베디드 소프트웨어','임베디드 개발자','하드웨어 엔지니어']:
+#         return 'HW/임베디드'
+#     elif position in ['크로스 플랫폼', '크로스플랫폼 앱 개발자']:
+#         return '크로스플랫폼'
+#     elif position in ['그래픽스','영상,음성 엔지니어', '그래픽스 엔지니어']:
+#         return '멀티미디어 엔지니어'
+#     elif position in ['소프트웨어 엔지니어','.NET 개발자']:
+#         return '소프트웨어'
+    elif position in ['서버/백엔드', '서버 개발자', '자바 개발자', 'C,C++ 개발자','파이썬 개발자','Node.js 개발자','DBA']:
+        return '백엔드'
     elif position in ['프론트엔드', '프론트엔드 개발자']:
         return '프론트엔드'
     elif position in ['안드로이드', '안드로이드 개발자']:
         return '안드로이드'
     elif position in ['iOS', 'iOS 개발자']:
         return 'iOS'
-    elif position in ['개발PM','개발 매니저','프로덕트 매니저']:
-        return '개발PM'
-    elif position in ['QA', 'QA, 테스트 엔지니어']:
-        return 'QA'
+#     elif position in ['개발PM','개발 매니저','프로덕트 매니저']:
+#         return '개발PM'
+#     elif position in ['QA', 'QA, 테스트 엔지니어']:
+#         return 'QA'
     elif position in ['블록체인 플랫폼 엔지니어','블록체인']:
         return '블록체인'
     elif position in ['VR/AR/3D','VR 엔지니어']:
-        return 'VR/AR/3D'
-    elif position in ['DBA']:
-        return 'DBA'  
-    elif position in ['기술지원']:
-        return '기술지원' 
-    elif position in ['데이터 사이언티스트']:
-        return '데이터 사이언티스트' 
-    elif position in ['웹퍼블리셔', '웹 퍼블리싱']:
-        return '웹퍼블리셔' 
+        return 'VR/AR'
+#     elif position in ['기술지원']:
+#         return '기술지원' 
+#     elif position in ['데이터 사이언티스트']:
+#         return '데이터 사이언티스트' 
+#     elif position in ['웹퍼블리셔', '웹 퍼블리싱']:
+#         return '웹퍼블리셔' 
     
 # 기술 분류
 def classify_skill(skill):
