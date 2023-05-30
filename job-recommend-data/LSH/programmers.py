@@ -34,10 +34,10 @@ def classify_position(position):
         return '백엔드'
     elif position in ['프론트엔드', '프론트엔드 개발자']:
         return '프론트엔드'
-    elif position in ['안드로이드', '안드로이드 개발자']:
-        return '안드로이드'
-    elif position in ['iOS', 'iOS 개발자']:
-        return 'iOS'
+    elif position in ['안드로이드', '안드로이드 개발자', 'iOS', 'iOS 개발자' ]:
+        return '모바일'
+#     elif position in ['iOS', 'iOS 개발자']:
+#         return 'iOS'
 #     elif position in ['개발PM','개발 매니저','프로덕트 매니저']:
 #         return '개발PM'
 #     elif position in ['QA', 'QA, 테스트 엔지니어']:
@@ -205,6 +205,9 @@ for label in labels:
             
 print("position_url 딕셔너리를 완성했습니다!")
 
+# 직무별 스택 모아볼 수 있는 코드
+position_stack={}
+
 # 크롤링 시작
 for position, url in position_url.items():
     print(f"{position} 공고 탐방을 시작하겠습니다!")
@@ -301,6 +304,11 @@ for position, url in position_url.items():
 
                     if classified_skill not in stack:
                         stack.append(classified_skill)
+
+                    if position in position_stack:
+                        position_stack[position].add(classified_skill)
+                    else:
+                        position_stack[position] = set([classified_skill])
             else:
                 stack = None
 

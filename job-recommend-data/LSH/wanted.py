@@ -9,7 +9,6 @@ import json
 import numpy as np
 
 # 직무 분류
-# 직무 분류
 def classify_position(position):
 #     if position in ['시스템 네트워크','시스템, 네트워크 관리자', '시스템 소프트웨어', '로보틱스 미들웨어', '사물인터넷(IoT)']:
 #         return '시스템/네트워크'
@@ -37,10 +36,10 @@ def classify_position(position):
         return '백엔드'
     elif position in ['프론트엔드', '프론트엔드 개발자']:
         return '프론트엔드'
-    elif position in ['안드로이드', '안드로이드 개발자']:
-        return '안드로이드'
-    elif position in ['iOS', 'iOS 개발자']:
-        return 'iOS'
+    elif position in ['안드로이드', '안드로이드 개발자', 'iOS', 'iOS 개발자' ]:
+        return '모바일'
+#     elif position in ['iOS', 'iOS 개발자']:
+#         return 'iOS'
 #     elif position in ['개발PM','개발 매니저','프로덕트 매니저']:
 #         return '개발PM'
 #     elif position in ['QA', 'QA, 테스트 엔지니어']:
@@ -201,6 +200,10 @@ positions=soup.find_all('button', class_="JobCategoryItem_JobCategoryItem__oUaZr
 positions = [position.text for position in positions][1:]
 
 done_position=set()
+
+# 직무별 스택 모아볼 수 있는 코드
+position_stack={}
+
 # 지역 저장 시 사용하는 keywords
 keywords = ['대한민국', '서울', '경기', '제주', '울산', '경상북도', '경북', '부산', '인천', '대전', '경기']
 
@@ -333,6 +336,12 @@ for i in range(0,len(positions)):
 
                     if classified_skill not in stack:
                         stack.append(classified_skill)
+
+                    if position in position_stack:
+                        position_stack[position].add(classified_skill)
+                    else:
+                        position_stack[position] = set([classified_skill])
+                        
                 #추출한 정보를 데이터프레임에 추가
                 job_postings_df.loc[len(job_postings_df)] = [title, company, position, deadline, None, None, work_location, None, stack, URL]
                 print(f"{position}의 {n}번째 공고 정보 끝!")
