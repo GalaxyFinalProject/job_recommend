@@ -332,5 +332,7 @@ final_data = final_data.drop_duplicates(subset='링크')
 final_data.to_csv(r'C:\Users\Playdata\Desktop\final.csv', index=False, encoding='cp949')
 
 
-
-
+# 직무 마지막 전처리
+df4=pd.read_csv(r"C:\Users\Playdata\Desktop\final.csv", encoding='cp949')
+df4['직무'] = df4['직무'].str.replace("'", '"')
+df4.to_csv(r'C:\Users\Playdata\Desktop\final__.csv', index=False, encoding='cp949')
