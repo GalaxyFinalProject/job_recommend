@@ -344,4 +344,5 @@ def format_value(value):
 # '직무' 컬럼의 데이터 형식 변경
 df4['직무'] = df4['직무'].apply(format_value)
 
-df4.to_csv(r'C:\Users\Playdata\Desktop\final__.csv', index=False, encoding='cp949')
+df4.to_csv(r'C:\Users\Playdata\Desktop\final_true.csv', index=True, encoding='cp949')
+df4.to_csv(r'C:\Users\Playdata\Desktop\final_flase.csv', index=True, encoding='cp949')
