@@ -76,10 +76,12 @@ df =df.drop('Unnamed: 0',axis=1)
 import ast
 # 문자열을 리스트로 변환하고 원하는 형식으로 변경하는 함수
 def format_list(string):
-    formatted_lst = [f'"{item.strip()}"' for item in string.split(',')]  # 원하는 형식으로 변경
+    formatted_lst = [item.strip() for item in string.split(',')]  # 원하는 형식으로 변경
     return formatted_lst
+
 # '직무' 컬럼의 데이터 형식 변경
 df['직무'] = df['직무'].apply(format_list)
+
 
 # 기술스택 전처리
 # np.where(condition, x, y)를 활용해서 condition이 참일 경우 x를, 아닌 경우 y로!
@@ -334,5 +336,12 @@ final_data.to_csv(r'C:\Users\Playdata\Desktop\final.csv', index=False, encoding=
 
 # 직무 마지막 전처리
 df4=pd.read_csv(r"C:\Users\Playdata\Desktop\final.csv", encoding='cp949')
-df4['직무'] = df4['직무'].str.replace("'", '"')
+# 데이터프레임의 열에 대해 원하는 형식으로 변경하는 함수
+def format_value(value):
+    formatted_value = value.replace('\'"', '"').replace('"\'', '"')  # 작은따옴표와 큰따옴표를 큰따옴표로 변경
+    return formatted_value
+
+# '직무' 컬럼의 데이터 형식 변경
+df4['직무'] = df4['직무'].apply(format_value)
+
 df4.to_csv(r'C:\Users\Playdata\Desktop\final__.csv', index=False, encoding='cp949')
