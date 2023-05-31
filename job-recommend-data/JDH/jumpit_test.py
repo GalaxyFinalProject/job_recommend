@@ -24,10 +24,10 @@ def classify_skill(skill):
                  'AWS Simple Queue Service(AWS SQS)','Amazon Web Service','Amazon Web Services(AWS)','AWS App Mesh',
                  'AWS Cloud Development Kit','AWS CodeCommit','AWS IoT Device Management','AWS Shell','Amazon API Gateway',
                  'Amazon CloudFront','Amazon Connect','Amazon DynamoDB','Amazon EC2','Amazon EKS','Amazon RDS','Amazon RDS for PostgreSQL',
-                 'Amazon Route 53','Amazon S3','aws','amazon dynamodb', 'Yocto']:
+                 'Amazon Route 53','Amazon S3','aws','amazon dynamodb', 'Yocto','aws batch', 'EC2' ,'EMR']:
         return 'AWS'
-    elif skill in ['Android','Android Studio','Android OS','Android SDK', 'android os']:
-        return 'Android Studio'
+    elif skill in ['Kotlin','Android','Android Studio','Android OS','Android SDK', 'android os']:
+        return 'Kotlin'
     elif skill in ['Angular','AngularJS','angular 2']:
         return 'Angular'
     elif skill in ['Apache','Apache HTTP Server','Apache Tomcat','Apache Traffic Server', 'apache tomcat']:
@@ -40,17 +40,17 @@ def classify_skill(skill):
         return 'Spark'
     elif skill in ['Apache ZooKeeper']:
         return 'ZooKeeper'
-    elif skill in [ 'Azure','Azure Computer Vision','Azure Emotion','AZURE']:
+    elif skill in [ 'Azure','Azure Computer Vision','Azure Emotion','AZURE', 'Microsoft Azure']:
         return 'Azure'
     elif skill in ['C#']:
         return 'C#'
-    elif skill in [ 'C','C++','c','c++','Mfc']:
+    elif skill in [ 'C', 'C / C++','C++','c','c++','Mfc','Mantis','Embedded C']:
         return 'C / C++'
     elif skill in ['AutoCAD','CAD']:
         return 'CAD'
-    elif skill in [ 'CSS','CSS3','css 3','CSS 3']:
+    elif skill in [ 'CSS','CSS3','css 3','CSS 3','Tailwind CSS']:
         return 'CSS'
-    elif skill in [ 'ElasticSearch','Elasticsearch', 'elasticsearch']:
+    elif skill in [ 'ElasticSearch','Elasticsearch', 'elasticsearch ']:
         return 'ElasticSearch'
     elif skill in [ 'FPGA','FPGA 프로토 타이핑']:
         return 'FPGA'
@@ -103,15 +103,15 @@ def classify_skill(skill):
         return 'Shell'
     elif skill in [  'Hibernate','JPA','JPA(Java Persistent API)', 'Spring', 
                    'Spring Batch','Spring Boot','Spring Cloud','Spring Framework',
-                  'spring','spring boot','spring framework', 'Spring MVC']:
+                  'spring','spring boot','spring framework', 'Spring MVC','Spring Data JPA']:
         return 'Spring'
     elif skill in [ 'Vue.JS','Vue.js','VueJS','vue.js']:
         return 'Vue.JS'
-    elif skill in [ '.NET','.NET Core']:
+    elif skill in [ '.NET','.NET Core','.net']:
         return '.NET'
     elif skill in [ 'ASP', 'ASP .NET','ASP.NET']:
         return 'ASP.NET'
-    elif skill in [ 'Linux', 'Linux kernel','CentOS', 'centos', 'linux']:
+    elif skill in [ 'Linux', 'Linux kernel','CentOS', 'centos', 'linux','Embedded Linux']:
         return 'Linux'
     elif skill in ['UNIX','Unix']:
         return 'UNIX'
@@ -123,61 +123,98 @@ def classify_skill(skill):
         return 'Nest.js'
     elif skill in ['Objective-C','ObjectiveC','objective-c']:
         return 'Objective-C'
-    elif skill in ['JavaScript','javascript']:
+    elif skill in ['JavaScript','javascript','ES6']:
         return 'JavaScript'
     elif skill in ['3Ds Max']:
         return '3Ds Max'
-    elif skill in ['Sass(SCSS)', 'SCSS','Sass']:
+    elif skill in ['Sass(SCSS)', 'SCSS','Sass','SASS']:
         return 'SASS'
     elif skill in ['Rxswift', 'rxswift']:
         return 'Rxswift'
-    elif skill in []:
-        return 'C/C++'
-    elif skill in ['Microsoft SQL Server']:
+    elif skill in ['SQL 서버','Microsoft SQL Server']:
         return 'SQL 서버'
-    elif skill in ['NoSql', 'nosql']:
+    elif skill in ['NoSQL', 'NoSql', 'nosql']:
         return 'NoSQL'
-    elif skill in ['Sequelize']:
+    elif skill in ['Sequelize.js','Sequelize']:
         return 'Sequelize.js'
-    elif skill in ['Spring Data JPA']:
-        return 'JPA'
-    elif skill in ['SwiftUI', 'swift']:
+    elif skill in ['Swift','SwiftUI', 'swift']:
         return 'Swift'
-    elif skill in ['TensorFlow', 'tensorflow']:
+    elif skill in ['Tensorflow','Tensorflow Lite','TensorFlow', 'tensorflow']:
         return 'Tensorflow'
-    elif skill in ['django']:
+    elif skill in ['Django','django','DRF(Django REST framework)']:
         return 'Django'
-    elif skill in ['jquery ']:
+    elif skill in ['jQuery', 'jquery ']:
         return 'jQuery'
-    elif skill in ['keras']:
+    elif skill in ['Keras', 'keras']:
         return 'Keras'
-    elif skill in ['mariadb']:
+    elif skill in ['Terraform']:
+        return 'Terraform'
+    elif skill in ['MariaDB','mariadb']:
         return 'MariaDB'
-    elif skill in ['matlab']:
+    elif skill in ['MATLAB','matlab']:
         return 'MATLAB'
-    elif skill in ['mongodb']:
+    elif skill in ['MongoDB','mongodb']:
         return 'MongoDB'
-    elif skill in ['mssql']:
+    elif skill in ['MSSQL','mssql']:
         return 'MSSQL'
-    elif skill in ['mysql']:
+    elif skill in ['MySQL','mysql']:
         return 'MySQL'
-    elif skill in ['nginx']:
+    elif skill in ['Nginx','NGINX','nginx']:
         return 'Nginx'
-    elif skill in ['notion.so']:
+    elif skill in ['Notion','notion.so']:
         return 'Notion'
-    elif skill in ['opencv']:
+    elif skill in ['OpenCV','opencv']:
         return 'OpenCV'
-    elif skill in ['php']:
+    elif skill in ['PHP','php']:
         return 'PHP'
-    elif skill in ['postgresql']:
+    elif skill in ['PostgreSQL', 'postgresql']:
         return 'PostgreSQL'
-    elif skill in ['r']:
+    elif skill in ['R','r']:
         return 'R'
-    elif skill in ['redis']:
+    elif skill in ['Redis','redis']:
         return 'Redis'
-    elif skill in ['unity']:
+    elif skill in [ 'Unity','Unity3D','unity']:
         return 'Unity'
-    
+    elif skill in [ 'SQL', 'SQLite']:
+        return 'SQL'
+    elif skill in [ 'Go', 'Golang']:
+        return 'Go'
+    elif skill in ['CI/CD' ]:
+        return 'CI/CD' 
+    elif skill in [ 'Docker' ]:
+        return  'Docker' 
+    elif skill in ['ExpressJS']:
+        return 'ExpressJS'
+    elif skill in ['FastAPI' ]:
+        return 'FastAPI' 
+    elif skill in ['Firebase']:
+        return 'Firebase'
+    elif skill in ['Flask' ]:
+        return 'Flask' 
+    elif skill in ['JIRA' ,'Jira']:
+        return 'JIRA'
+    elif skill in ['Jenkins']:
+        return 'Jenkins' 
+    elif skill in ['Kubernetes' ]:
+        return 'Kubernetes' 
+    elif skill in ['Microservice Architecture' ]:
+        return 'Microservice Architecture' 
+    elif skill in ['Next.js' ]:
+        return 'Next.js' 
+    elif skill in ['OpenCL']:
+        return 'OpenCL' 
+    elif skill in ['OpenGL']:
+        return 'OpenGL'
+    elif skill in ['Redmine' ]:
+        return 'Redmine' 
+    elif skill in ['Rust' ]:
+        return 'Rust' 
+    elif skill in ['SVN' ]:
+        return 'SVN' 
+    elif skill in ['Selenium']:
+        return 'Selenium'
+    elif skill in ['TypeScript' ]:
+        return 'TypeScript' 
     elif skill in ['3D','3D 모델링','API 개발','Big Data', 'Blockchain', 'Data Analysis','Data Analysys','Database','Deep Learning', 
                    'DevOps','DirectX','EEO','ERP 소프트웨어', 'ETL', 'Eclipse','Embedded System', 'Excel','GPU','GUI', 'Google Analytics',
                    'Google Apps', 'ISO','IT 관리','IT 운영','Image Processing','IntelliJ IDEA','IoT', 'JSON', 'ORM','OTN', 'PCB 디자인',
@@ -197,16 +234,26 @@ def classify_skill(skill):
                    '전자정부프레임워크', '정보 보안','정보 운영','정보관리','제안서 작성', '제어 시스템 설계', '제품 개발','차량',
                    '최적화', '취약점 스캐닝','카메라', '컴파일러', '컴퓨터 비전', '클라우드 보안', '테스트 실행', '통신', '펌웨어', 
                    '품질 관리', '프로그램 관리', '프로젝트 관리', '프론트엔드 개발자', '하드웨어', '회로', '회로 분석', '회로 설계',
-                  'Agile','Children','Windows','Windows 8','Windows Embedded','Windows Server','Windows kernel',
-                   'Windows 서버','BigData', 'DB', 'Etl','ai/인공지능','blockchain','ios',
-                  'windows','3D Rendering','3D Volume Rendering','AI/인공지능','Cisco',
-                  'DeepLearning','ERP','Embedded','HW','ISMS','MCU,''MQTT','MachineLearning',
-                   'Matplotlib','Network','Optimize','Pads','PyCharm','QA','RDB','Red Hat Enterprise ',
-                  'SW','Switch','switch','Smartcontract','VPN','VR','cisco','WebStorm','deeplearning','embedded',
-                   'machinelearning', 'network', 'l2', 'l3','l4','rest api','sw']:
+                   'Agile','Children','Windows','Windows 8','Windows Embedded','Windows Server','Windows kernel', 'Windows 서버',
+                   'BigData', 'DB', 'Etl','ai/인공지능','blockchain','ios','windows','3D Rendering','3D Volume Rendering','AI/인공지능',
+                   'Cisco','DeepLearning','ERP','Embedded','HW','ISMS','MCU,''MQTT','MachineLearning','Matplotlib','Network','Optimize',
+                   'Pads','PyCharm','QA','RDB','Red Hat Enterprise ','SW','Switch','switch','Smartcontract','VPN','VR','cisco','WebStorm',
+                   'deeplearning','embedded','machinelearning', 'network', 'l2', 'l3','l4','rest api','sw','hw','WordPress', 'ADC', 'AJAX',
+                   'API','AR', 'ARM', 'Adobe XD', 'Ajax', 'Appium', 'Aurora DB','Axios', 'Babel', 'Bash', 'BitBucket', 'Bootstrap', 'CAM',
+                   'CRM','CUDA','CodeIgniter','Confluence','Consul','Coroutine', 'Cucumber', 'DACS', 'DART for Publishers', 
+                   'DBA(Database administration)','DWDM', 'Dart','Delphi', 'Element UI', 'EnCase','Entity Framework', 'Ethereum','FFmpeg',
+                   'FMEA','Flow','GStreamer','Hyperledger', 'I2C', 'IDA(Interactive DisAssembler)', 'IIS','IP', 'IPS','JSTL', 'JsonAPI', 
+                   'Klaytn', 'Laravel', 'LiDAR', 'Lua', 'MES', 'MFC', 'ML', 'MVC', 'MVVM', 'MXNET', 'Machine Learning', 'Machine Vision', 
+                   'Material-UI', 'Maven', 'Memcached', 'Moodle', 'MyBatis', 'NFC', 'NLP', 'NVIDIA TensorRT', 'Netty','OOP','OpenFlow',
+                   'OpenMP', 'OpenStack','Oracle', 'Oracle Database', 'Perl', 'PowerBuilder', 'Prisma', 'Qt','RHEL', 'ROS','RS232', 'RTOS',
+                   'RabbitMQ', 'STL', 'STP',  'SVG','Scala', 'Scikit-Learn', 'Servlets', 'Shader', 'Simulink', 'Sketch', 'Socket.IO', 
+                   'Solidity', 'Spa',  'Spinnaker', 'Storybook',  'Sybase',  'SLAM', 'TCL', 'Tableau','TeamCity', 'Tomcat', 'Truffle',
+                   'TypeORM','UML', 'Ubuntu', 'Unreal Engine', 'VM웨어', 'Visual Basic', 'Visual Studio', 'Visual Studio Code','Vuetify.js',
+                   'Web3.py','web3.js', 'WebGL', 'WebRTC', 'Webpack', 'WinForm', 'Xcode', 'Xilinx', 'Yarn', 'gRPC', 'DevExpress' ]:
         return '기술이 아님' 
     else:
         return skill
+
 
 chrome_options = Options()
 
