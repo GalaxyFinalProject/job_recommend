@@ -284,12 +284,12 @@ for i in pos_num:
 
 
 csv_save_path = 'C:/myPyCode/final_project/jumpit_page_2.csv'
-
-
+position_save_path = 'C:/myPyCode/final_project/jumpit_position_stack.csv'
+position_stack = {}
 with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
     writer = csv.writer(file)
     writer.writerow(['공고명', '회사명', '직무', '마감일', '고용형태', '연봉', '근무지', '학력', '기술스택', '링크'])
-    position_stack = {}
+    
     for orig_url, position in add_list:
         driver.get(orig_url)
         time.sleep(4)
@@ -324,10 +324,10 @@ with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
                 if classified_skill not in stack:
                     stack.append(classified_skill)
                     
-                if position_text in position_stack:
-                    position_stack[position_text].add(classified_skill)
+                if position in position_stack:
+                    position_stack[position].add(classified_skill)
                 else:
-                    position_stack[position_text] = set([classified_skill])
+                    position_stack[position] = {classified_skill}
             
         except NoSuchElementException:
             stack = None
@@ -336,29 +336,34 @@ with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
         link = orig_url
         
         writer.writerow([title, company, position, deadline, employment_type, salary, work_location, grade, stack, link])
-
+            
 driver.quit()
-
-df=pd.read_csv(r'csv_save_path', encoding='cp949')
-df['근무지'] = df['근무지'].str.replace(r'^\(\d+\)\s*', '')
-df['근무지'] = df['근무지'].str.replace(r'\[.*?\]', '')
-df['근무지'] = df['근무지'].str.replace('주소 ', '')
-df['근무지'] = df['근무지'].str.replace('대한민국 ', '')
-df['근무지'] = df['근무지'].str.replace('서울특별시', '서울')
-df['근무지'] = df['근무지'].str.replace('서울시', '서울')
-df['근무지'] = df['근무지'].str.replace('경기도', '경기')
-df['근무지'] = df['근무지'].str.replace('연남로13길9', '서울 마포구 연남로13길9')
-df['근무지'] = df['근무지'].str.replace('제주특별자치도', '제주')
-df['근무지'] = df['근무지'].str.replace('울산광역시', '울산')
-df['근무지'] = df['근무지'].str.replace('경상북도', '경북')
-df['근무지'] = df['근무지'].str.replace('부산광역시', '부산')
-df['근무지'] = df['근무지'].str.replace('인천광역시', '인천')
-df['근무지'] = df['근무지'].str.replace('대전시', '대전')
-df['근무지'] = df['근무지'].str.replace('대전광역시', '대전')
-df['근무지'] = df['근무지'].str.replace('대구광역시', '대구')
-df['근무지'] = df['근무지'].str.replace('전라남도', '전남')
+with open(position_save_path, 'w', newline='', encoding='cp949') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(position_stack.keys())
+    writer.writerow(position_stack.values())
+csv_save_path = 'C:/myPyCode/final_project/jumpit_page_2.csv'
+df=pd.read_csv(csv_save_path, encoding='cp949')
+df['근무지'] = df['근무지'].str.replace(r'^\(\d+\)\s*', '', regex=True)
+df['근무지'] = df['근무지'].str.replace(r'\[.*?\]', '', regex=True)
+df['근무지'] = df['근무지'].str.replace('서울특별시', '서울', regex=True)
+df['근무지'] = df['근무지'].str.replace('서울시', '서울', regex=True)
+df['근무지'] = df['근무지'].str.replace('경기도', '경기', regex=True)
+df['근무지'] = df['근무지'].str.replace('연남로13길9', '서울 마포구 연남로13길9', regex=True)
+df['근무지'] = df['근무지'].str.replace('제주특별자치도', '제주', regex=True)
+df['근무지'] = df['근무지'].str.replace('울산광역시', '울산', regex=True)
+df['근무지'] = df['근무지'].str.replace('경상북도', '경북', regex=True)
+df['근무지'] = df['근무지'].str.replace('부산광역시', '부산', regex=True)
+df['근무지'] = df['근무지'].str.replace('인천광역시', '인천', regex=True)
+df['근무지'] = df['근무지'].str.replace('대전시', '대전', regex=True)
+df['근무지'] = df['근무지'].str.replace('대전광역시', '대전', regex=True)
+df['근무지'] = df['근무지'].str.replace('대구광역시', '대구', regex=True)
+df['근무지'] = df['근무지'].str.replace('전라남도', '전남', regex=True)
 
 # 기술 스택 획일화
 # np.where(condition, x, y)를 활용해서 condition이 참일 경우 x를, 아닌 경우 y로!
 df['기술스택'] = df['기술스택'].str.replace("'", '"')
 df['기술스택'] = np.where((df['기술스택'].isnull()) | (df['기술스택'] == "[]"), """[""]""", df['기술스택'])
+#csv 저장
+csv_save_path_updated = 'C:/myPyCode/final_project/jumpit_page_2_updated.csv'
+df.to_csv(csv_save_path_updated, index=False, encoding='cp949')
