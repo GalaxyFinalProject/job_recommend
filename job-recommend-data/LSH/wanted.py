@@ -464,6 +464,8 @@ for i in range(0,len(positions)):
 
         print(f"{position} 데이터 프레임 생성 끝!")
         done_position.add(position)
+    
+driver.quit()
 
 # 저장
 job_postings_df.to_csv(r"C:\Users\Playdata\Desktop\wanted_cp949_1.csv", index=True, encoding='cp949')
