@@ -471,3 +471,20 @@ driver.quit()
 job_postings_df.to_csv(r"C:\Users\Playdata\Desktop\wanted_cp949_1.csv", index=True, encoding='cp949')
 # 저장
 job_postings_df.to_csv(r"C:\Users\Playdata\Desktop\wanted_cp949_2.csv", index=False, encoding='cp949')
+
+# position_stack 저장
+import os
+import csv
+
+position_stack2 = position_stack
+
+directory = r'C:\Users\Playdata\Desktop\\' 
+
+filename2 = os.path.join(directory, 'position_stack2.csv')
+
+with open(filename2, 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['Position', 'Stack'])  # 헤더 작성
+    for position, stack in position_stack2.items():
+        for stack_item in stack:
+            writer.writerow([position, stack_item])
