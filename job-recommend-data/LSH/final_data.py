@@ -210,7 +210,7 @@ intersection = pd.Series(list(set(df1['회사명'].unique()) & set(df2['회사�
 filtered_df = df[df['회사명'].isin(intersection)]
 
 # 공고명에서 '신입'과 ()로 둘러싸인 부분 삭제
-filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r' \(신입.*?\)|신입|\[신입.*?\] |\[코스닥상장사\] ', '', x))
+filtered_df.loc[:, '공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r' \(신입.*?\)|신입|\[신입.*?\] |\[코스닥상장사\] |채용', '', x))
 
 # 공고문과 회사명이 일치하는 것들 뽑아냄
 duplicates_df = filtered_df[filtered_df.duplicated(subset=['공고명', '회사명'], keep=False)]
@@ -234,8 +234,8 @@ for _, group in grouped:
                     or (prog_group['링크'].startswith('https://www.wanted.co.kr') and wanted_group['링크'].startswith('https://programmers.co.kr'))):
                     # 공고문이 다른 공고문을 완전히 포함하는지 확인
                     if pd.Series(prog_group['공고명']).str.contains(wanted_group['공고명'], regex=False).any() or pd.Series(wanted_group['공고명']).str.contains(prog_group['공고명'], regex=False).any():
-                        filtered_results = filtered_results.append(prog_group)
-                        filtered_results = filtered_results.append(wanted_group)
+                        filtered_results = filtered_results._append(prog_group)
+                        filtered_results = filtered_results._append(wanted_group)
 
 filtered_results.reset_index(drop=True, inplace=True)
 
@@ -256,9 +256,11 @@ excluded_links = filtered_df['링크'].tolist()
 # 중복데이터가 아닌 데이터들을 final_df에 저장
 pro_wanted_df = df[~df['링크'].isin(excluded_links)]
 # 회사는 겹치지만 공고는 겹치지 않는 solo_ignore 추가
-pro_wanted_df = pro_wanted_df.append(solo_df, ignore_index=True)
+pro_wanted_df = pd.concat([pro_wanted_df, solo_df], ignore_index=True)
+
 # 중복데이터 중에 프로그래머스 링크만 있는 것 추가
-pro_wanted_df = pro_wanted_df.append(same_df, ignore_index=True)
+pro_wanted_df = pro_wanted_df._append(same_df, ignore_index=True)
+pro_wanted_df = pro_wanted_df.drop_duplicates(subset='링크')
 
 # 프로그래머스_원티드 & 점핏
 intersection = pd.Series(list(set(pro_wanted_df['회사명'].unique()) & set(df3['회사명'].unique())))
@@ -267,7 +269,7 @@ df=pro_wanted_df
 filtered_df = df[df['회사명'].isin(intersection)]
 
 # 공고명에서 '신입'과 ()로 둘러싸인 부분 삭제
-filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r' \(신입.*?\)|신입|\[신입.*?\] |\[코스닥상장사\] ', '', x))
+filtered_df.loc[:, '공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r' \(신입.*?\)|신입|\[신입.*?\] |\[코스닥상장사\] |채용', '', x))
 
 # 공고문과 회사명이 일치하는 것들 뽑아냄
 duplicates_df = filtered_df[filtered_df.duplicated(subset=['공고명', '회사명'], keep=False)]
@@ -291,14 +293,14 @@ for _, group in grouped:
                     (prog_wanted_group['링크'].startswith('https://programmers.co.kr') or prog_wanted_group['링크'].startswith('https://www.wanted.co.kr'))
                     and jumpit_group['링크'].startswith('https://www.jumpit.co.kr')
                 ) or (
-                    (prog_wanted_group['링크'].startswith('https://www.wanted.co.kr') or prog_wanted_group['링크'].startswith('https://programmers.co.kr'))
-                    and jumpit_group['링크'].startswith('https://www.jumpit.co.kr')
+                    jumpit_group['링크'].startswith('https://www.jumpit.co.kr')
+                    and (prog_wanted_group['링크'].startswith('https://www.wanted.co.kr') or prog_wanted_group['링크'].startswith('https://programmers.co.kr'))
                 ):
 
                     # 공고문이 다른 공고문을 완전히 포함하는지 확인
                     if pd.Series(prog_wanted_group['공고명']).str.contains(jumpit_group['공고명'], regex=False).any() or pd.Series(jumpit_group['공고명']).str.contains(prog_wanted_group['공고명'], regex=False).any():
-                        filtered_results = filtered_results.append(prog_wanted_group)
-                        filtered_results = filtered_results.append(jumpit_group)
+                        filtered_results = filtered_results._append(prog_wanted_group)
+                        filtered_results = filtered_results._append(jumpit_group)
 
 filtered_results.reset_index(drop=True, inplace=True)
 
@@ -318,12 +320,16 @@ excluded_links = filtered_df['링크'].tolist()
 # 중복데이터가 아닌 데이터들을 final_df에 저장
 final_data = df[~df['링크'].isin(excluded_links)]
 # 회사는 겹치지만 공고는 겹치지 않는 solo_ignore 추가
-final_data = final_data.append(solo_df, ignore_index=True)
+final_data = pd.concat([final_data, solo_df], ignore_index=True)
+
 # 중복데이터 중에 프로그래머스 링크만 있는 것 추가
-final_data = final_data.append(same_pro_df, ignore_index=True)
+final_data = pd.concat([final_data, same_df], ignore_index=True)
+
+
+final_data = final_data.drop_duplicates(subset='링크')
 
 # 저장
-filtered_df.to_csv(r'C:\Users\Playdata\Desktop\final.csv', index=False, encoding='cp949')
+final_data.to_csv(r'C:\Users\Playdata\Desktop\final.csv', index=False, encoding='cp949')
 
 
 
