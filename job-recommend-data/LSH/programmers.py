@@ -286,7 +286,7 @@ def classify_skill(skill):
                    'Solidity', 'Spa',  'Spinnaker', 'Storybook',  'Sybase',  'SLAM', 'TCL', 'Tableau','TeamCity', 'Tomcat', 'Truffle',
                    'TypeORM','UML', 'Ubuntu', 'Unreal Engine', 'VM웨어', 'Visual Basic', 'Visual Studio', 'Visual Studio Code','Vuetify.js',
                    'Web3.py','web3.js', 'WebGL', 'WebRTC', 'Webpack', 'WinForm', 'Xcode', 'Xilinx', 'Yarn', 'gRPC', 'DevExpress' ]:
-        pass
+        return None
     else:
         return skill
     
@@ -409,7 +409,7 @@ for position, url in position_url.items():
                     skill = li_tag.text
                     classified_skill = classify_skill(skill)
 
-                    if classified_skill in None:
+                    if classified_skill is None:
                         pass
                     else:
                         if classified_skill not in stack:
