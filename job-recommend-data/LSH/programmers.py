@@ -42,10 +42,10 @@ def classify_position(position):
 #         return '개발PM'
 #     elif position in ['QA', 'QA, 테스트 엔지니어']:
 #         return 'QA'
-    elif position in ['블록체인 플랫폼 엔지니어','블록체인']:
-        return '블록체인'
-    elif position in ['VR/AR/3D','VR 엔지니어']:
-        return 'VR/AR'
+    # elif position in ['블록체인 플랫폼 엔지니어','블록체인']:
+    #     return '블록체인'
+    # elif position in ['VR/AR/3D','VR 엔지니어']:
+    #     return 'VR/AR'
 #     elif position in ['기술지원']:
 #         return '기술지원' 
 #     elif position in ['데이터 사이언티스트']:
