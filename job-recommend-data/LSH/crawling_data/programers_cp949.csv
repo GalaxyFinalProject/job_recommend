@@ -1,0 +1,319 @@
+,공고명,회사명,직무,마감일,고용형태,연봉,근무지,학력,기술스택,링크
+0,게임 서버 프로그래머 ,에이스프로젝트,"서버/백엔드, 모바일 게임, 게임 서버",상시 채용,정규직,,"서울 중구 을지로 264, (을지로6가) 스파크플러스 11층",,"['Java', 'Linux', 'Redis', 'Spring']",https://programmers.co.kr/job_positions/18654
+1,[울산] C# .NET 개발자,인터엑스,"데이터 엔지니어링, 시스템 소프트웨어",상시 채용,정규직,,"울산 중구 종가6길 7, (우정동) 10층(혁신 더테라스)",,"['C#', '.NET', 'WPF']",https://programmers.co.kr/job_positions/17754
+2,[서울] C# .NET 개발자,인터엑스,"데이터 엔지니어링, 시스템 소프트웨어",상시 채용,정규직,,"서울 금천구 가산디지털1로 171, (가산동) 1409호",,"['C#', '.NET', 'WPF']",https://programmers.co.kr/job_positions/17418
+3,[ESTsoft] 백엔드 개발 (신입),이스트소프트,서버/백엔드,상시 채용,정규직,,대한민국 서울특별시 서초구 서초3동 반포대로 3 이스트빌딩,,,https://programmers.co.kr/job_positions/18459
+4,서버 엔지니어 (Python),페이히어,서버/백엔드,상시 채용,정규직,,"서울 강남구 강남대로 374, (역삼동) 16층",,['Python'],https://programmers.co.kr/job_positions/16032
+5,(자율주행 데브코스 수료생 전용) Computer Vison Engineer,프로그래머스 KDT 데브코스 자율주행 1기,"임베디드 소프트웨어, 사물인터넷(IoT), 응용 프로그램",상시 채용,정규직,,,,"['Machine Vision', 'SLAM', 'C++', 'Python']",https://programmers.co.kr/job_positions/17856
+6,저작권 보호 서비스 개발,두다지,"서버/백엔드, 데이터 엔지니어링, 시스템/네트워크",상시 채용,계약직(1년 이상),,"서울 서초구 매헌로 16, (양재동) 1206호 두다지",,"['Docker', 'Python', 'Kubernetes']",https://programmers.co.kr/job_positions/18147
+7,데이터분석 담당 (석사/박사),넛지헬스케어,"웹 풀스택, 인공지능(AI), 데이터 엔지니어링",상시 채용,정규직,,"서울 강남구 역삼로1길 8, (역삼동) ",,"['Docker', 'Django', 'Node.js', 'R', 'SQL', 'Vue.js', 'ReactJS', 'Python', 'MySQL', 'jQuery', 'JavaScript', 'HTML', 'Java']",https://programmers.co.kr/job_positions/18075
+8,(자율주행 데브코스 수료생 전용) 자율주행 딥러닝 엔지니어,프로그래머스 KDT 데브코스 자율주행 1기,"인공지능(AI), 시스템 소프트웨어",상시 채용,정규직,,,,"['ROS', 'Linux', 'Tensorflow', 'PyTorch', 'Python', 'C++', 'OpenCV']",https://programmers.co.kr/job_positions/7608
+9,[병역특례] 안드로이드개발 산업기능요원,넛지헬스케어,안드로이드,상시 채용,정규직,,"서울 강남구 역삼로1길 8, (역삼동) ",,"['Kotlin', 'Android', 'Java']",https://programmers.co.kr/job_positions/15838
+10,(자율주행 데브코스 수료생 전용) 자율주행 SW개발,프로그래머스 KDT 데브코스 자율주행 1기,"인공지능(AI), 임베디드 소프트웨어, 사물인터넷(IoT)",상시 채용,정규직,,,,"['Docker', 'Deep Learning', 'Tensorflow', 'PyTorch', 'C++', 'Python']",https://programmers.co.kr/job_positions/17853
+11,[울산] QA 엔지니어,인터엑스,QA,상시 채용,정규직,,"울산 중구 종가6길 7, (우정동) 10층",,['GitHub'],https://programmers.co.kr/job_positions/17441
+12,Devops 엔지니어 (신입),에이에프아이,서버/백엔드,상시 채용,정규직,4300 ~ 5417 만원,"대한민국 서울특별시 성동구 아차산로 17, 서울숲엘타워 1301호",,"['Docker', 'Node.js', 'ES6', 'Linux', 'CI/CD']",https://programmers.co.kr/job_positions/16425
+13,[병역특례] 백엔드개발(Node.js) 산업기능요원,넛지헬스케어,"서버/백엔드, 웹 풀스택, 시스템/네트워크",상시 채용,정규직,,"서울 강남구 역삼로1길 8, (역삼동) ",,"['Java', 'Django', 'Git', 'Node.js', 'Python', 'Vue.js', 'MySQL']",https://programmers.co.kr/job_positions/15840
+14,Wi-Fi 관련 QA,테크노니아,QA,상시 채용,정규직,,"서울 서초구 매헌로 16, (양재동) 5층 브로드컴코리아 ",,,https://programmers.co.kr/job_positions/17280
+15,[병역특례] iOS개발 산업기능요원,넛지헬스케어,iOS,상시 채용,정규직,,"서울 강남구 역삼로1길 8, (역삼동) ",,"['Swift', 'iOS']",https://programmers.co.kr/job_positions/15839
+16,[병역특례] QA담당 산업기능요원,넛지헬스케어,"웹 풀스택, 안드로이드, QA",상시 채용,정규직,,"서울 강남구 역삼로1길 8, (역삼동) ",,['Selenium'],https://programmers.co.kr/job_positions/15844
+17,[병역특례] 풀스택개발 산업기능요원,넛지헬스케어,"서버/백엔드, 웹 풀스택, 시스템/네트워크",상시 채용,정규직,,"서울 강남구 역삼로1길 8, (역삼동) ",,"['MySQL', 'Vue.js', 'Python', 'Node.js', 'Git', 'Django', 'Java']",https://programmers.co.kr/job_positions/15845
+18,이미지 프로세싱 알고리즘 연구/ 최적화,포스로직,"머신러닝, 인공지능(AI), 응용 프로그램",상시 채용,정규직,4212 ~ 4212 만원,"경기 안양시 동안구 시민대로327번길 11-14, (관양동) 6F",,"['C++', 'C', 'Tensorflow', 'PyTorch', 'Deep Learning', 'Machine Vision', 'Image Processing']",https://programmers.co.kr/job_positions/7085
+19,네트워크 개발 (전문연구요원),플랜티넷,"시스템/네트워크, 임베디드 소프트웨어",상시 채용,정규직,3800 ~ 6000 만원,"경기 성남시 분당구 대왕판교로 670, (삼평동) ",,"['SDN', 'OpenFlow', 'Embedded System', 'Keras', 'Linux kernel', 'Windows kernel']",https://programmers.co.kr/job_positions/14762
+20,SDN개발자,에스비정보기술,"시스템/네트워크, 시스템 소프트웨어, 응용 프로그램",상시 채용,정규직,,"경기 의왕시 성고개로 53, (포일동, 에이스청계타워)  1015-1016호",,['Java'],https://programmers.co.kr/job_positions/14524
+21,(프로그래머스 자율주행 데브코스 수료생용 공고) 자율주행 Planning/Control Developer,프로그래머스 KDT 데브코스 자율주행 1기,,상시 채용,정규직,,,,,https://programmers.co.kr/job_positions/13569
+22,[아이페이지온] 안드로이드 앱 개발자(Android App),아이페이지온,안드로이드,상시 채용,정규직,,"서울 강남구 테헤란로14길 5, (역삼동) 5층",,"['Java', 'JavaScript', 'C', 'C++', 'Android']",https://programmers.co.kr/job_positions/10024
+23,플랫폼 서비스 개발 팀원,히비스,"프론트엔드, 데브옵스",상시 채용,정규직,,"서울시 강동구 성내로 19, (주)서경산업개발 502호 ",,"['JavaScript', 'jQuery']",https://programmers.co.kr/job_positions/2385
+24,프론트엔드 개발자 ,블루펫,프론트엔드,상시 채용,정규직,3000 ~ 6000 만원,"서울 금천구 가산디지털1로 225, (가산동) ",,"['ReactJS', 'Redux-Saga', 'Next.js']",https://programmers.co.kr/job_positions/7144
+25,데이터사이언티스트(석박사),솔트룩스,인공지능(AI),상시 채용,,,"서울특별시 강남구 언주로 538, 4층, 5층동(역삼동, 대웅빌딩)",,['Big Data'],https://programmers.co.kr/job_positions/2666
+26,이러닝 웹 솔루션 개발자,Xinics,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,,,"서울특별시 구로구 디지털로31길 53, 1101호(구로동, 이엔씨벤처드림타워5차)",,"['HTML', 'CSS', 'JavaScript', 'ReactJS', 'PHP']",https://programmers.co.kr/job_positions/1207
+27,AI Engineer / AI Scientist (Junior),디메타,"머신러닝, 인공지능(AI)",상시 채용,정규직,,서울 강남구 역삼동 605-22 ,,"['Docker', 'PyTorch', 'Python', 'JIRA', 'Slack API', 'GitHub']",https://programmers.co.kr/job_positions/15919
+28,[미리디] Jr. 프론트엔드 개발자,미리디,프론트엔드,상시 채용,정규직,,"대한민국 서울특별시 구로구 디지털로31길 12, 8층, 미리디",,,https://programmers.co.kr/job_positions/18407
+29,[액션파워] 인공지능/머신러닝 엔지니어,액션파워,"머신러닝, 인공지능(AI)",상시 채용,정규직,,"서울 관악구 남부순환로 1838, 11층(봉천동)",,"['Machine Learning', 'Python', 'Tensorflow', 'Linux', 'Docker', 'Git']",https://programmers.co.kr/job_positions/13119
+30,[제주 오피스] QA Engineer,클로버추얼패션,QA,상시 채용,정규직,3000 ~ 6000 만원,"제주특별자치도 제주시 첨단로 213-3, (영평동) ",,"['JIRA', 'Slack API', 'GitHub']",https://programmers.co.kr/job_positions/5112
+31,RPA 담당자,팀프레시,"서버/백엔드, 시스템 소프트웨어",상시 채용,정규직,,서울시 강남구 봉은사로37길 7-9,,,https://programmers.co.kr/job_positions/18269
+32,QA,위메이드,QA,23년 05월 31일 23:59까지,정규직,,"경기도 성남시 대왕판교로 644번길 49, 위메이드타워",,,https://programmers.co.kr/job_positions/8155
+33,백엔드 엔지니어 (Python),데이터비,서버/백엔드,상시 채용,정규직,3000 ~ 7000 만원,"서울 마포구 백범로31길 21, (공덕동) 404호",,"['Python', 'REST API', 'Redis', 'RabbitMQ', 'SQL']",https://programmers.co.kr/job_positions/17780
+34,백엔드 엔지니어 (NodeJS),데이터비,서버/백엔드,상시 채용,정규직,3000 ~ 7000 만원,"서울 마포구 백범로31길 21, (공덕동) 404호",,"['Node.js', 'Git']",https://programmers.co.kr/job_positions/17779
+35,C# 개발자,넥서스커뮤니티,서버/백엔드,상시 채용,정규직,,"서울 영등포구 여의대로 108, (여의도동) 파크원 타워2 19F",,"['C#', 'Windows', 'MariaDB', 'Oracle', 'DevExpress']",https://programmers.co.kr/job_positions/4351
+36,iOS 개발자,Teamblind,iOS,상시 채용,정규직,,서울시 강남구 테헤란로,,"['Swift', 'Objective-C', 'REST API']",https://programmers.co.kr/job_positions/12040
+37,IT Service Manager - WMS,씨티케이,시스템/네트워크,상시 채용,정규직,,미국 캘리포니아 온타리오,,,https://programmers.co.kr/job_positions/16670
+38,Deep Learning Researcher,딥핑소스,머신러닝,상시 채용,정규직,,"서울 강남구 언주로 508, (역삼동) 3층, 5층",,,https://programmers.co.kr/job_positions/14854
+39,[R&D] Software Engineer,클로버추얼패션,"시스템 소프트웨어, 응용 프로그램",상시 채용,정규직,,서울특별시 강남구 도산대로8길 17-4(논현동),,"['C', 'C++', 'OpenGL', 'Qt', 'OpenCV', 'CUDA', 'Unreal Engine', 'Unity', 'Python']",https://programmers.co.kr/job_positions/5541
+40,필드 엔지니어,딥핑소스,,상시 채용,정규직,,"서울 강남구 언주로 508, (역삼동) 3층, 5층",,,https://programmers.co.kr/job_positions/14859
+41,API 개발자,넥서스커뮤니티,"서버/백엔드, 임베디드 소프트웨어",상시 채용,정규직,,"서울 영등포구 여의대로 108, (여의도동) 파크원 타워2 19F",,"['Java', 'Unix', 'TCP/IP', 'Database', 'REST API', 'C++', 'C']",https://programmers.co.kr/job_positions/12991
+42,보안 취약점 솔루션 엔지니어,쿤텍,"시스템/네트워크, 시스템 소프트웨어, 데브옵스",상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,,https://programmers.co.kr/job_positions/9672
+43,백엔드 개발자,스와치온,서버/백엔드,상시 채용,정규직,6500 ~ 20000 만원,"서울 성동구 광나루로 286, 5층 (성수동2가, 아인빌딩)",,"['Node.js', 'Ruby on Rails', 'Python', 'Git', 'MySQL']",https://programmers.co.kr/job_positions/7771
+44,어플리케이션 프로그래머,쿤텍,응용 프로그램,상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,"['C', 'C#', 'C++']",https://programmers.co.kr/job_positions/9693
+45,웹개발 ,아주큐엠에스,"서버/백엔드, 프론트엔드",상시 채용,정규직,3500 ~ 4000 만원,"서울 서초구 강남대로 351, (서초동)  청남빌딩 8층 ",,"['Java', 'JavaScript', 'MySQL']",https://programmers.co.kr/job_positions/11917
+46,악성코드 분석 엔지니어,쿤텍,"시스템/네트워크, 시스템 소프트웨어, 데브옵스",상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,,https://programmers.co.kr/job_positions/9674
+47,Back-end/Infra 개발 ,바텍 네트웍스,"서버/백엔드, 웹 풀스택, 시스템/네트워크",상시 채용,정규직,4000 ~ 8000 만원,"경기도 화성시 삼성1로2길 13, (석우동)",,"['Docker', 'Node.js', 'Kubernetes', 'MongoDB', 'AWS DynamoDB']",https://programmers.co.kr/job_positions/3669
+48,임베디드 프로그래머,쿤텍,"안드로이드, iOS, 임베디드 소프트웨어",상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,"['C', 'C++']",https://programmers.co.kr/job_positions/9669
+49,SoC Verification EDA Tool Engineer,쿤텍,"시스템/네트워크, 시스템 소프트웨어",상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,"['C', 'C++']",https://programmers.co.kr/job_positions/10609
+50,SaaS 개발자,크레비스파트너스,"서버/백엔드, 웹 풀스택, 응용 프로그램",상시 채용,정규직,,"서울특별시 성동구 왕십리로 88, 4층(성수동1가)",,"['Azure', '.NET', 'C#']",https://programmers.co.kr/job_positions/17194
+51,[패스오더] 안드로이드 개발자,페이타랩,"프론트엔드, 안드로이드, 응용 프로그램",상시 채용,정규직,,"서울 강남구 영동대로85길 34, (대치동) 6층",,"['Android', 'Kotlin', 'Java']",https://programmers.co.kr/job_positions/9637
+52,암호 라이브러리 개발자 ,펜타시큐리티시스템,"인터넷 보안, 응용 프로그램, 크로스 플랫폼",상시 채용,정규직,,"서울 영등포구 여의공원로 115, (여의도동) 8층 / 9층",,"['Linux', 'Unix', 'Windows', 'C', 'C++', 'iOS', 'Android']",https://programmers.co.kr/job_positions/15856
+53,Quantization Research Engineer,노타,머신러닝,23년 06월 30일 23:59까지,정규직,,"서울 강남구 테헤란로 332, (역삼동) 14층 Nota",,"['Python', 'Tensorflow', 'PyTorch']",https://programmers.co.kr/job_positions/14987
+54,Reinforcement Learning Research Engineer,노타,"머신러닝, 인공지능(AI)",23년 06월 30일 23:55까지,정규직,,"서울 강남구 테헤란로 332, (역삼동) 14층 Nota",,,https://programmers.co.kr/job_positions/17313
+55,서버 백엔드 개발자 Server Backend Developer,클레온,서버/백엔드,상시 채용,계약직(1년 이상),,서울시 중구 소월로2길 30 티타워 18층 클레온,,"['Kotlin', 'Node.js', 'Python', 'Spring Boot', 'Spring Batch', 'PostgreSQL', 'MySQL', 'AWS CloudFront', 'FFmpeg', 'GStreamer', 'OpenCV', 'gRPC', 'WebRTC', 'Git', 'Docker', 'Apache Kafka']",https://programmers.co.kr/job_positions/18663
+56,"[인포보스]인공지능개발팀(산업기능요원, 전문연구요원 가능)",인포보스,"머신러닝, 인공지능(AI), 데이터 엔지니어링",상시 채용,정규직,,서울시 강남구 삼성동 1-4번지 해운빌딩 301호,,"['Tensorflow', 'Keras', 'SQL', 'Python', 'NLP']",https://programmers.co.kr/job_positions/12417
+57,백엔드 개발자,알로카도스,서버/백엔드,상시 채용,정규직,4000 ~ 12000 만원,"서울 강남구 테헤란로 503, (삼성동) 패스트파이브 삼성3호점",,"['Redis', 'Python', 'Flask', 'FastAPI', 'Django', 'PostgreSQL', 'MongoDB', 'AWS DynamoDB', 'Docker', 'SQL', 'NoSQL']",https://programmers.co.kr/job_positions/16045
+58,"자연어처리 엔지니어 (Natural Language Processing, NLP)",로민,"머신러닝, 인공지능(AI), 데이터 엔지니어링",상시 채용,정규직,,"서울 서초구 방배천로2길 10, (방배동) 7층",,"['Tensorflow', 'PyTorch', 'Python', 'Docker', 'Git', 'Linux']",https://programmers.co.kr/job_positions/16599
+59,"컴퓨터비전 엔지니어 (Computer Vision, CV)",로민,"머신러닝, 인공지능(AI), 데이터 엔지니어링",상시 채용,정규직,,"서울 서초구 방배천로2길 10, (방배동) 7층",,"['Linux', 'Git', 'Docker', 'Python', 'PyTorch', 'Tensorflow']",https://programmers.co.kr/job_positions/16600
+60,Unity 개발자,네오사피엔스,그래픽스,상시 채용,정규직,,"대한민국 서울특별시 강남구 영동대로96길 20 5층, ",,,https://programmers.co.kr/job_positions/17475
+61,백엔드 개발자,아하랩스,"서버/백엔드, 머신러닝",상시 채용,정규직,,"경기도 성남시 분당구 성남대로 43번길 10, 7층 712호",,"['Git', 'Python']",https://programmers.co.kr/job_positions/18627
+62,머신러닝 엔지니어,콜리,"머신러닝, 데이터 엔지니어링",상시 채용,정규직,7000 ~ 14000 만원,"서울 강남구 논현로 709, (논현동) 5층",,"['PyTorch', 'Pandas']",https://programmers.co.kr/job_positions/18624
+63,Planning & Control Engineer,뉴빌리티,"인공지능(AI), 임베디드 소프트웨어",상시 채용,정규직,,"서울 성동구 왕십리로 115, (성수동1가) ",,"['C', 'C++', 'Linux']",https://programmers.co.kr/job_positions/18253
+64,플랫폼 백엔드 개발자,111퍼센트,"서버/백엔드, 모바일 게임",상시 채용,정규직,,"서울 강남구 테헤란로 152, 33층(역삼동, 강남파이낸스센터) ",,"['Node.js', 'REST API']",https://programmers.co.kr/job_positions/6142
+65,[패스오더] 안드로이드 개발자 (병역특례 산업기능요원 보충역/전직가능),페이타랩,"프론트엔드, 안드로이드, 응용 프로그램",상시 채용,정규직,,"서울 강남구 영동대로85길 34, (대치동) 6층",,"['Kotlin', 'Java', 'JavaScript', 'Android', 'React Native']",https://programmers.co.kr/job_positions/9649
+66,"[패스오더] 백엔드(Spring, Python, MSA)개발자 (병역특례 산업기능요원 보충역/전직가능)",페이타랩,"서버/백엔드, 웹 풀스택, 데이터 엔지니어링",상시 채용,정규직,,"서울 강남구 영동대로85길 34, (대치동) 6층",,"['Java', 'JavaScript', 'Python', 'Git', 'Docker', 'Spring', 'Kotlin', 'Flask', 'Jenkins', 'Kubernetes', 'PostgreSQL', 'SQL']",https://programmers.co.kr/job_positions/9647
+67,AI 컴파일러 엔지니어,에너자이,"머신러닝, 인공지능(AI), 임베디드 소프트웨어",23년 05월 31일 14:59까지,정규직,,"대한민국 서울특별시 강남구 테헤란로 431, 6층",,"['C', 'C++', 'Python']",https://programmers.co.kr/job_positions/11389
+68,ML Engineer,데이터메이커,"머신러닝, 인공지능(AI)",상시 채용,정규직,,"대전광역시 유성구 유성대로 871, 4,5층(죽동, CU빌딩)",,"['Python', 'Git', 'Unix', 'Linux', 'OpenCV', 'C++', 'Tensorflow', 'Machine Learning', 'Deep Learning', 'NVIDIA TensorRT', 'PyTorch', 'Docker', 'Kubernetes']",https://programmers.co.kr/job_positions/5232
+69,"프론트, 백엔드 개발자",새론솔루션,"서버/백엔드, 프론트엔드, 웹 풀스택",23년 06월 30일 23:55까지,정규직,3500 ~ 6000 만원,"경기도 의왕시 안양판교로 82, 815호(포일동, 포일어울림센터)",,"['Python', 'Java', 'JavaScript', 'Spring']",https://programmers.co.kr/job_positions/18613
+70,데이터 분석 및 AI 개발자,새론솔루션,"머신러닝, 인공지능(AI), 데이터 엔지니어링",23년 06월 30일 23:59까지,정규직,3500 ~ 6000 만원,"경기도 의왕시 안양판교로 82, 815호(포일동, 포일어울림센터)",,"['Python', 'PyTorch', 'Tensorflow', 'Pandas']",https://programmers.co.kr/job_positions/18612
+71,윙크/윙크북스 서비스 백엔드 개발자 (Django),단비교육,서버/백엔드,23년 05월 31일 23:59까지,정규직,,"서울 강남구 개포로 640, (일원동) ",,"['PostgreSQL', 'Aurora DB', 'Git', 'DRF(Django REST framework)', 'Django', 'Python', 'REST API']",https://programmers.co.kr/job_positions/17925
+72,윙크/윙크북스 서비스 프런트엔드(ReactJS) 개발자,단비교육,"프론트엔드, 안드로이드, iOS",23년 05월 31일 23:59까지,정규직,,"서울 강남구 개포로 640, (일원동) ",,"['Tailwind CSS', 'REST API', 'Webpack', 'Socket.IO', 'AWS Amplify', 'TypeScript', 'ReactJS']",https://programmers.co.kr/job_positions/17924
+73,QA 매니저,티피씨인터넷,QA,상시 채용,정규직,,"서울 강남구 선릉로93길 50, (역삼동) 11층",,,https://programmers.co.kr/job_positions/18450
+74,"화이트박스 크립토그래피 개발자(C,C++)",잉카엔트웍스,"서버/백엔드, 머신러닝, 인공지능(AI)",상시 채용,정규직,,"서울 강남구 논현로 608 (논현동, 덕수빌딩) 1층",,"['Java', 'C', 'C++']",https://programmers.co.kr/job_positions/17443
+75,[패스오더] DevOps Engineer (병역특례 산업기능요원 보충역/전직가능),페이타랩,"시스템/네트워크, 데브옵스, 인터넷 보안",상시 채용,정규직,,"서울특별시 강남구 영동대로 85길 34, 6층",,"['AWS RDS', 'AWS S3', 'AWS ECS', 'Jenkins', 'Docker']",https://programmers.co.kr/job_positions/9651
+76,Path Planning 엔지니어,펀진,"머신러닝, 로보틱스 미들웨어, 응용 프로그램",상시 채용,정규직,3000 ~ 6000 만원,"서울 성동구 연무장5가길 7, (성수동2가) EAST 동 13층",,"['C++', 'Python', 'ROS', 'Git']",https://programmers.co.kr/job_positions/18601
+77,딥러닝 엔지니어,펀진,"머신러닝, 인공지능(AI)",상시 채용,정규직,,"서울 성동구 연무장5가길 7, (성수동2가) EAST 동 13층",,"['Docker', 'Python', 'PyTorch', 'Tensorflow', 'Pandas', 'Keras', 'NLP']",https://programmers.co.kr/job_positions/18597
+78,[협업툴 플로우] 엔터프라이즈 개발자,마드라스체크,"서버/백엔드, 웹 풀스택",23년 06월 06일 23:59까지,정규직,,"서울 영등포구 영신로 220, (영등포동8가) KNK디지털타워 1409~1412호",,"['Java', 'JavaScript', 'jQuery', 'Node.js', 'Linux']",https://programmers.co.kr/job_positions/16081
+79,STO 플랫폼 서비스 블록체인 개발,블록체인글로벌,블록체인,23년 07월 31일 17:40까지,정규직,3000 ~ 9000 만원,"서울 영등포구 여의나루로 57, (여의도동) 신송센터빌딩 10층 ",,"['Vue.js', 'JavaScript', 'React Native', 'Java', 'Node.js', 'Docker', 'Kubernetes', 'TypeScript', 'Kotlin', 'Spring Boot', 'flutter', 'Hyperledger', 'Go']",https://programmers.co.kr/job_positions/18575
+80,웹/모바일 퍼블리셔 - 초고속 성장기업,업템포글로벌,웹 퍼블리싱,상시 채용,정규직,3000 ~ 4000 만원,"서울 강남구 선릉로 561, (역삼동) 2층",,"['CSS', 'HTML', 'ReactJS', 'React Native', 'JavaScript']",https://programmers.co.kr/job_positions/18487
+81,웹(React) 개발자,클라썸,"프론트엔드, 웹 풀스택",상시 채용,정규직,,"대한민국 서울특별시 강남구 테헤란로2길 27, 14층",,"['Redux.js', 'ReactJS', 'TypeScript', 'Sass(SCSS)']",https://programmers.co.kr/job_positions/15890
+82,인공지능 NLP 개발자,포자랩스,"머신러닝, 인공지능(AI)",상시 채용,정규직,,"대한민국 서울특별시 강남구 테헤란로78길 16, 노벨빌딩 10층 포자랩스",,"['PyTorch', 'Python', 'NLP', 'Docker', 'GitHub']",https://programmers.co.kr/job_positions/11399
+83,ML Research&Development(인공지능 연구개발)(전문연구요원 가능),휴이노,"머신러닝, 인공지능(AI)",상시 채용,정규직,,"서울특별시 강남구 압구정로79길 19, 401호, 301호, 302호 (청담동, 레인에비뉴)",,,https://programmers.co.kr/job_positions/18438
+84,백엔드 개발자,아이티이지,"서버/백엔드, 웹 풀스택, 시스템/네트워크",상시 채용,정규직,3000 ~ 6000 만원,"서울 서초구 서초대로 250, (서초동) 3층",,,https://programmers.co.kr/job_positions/17845
+85,클라우드EDI 서비스 개발자,인스피언,서버/백엔드,상시 채용,정규직,3400 ~ 6000 만원,"서울특별시 금천구 벚꽃로 278, SJ테크노빌 1309호",,"['Java', 'Spring']",https://programmers.co.kr/job_positions/13713
+86,AI Language,알지에이아이엔씨,"머신러닝, 인공지능(AI)",상시 채용,정규직,5000 ~ 15000 만원,"서울 서초구 서초대로 396, (서초동) ",,"['Python', 'PyTorch', 'Tensorflow', 'NVIDIA TensorRT', 'MXNET', 'Docker', 'C++', 'Linux', 'ROS', 'Git', 'JIRA']",https://programmers.co.kr/job_positions/18431
+87,AI computer vision,알지에이아이엔씨,"머신러닝, 인공지능(AI)",상시 채용,정규직,5000 ~ 15000 만원,"서울 서초구 서초대로 396, (서초동) ",,"['Python', 'PyTorch', 'Tensorflow', 'MXNET', 'NVIDIA TensorRT', 'Tensorflow Lite', 'C++', 'Linux', 'ROS', 'Git', 'JIRA']",https://programmers.co.kr/job_positions/18430
+88,Frontend(React / React-Native),에딘트,"프론트엔드, 안드로이드, iOS",상시 채용,정규직,,"경기 성남시 수정구 대왕판교로 815, (시흥동)  창업존 7층 G736",,"['React Native', 'ReactJS', 'HTML', 'REST API', 'CSS', 'JavaScript']",https://programmers.co.kr/job_positions/18150
+89,웹 백엔드 개발자,알고리고,"서버/백엔드, 데브옵스",상시 채용,정규직,,"서울 강남구 봉은사로 319, (논현동) 내외빌딩 4층 ",,"['Python', 'Amazon Web Services(AWS)', 'MySQL', 'REST API', 'NoSQL', 'TCP/IP', 'WebSocket', 'CI/CD', 'Redis', 'Microservice Architecture', 'GraphQL', 'Shell', 'GitHub']",https://programmers.co.kr/job_positions/15596
+90,[게임 스튜디오] 게임 클라이언트 개발자,메타지,게임 클라이언트,상시 채용,정규직,,서울특별시 강남구 언주로134길 24 4층,,['Unreal Engine'],https://programmers.co.kr/job_positions/18273
+91,[NFT 거래소] 프론트엔드 개발자 (Full-Remote),메타지,프론트엔드,상시 채용,정규직,,서울특별시 강남구 언주로134길 24 4층,,"['flutter', 'AWS S3', 'AWS CloudFront', 'PostgreSQL', 'AWS Lambda', 'AWS Simple Queue Service(AWS SQS)', 'AWS Simple Notification Service(AWS SNS)']",https://programmers.co.kr/job_positions/18268
+92,[게임 스튜디오] 게임 서버 개발자 (Full-Remote),메타지,게임 서버,상시 채용,정규직,3000 ~ 6000 만원,서울특별시 강남구 언주로134길 24 4층,,"['Unreal Engine', 'C++']",https://programmers.co.kr/job_positions/18272
+93,[NFT 거래소] 백엔드 개발자 (Full-Remote),메타지,서버/백엔드,상시 채용,정규직,,서울특별시 강남구 언주로134길 24 4층,,"['PostgreSQL', 'AWS Lambda', 'AWS Simple Queue Service(AWS SQS)', 'AWS Simple Notification Service(AWS SNS)', 'Node.js', 'TypeScript', 'AWS Serverless Application Repository', 'Prisma']",https://programmers.co.kr/job_positions/18271
+94,QA 엔지니어,스윗코리아,QA,상시 채용,정규직,,대한민국 서울특별시 강남구 삼성동 삼성로 570 석천빌딩 6층,,,https://programmers.co.kr/job_positions/16950
+95,프론트엔드 개발자,데브툴즈,"프론트엔드, 블록체인",상시 채용,정규직,4000 ~ 8000 만원,"경기 안양시 동안구 시민대로 361, 1106호 (관양동) ",,"['Vue.js', 'Sass(SCSS)', 'TypeScript']",https://programmers.co.kr/job_positions/18160
+96,Data Scientist (데이터 사이언티스트)(병역특례 가능),AB180,"머신러닝, 인공지능(AI), 데이터 엔지니어링",상시 채용,정규직,,"서울 서초구 강남대로61길 17, (서초동, 밀라텔 쉐르빌) ",,"['SQL', 'Scikit-Learn', 'PyTorch', 'Tensorflow', 'R', 'Python']",https://programmers.co.kr/job_positions/12783
+97,백엔드 개발자,데브툴즈,"서버/백엔드, 블록체인",상시 채용,정규직,4000 ~ 8000 만원,"경기 안양시 동안구 시민대로 361, 1106호 (관양동) ",,"['Node.js', 'Go', 'NoSQL', 'Rust']",https://programmers.co.kr/job_positions/18146
+98,신규프로젝트_서버 프로그래머,엔픽셀,"서버/백엔드, 웹 풀스택, 게임 서버",23년 05월 31일 12:19까지,정규직,,서울시 강남구 테헤란로 231 센터필드 WEST TOWER 14층 엔픽셀,,"['Rust', 'AWS ECS', 'Kotlin', 'Spring', 'flutter', 'Apache Kafka', 'Redis', 'NoSQL', 'Dart']",https://programmers.co.kr/job_positions/18137
+99,블록체인 게임 플랫폼 스마트 컨트랙트 개발자,위메이드,"서버/백엔드, 블록체인",23년 05월 31일 23:59까지,정규직,,"경기도 성남시 대왕판교로 644번길 49, 위메이드타워",,"['Solidity', 'Truffle', 'Ethereum', 'Klaytn']",https://programmers.co.kr/job_positions/16746
+100, Android SDK 개발,위메이드,안드로이드,23년 05월 31일 23:59까지,정규직,,"경기도 성남시 분당구 대왕판교로644번길 49, 2층 201호 전체(삼평동, 코리아벤처타운)",,['Android'],https://programmers.co.kr/job_positions/11934
+101,블록체인 디파이 플랫폼 스마트 컨트랙트 전문 개발자,위메이드,"프론트엔드, 웹 풀스택, 블록체인",23년 05월 31일 23:59까지,정규직,,"경기도 성남시 대왕판교로 644번길 49, 위메이드타워",,"['Solidity', 'Truffle']",https://programmers.co.kr/job_positions/11924
+102,iOS SDK 개발,위메이드,iOS,23년 05월 31일 23:59까지,정규직,,"경기도 성남시 분당구 대왕판교로644번길 49, 2층 201호 전체(삼평동, 코리아벤처타운)",,['iOS'],https://programmers.co.kr/job_positions/11932
+103,블록체인 게임 플랫폼 백엔드 개발자,위메이드,"서버/백엔드, 블록체인, 크로스 플랫폼",23년 05월 31일 23:59까지,정규직,,"경기도 성남시 대왕판교로 644번길 49, 위메이드타워",,"['Go', 'Java', 'Node.js', 'REST API', 'RPC(Remote Procedure Call)']",https://programmers.co.kr/job_positions/16747
+104,블록체인 디파이 플랫폼 백엔드 전문 개발자,위메이드,"서버/백엔드, 블록체인",23년 05월 31일 23:59까지,정규직,,"경기도 성남시 대왕판교로 644번길 49, 위메이드타워",,"['C++', 'Java', 'Node.js', 'Go', 'C#']",https://programmers.co.kr/job_positions/11923
+105,플랫폼 서버 개발,위메이드,"서버/백엔드, 블록체인",23년 05월 31일 23:59까지,정규직,,"경기도 성남시 분당구 대왕판교로644번길 49, 2층 201호 전체(삼평동, 코리아벤처타운)",,"['Java', 'MySQL', 'REST API']",https://programmers.co.kr/job_positions/11935
+106,[전문연구요원 신규편입 & 전직] Software Engineer,업스테이지,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"경기 용인시 수지구 광교중앙로 338, (상현동)",,"['Go', 'JavaScript', 'Ruby on Rails', 'ReactJS', 'Java', 'Vue.js', 'Python', 'Django']",https://programmers.co.kr/job_positions/12682
+107,AI R&D 연구원,에너자이,"머신러닝, 인공지능(AI), 임베디드 소프트웨어",23년 05월 31일 14:59까지,정규직,,"대한민국 서울특별시 강남구 테헤란로 431, 6층",,,https://programmers.co.kr/job_positions/17121
+108,ML Engineer / Researcher ,에너자이,"머신러닝, 인공지능(AI), 응용 프로그램",23년 05월 31일 14:59까지,정규직,,"대한민국 서울특별시 강남구 테헤란로 431, 6층",,"['Python', 'PyTorch', 'Tensorflow', 'Deep Learning']",https://programmers.co.kr/job_positions/11388
+109,딥러닝 개발자,블루닷,"머신러닝, 인공지능(AI)",상시 채용,정규직,,서울 강남구 ,,,https://programmers.co.kr/job_positions/18088
+110,반도체 회로 설계 개발자,블루닷,"머신러닝, 인공지능(AI)",상시 채용,정규직,,"서울 강남구 언주로 527, (역삼동) ",,,https://programmers.co.kr/job_positions/18087
+111,비디오 코덱 엔지니어,블루닷,"머신러닝, 인공지능(AI)",상시 채용,정규직,,"서울 강남구 언주로 527, (역삼동) ",,"['C', 'C++']",https://programmers.co.kr/job_positions/18086
+112,센서 융합 연구원,모빌테크,인공지능(AI),상시 채용,정규직,,"서울 서초구 마방로4길 16-9, (양재동) ",,"['C', 'C++', 'ROS', 'Linux']",https://programmers.co.kr/job_positions/17428
+113,"Senior Software Engineer, Machine Learning, Extended Reality",버킷플레이스(오늘의집),"머신러닝, VR/AR/3D",상시 채용,정규직,,"대한민국 서울특별시 서초구 서초대로74길 4, 삼성생명 서초타워 25층, 27층",,,https://programmers.co.kr/job_positions/14672
+114,블록체인 게임 플랫폼 백오피스 프론트엔드 개발자,위메이드,"프론트엔드, 블록체인",23년 05월 31일 23:59까지,정규직,,"경기도 성남시 대왕판교로 644번길 49, 위메이드타워",,"['Socket.IO', 'ReactJS', 'AngularJS', 'Vue.js', 'web3.js']",https://programmers.co.kr/job_positions/17768
+115,백엔드 개발자,오지스,"서버/백엔드, 블록체인",상시 채용,정규직,,"서울 영등포구 여의대로 108, (여의도동) 47층",,"['Git', 'Jenkins', 'Node.js', 'Yarn', 'Redis', 'Web3.py', 'MySQL', 'Docker', 'AWS Alexa']",https://programmers.co.kr/job_positions/17933
+116,프론트엔드 엔지니어,리드넘버,"프론트엔드, 웹 풀스택",상시 채용,정규직,4000 ~ 15000 만원,"서울 관악구 남부순환로 2072, (남현동) ",,"['ReactJS', 'Node.js', 'Webpack', 'ES6']",https://programmers.co.kr/job_positions/15464
+117,[ESTsecurity] 정보보호 백엔드 개발자 (신입/경력),이스트소프트,서버/백엔드,상시 채용,정규직,,"대한민국 서울특별시 서초구 서초3동 반포대로 3, (주)이스트소프트",,,https://programmers.co.kr/job_positions/17750
+118,[신규] Unity 3D 클라이언트 프로그래머,5민랩,"모바일 게임, 게임 클라이언트",23년 06월 01일 00:00까지,정규직,,"서울특별시 마포구 양화로 19, 8층 5민랩(합정동, 합정오피스빌딩)",,"['Unity', 'C#', 'Unreal Engine']",https://programmers.co.kr/job_positions/6669
+119,[PMC/Isegye 프로젝트] 클라이언트 프로그래머,5민랩,"모바일 게임, 게임 클라이언트",23년 05월 31일 17:24까지,정규직,,"서울 마포구 양화로 19, (합정동) , 8층 5민랩",,"['iOS', 'Android', 'Unity', 'Unreal Engine', 'C++']",https://programmers.co.kr/job_positions/6668
+120,벡엔드 엔지니어,룩코,"서버/백엔드, 웹 풀스택",상시 채용,정규직,,"서울 강남구 테헤란로43길 18, (역삼동)  6층",,"['Git', 'Database', 'FastAPI', 'Go', 'Redis']",https://programmers.co.kr/job_positions/12622
+121,플랫폼 개발자,샘표식품,"서버/백엔드, 웹 풀스택, ERP",상시 채용,정규직,3000 ~ 9000 만원,"서울 중구 충무로 2, 8층 (필동1가, 매일경제빌딩) ",,"['Java', 'Spring', 'HTML', 'JavaScript', 'CSS', 'jQuery', 'C#', 'Python']",https://programmers.co.kr/job_positions/3766
+122,CTI 솔루션 DATA 개발 및 유지보수,넥서스커뮤니티,서버/백엔드,상시 채용,정규직,,"서울 영등포구 여의대로 108, (여의도동) 파크원 타워2 19F",,"['MariaDB', 'Oracle', 'Python', 'Big Data', 'NoSQL', 'Linux']",https://programmers.co.kr/job_positions/17767
+123,"시스템 개발자 - 데이터분석 플랫폼 구축/운영,Saas/Cloud",골든플래닛,"데이터 엔지니어링, 시스템/네트워크, 개발PM",상시 채용,정규직,8000 ~ 8000 만원,"서울시 강남구 언주로 535, 골든플래닛 타워(자사 사옥)",,"['Spring', 'Java', 'Google Cloud Platform', 'Data Analysys', 'Big Data', 'Element UI', 'GCP(Google Cloud Platform)', 'SQL', 'Python', 'MySQL', 'Docker', 'C#']",https://programmers.co.kr/job_positions/17763
+124,백엔드(Node.js) 개발자,클라썸,서버/백엔드,상시 채용,정규직,,"대한민국 서울특별시 강남구 테헤란로2길 27, 14층",,"['TypeScript', 'NestJS']",https://programmers.co.kr/job_positions/15892
+125,앱(React Native) 개발자,클라썸,"프론트엔드, 안드로이드, iOS",상시 채용,정규직,,"대한민국 서울특별시 강남구 테헤란로2길 27, 14층",,"['TypeScript', 'Redux.js', 'React Native']",https://programmers.co.kr/job_positions/15891
+126,Backend Developer(전문연구요원),웰트,서버/백엔드,상시 채용,정규직,,"서울 서초구 강남대로 311, (서초동) 14층",,"['Python', 'SQL', 'Tableau', 'Scikit-Learn', 'Tensorflow', 'Apache Hadoop', 'Apache Spark', 'Go']",https://programmers.co.kr/job_positions/17759
+127,Cloud 운영 개발,지니언스,데브옵스,상시 채용,정규직,3400 ~ 5000 만원,경기도 안양시 동안구 벌말로 66 평촌역 하이필드 지식산업센터 A동 12층,,"['Kubernetes', 'Shell Script', 'Azure', 'Docker', 'Terraform']",https://programmers.co.kr/job_positions/17741
+128,[IoTrust] 디센트 프론트엔드 개발,아이오트러스트,프론트엔드,상시 채용,정규직,,"서울시 강남구 선릉로 747, 7층",,"['Node.js', 'web3.js', 'Babel', 'Webpack', 'Vue.js', 'GitHub', 'Yarn', 'Storybook']",https://programmers.co.kr/job_positions/13574
+129,가상발전소 플랫폼 데이터과학자(인공지능 개발자),에이치에너지,"머신러닝, 인공지능(AI)",23년 05월 31일 15:25까지,정규직,5000 ~ 8000 만원,"서울 강남구 학동로 402, (삼성동) ",,"['Python', 'Machine Learning', 'Deep Learning']",https://programmers.co.kr/job_positions/16845
+130,Hapakristin US Frontend 팀장급,피피비스튜디오스,"프론트엔드, 웹 풀스택, 개발PM",상시 채용,정규직,,"서울특별시 성동구 성수일로 19, 6층 (성수동1가) ",,"['Axios', 'REST API', 'Webpack', 'Vue.js', 'Linux', 'GitHub', 'JavaScript']",https://programmers.co.kr/job_positions/17693
+131,어드민 전문가,피피비스튜디오스,"데브옵스, ERP",상시 채용,정규직,,"서울특별시 성동구 성수일로 19, 6층 (성수동1가) ",,"['Ruby on Rails', 'Vue.js', 'JavaScript', 'REST API', 'Ajax', 'AWS EC2', 'AWS S3', 'AWS Amplify', 'AWS Lambda', 'Node.js', 'Vuetify.js']",https://programmers.co.kr/job_positions/17694
+132,Backend 개발자,피피비스튜디오스,서버/백엔드,상시 채용,정규직,,"서울특별시 성동구 성수일로 19, 6층 (성수동1가) ",,"['Ruby on Rails', 'AWS RDS', 'AWS S3', 'AWS EC2', 'ExpressJS', 'Docker', 'Linux', 'JavaScript', 'GitHub', 'Node.js']",https://programmers.co.kr/job_positions/12965
+133,App 개발자,피피비스튜디오스,"안드로이드, iOS",상시 채용,정규직,,"서울특별시 성동구 성수일로 19, 6층 (성수동1가) ",,"['Android', 'REST API', 'GitHub', 'flutter', 'Firebase']",https://programmers.co.kr/job_positions/8930
+134,결제관리,피피비스튜디오스,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"서울특별시 성동구 성수일로 19, 6층 (성수동1가) ",,"['Django', 'Angular', 'ReactJS', 'AWS Lambda', 'AWS Amplify', 'AWS S3', 'AWS EC2', 'PostgreSQL', 'Docker', 'Node.js', 'Ruby on Rails', 'Vuetify.js', 'Vue.js', 'JavaScript']",https://programmers.co.kr/job_positions/17696
+135,로블록스 개발자,111퍼센트,모바일 게임,상시 채용,정규직,,"서울특별시 강남구 테헤란로 152, 33층(역삼동, 강남파이낸스센터) ",,"['C++', 'C']",https://programmers.co.kr/job_positions/17707
+136,SW 결제 단말기 개발자 ,블루버드,"안드로이드, 임베디드 소프트웨어, 응용 프로그램",상시 채용,정규직,4000 ~ 8000 만원,"서울 강남구 일원로 115, (일원동), 삼성생명일원역빌딩 A동 3층 ",,"['C', 'C++', 'Java', 'Android', 'Linux', 'Embedded System', 'SQL']",https://programmers.co.kr/job_positions/12920
+137,[산업기능요원/보충역] 유니티 클라이언트 개발자,게임듀오,"모바일 게임, 게임 클라이언트",상시 채용,계약직(1년 이상),,"경기 성남시 수정구 창업로 43, (시흥동) ",,"['Unity', 'C#', 'GitHub', 'Git']",https://programmers.co.kr/job_positions/17388
+138,크롤링 및 자동화 관리,피피비스튜디오스,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"서울특별시 성동구 성수일로 19, 6층 (성수동1가) ",,"['JavaScript', 'Vue.js', 'Vuetify.js', 'Ruby on Rails', 'Node.js', 'Docker', 'PostgreSQL', 'AWS EC2', 'AWS S3', 'AWS Amplify', 'AWS Lambda', 'ReactJS', 'Angular', 'Django']",https://programmers.co.kr/job_positions/17695
+139,"Senior, Backend engineer (SCM)",Coupang,"서버/백엔드, 웹 풀스택, 데이터 엔지니어링",상시 채용,정규직,,"서울특별시 송파구 송파대로 570, 18층(신천동)",,"['Java', 'Spring', 'Python']",https://programmers.co.kr/job_positions/4023
+140,백엔드 엔지니어,리드넘버,"서버/백엔드, DBA, 데브옵스",상시 채용,정규직,4000 ~ 15000 만원,"서울 관악구 남부순환로 2072, (남현동) ",,"['Git', 'Spring', 'Redis']",https://programmers.co.kr/job_positions/15463
+141,카트라이더 드리프트 유닛 플레이 프로그래머,니트로 스튜디오,게임 클라이언트,상시 채용,정규직,,"서울 강남구 테헤란로 412, (대치동) 6층 니트로 스튜디오",,"['C', 'C++']",https://programmers.co.kr/job_positions/7034
+142,획득기술 개발자,지엠디소프트,"안드로이드, iOS, 인터넷 보안",상시 채용,정규직,3800 ~ 8000 만원,"경기 성남시 분당구 판교역로 235, (삼평동) H스퀘어 N동 2층",,"['C', 'Java', 'Python', 'ARM', 'IDA(Interactive DisAssembler)', 'Android', 'iOS', 'JIRA']",https://programmers.co.kr/job_positions/16655
+143,컴퓨터 비전 개발자,시터스,"머신러닝, 인공지능(AI), 응용 프로그램",상시 채용,정규직,3400 ~ 8000 만원,"서울 금천구 벚꽃로 278, (가산동) ",,"['C++', 'Machine Vision', 'Python', 'Deep Learning']",https://programmers.co.kr/job_positions/13741
+144,AI Scientist / 머신러닝 개발자,제네시스랩,"머신러닝, 인공지능(AI)",상시 채용,정규직,,"서울 중구 명동길 73, (명동1가) 페이지 명동 5층",,"['PyTorch', 'Python', 'Tensorflow']",https://programmers.co.kr/job_positions/16666
+145,AI 엔지니어,룩코,"머신러닝, 인공지능(AI)",상시 채용,정규직,5000 ~ 10000 만원,"서울 강남구 테헤란로43길 18, (역삼동)  6층",,"['Python', 'PyTorch']",https://programmers.co.kr/job_positions/12503
+146,기술지원팀 게임 클라이언트 개발자 (Unity)-전문연구요원,쿡앱스,"안드로이드, 모바일 게임, 게임 클라이언트",상시 채용,정규직,5000 ~ 8000 만원,경기도 성남시 분당구 대왕판교로660 유스페이스1B동 8층 쿡앱스,,"['Unity', 'C++', 'C#']",https://programmers.co.kr/job_positions/3872
+147,[산업기능요원] 웹 프론트엔드 개발자,와이오엘오,프론트엔드,상시 채용,정규직,,"서울 마포구 월드컵로10길 5-6, (서교동) 1,2층",,"['ReactJS', 'JavaScript', 'CSS', 'Vue.js']",https://programmers.co.kr/job_positions/17424
+148,웹 프론트엔드 개발자,와이오엘오,프론트엔드,상시 채용,정규직,3000 ~ 6000 만원,"서울 마포구 월드컵로10길 5-6, (서교동) 1,2층",,"['Vue.js', 'CSS', 'JavaScript', 'ReactJS']",https://programmers.co.kr/job_positions/15971
+149,(주)투게더아트 모바일 앱 개발자,투게더아트,"안드로이드, iOS",상시 채용,정규직,,"서울특별시 강남구 봉은사로 429 위즈빌딩, 4층(삼성동,위즈빌딩)",,"['flutter', 'React Native', 'Android', 'iOS']",https://programmers.co.kr/job_positions/17380
+150,의료용 증강현실(AR) 소프트웨어 개발,SKIA,"응용 프로그램, VR/AR/3D, 그래픽스",상시 채용,정규직,3400 ~ 6000 만원,"서울 구로구 디지털로 288, (구로동) 1502호",,"['C#', 'Swift', 'C++', 'Unity', 'iOS', 'ASP.NET', 'HLSL', 'OOP', 'Git', 'Docker']",https://programmers.co.kr/job_positions/16315
+151,"AR, Image processing 전문 연구원",SKIA,"머신러닝, 인공지능(AI), 로보틱스 미들웨어",상시 채용,정규직,3400 ~ 6000 만원,"서울 구로구 디지털로 288, (구로동) 1502호",,"['OpenCV', 'Machine Learning', 'C++', 'Python', 'Image Processing', 'SLAM', 'AR']",https://programmers.co.kr/job_positions/8794
+152,파이썬 백엔드 개발자,한국클라우드,"서버/백엔드, 웹 풀스택, 인공지능(AI)",상시 채용,정규직,3000 ~ 6000 만원,"서울 금천구 서부샛길 606, (가산동) B동 432호",,"['Git', 'NLP', 'Python', 'PyTorch', 'ReactJS', 'Redis', 'Docker']",https://programmers.co.kr/job_positions/17353
+153,"백엔드 엔지니어 (Backend Engineer / Python, Django)",뮤즈라이브,서버/백엔드,상시 채용,정규직,,"서울특별시 마포구 월드컵북로56길 19, 10층 뮤즈라이브(상암동, 드림타워)",,"['Django', 'Python', 'DRF(Django REST framework)', 'Docker']",https://programmers.co.kr/job_positions/12168
+154,서버 프로그래머,크레이브몹,"서버/백엔드, 모바일 게임, 게임 서버",상시 채용,정규직,4000 ~ 10000 만원,"서울 성동구 왕십리로10길 6, (성수동1가) 1208-1212",,"['Redis', 'MongoDB', 'JavaScript', 'Node.js', 'AWS EC2', 'ReactJS']",https://programmers.co.kr/job_positions/17335
+155,자바스크립트 BackEnd 개발자,슈프리마,"서버/백엔드, 웹 풀스택",상시 채용,정규직,,"경기도 성남시 분당구 정자일로 248, 17층 5호(정자동, 파크뷰오피스타워) ",,"['Node.js', 'JavaScript', 'ReactJS']",https://programmers.co.kr/job_positions/17276
+156,XaaS/SDx Solution Archiect,엔에이치엔크로센트,"웹 풀스택, DBA, 개발PM",상시 채용,정규직,,"서울시 서초구 강남대로43길 6, 2,3층",,"['DBA(Database administration)', 'OpenStack', 'Azure']",https://programmers.co.kr/job_positions/17089
+157,Performance Management,엔에이치엔크로센트,"웹 풀스택, 시스템 소프트웨어, QA",상시 채용,정규직,,"서울시 서초구 강남대로43길 6, 2,3층",,,https://programmers.co.kr/job_positions/17091
+158,Quality Control & Assuarance,엔에이치엔크로센트,"웹 풀스택, 시스템 소프트웨어, QA",상시 채용,정규직,,"서울시 서초구 강남대로43길 6, 2,3층",,"['OpenStack', 'Linux', 'Python']",https://programmers.co.kr/job_positions/17092
+159,Portal Devleopment,엔에이치엔크로센트,"웹 풀스택, 시스템 소프트웨어, 임베디드 소프트웨어",상시 채용,정규직,,"서울시 서초구 강남대로43길 6, 2,3층",,"['ReactJS', 'Angular', 'Spring Boot']",https://programmers.co.kr/job_positions/17094
+160,Middelware Development,엔에이치엔크로센트,"웹 풀스택, 데이터 엔지니어링, 임베디드 소프트웨어",상시 채용,정규직,,"서울시 서초구 강남대로43길 6, 2,3층",,"['OpenStack', 'Spring Boot', 'Python']",https://programmers.co.kr/job_positions/17095
+161,Terminal Device/GuestOS Development,엔에이치엔크로센트,"웹 풀스택, 데이터 엔지니어링, 시스템 소프트웨어",상시 채용,정규직,,"서울시 서초구 강남대로43길 6, 2,3층",,"['C++', 'Python', 'Linux']",https://programmers.co.kr/job_positions/17097
+162,3D AI Researcher(박사급),리콘랩스,"머신러닝, 인공지능(AI)",상시 채용,정규직,,서울 강남구 논현동 111 ,,"['Azure Computer Vision', 'Deep Learning', 'Machine Learning']",https://programmers.co.kr/job_positions/11912
+163,프론트엔드 개발자,알로카도스,프론트엔드,상시 채용,정규직,4000 ~ 8000 만원,"서울 강남구 테헤란로 503, (삼성동) 패스트파이브 삼성3호점",,"['ReactJS', 'TypeScript']",https://programmers.co.kr/job_positions/16044
+164,프론트엔드 개발자,피유엠피,프론트엔드,상시 채용,정규직,,"서울 강남구 도산대로90길 3, (청담동) , 3층",,,https://programmers.co.kr/job_positions/17067
+165,프론트엔드개발자 모집(대구),피유엠피,프론트엔드,상시 채용,정규직,3500 ~ 4500 만원,"서울 강남구 도산대로90길 3, (청담동) , 3층",,"['JavaScript', 'ReactJS']",https://programmers.co.kr/job_positions/17063
+166,플랫폼전략 서버(Back-end) 개발자,코콤,"서버/백엔드, 데브옵스",상시 채용,정규직,3000 ~ 6000 만원,서울시 강서구 마곡중앙8로5길 16,,"['Spring', 'Spring Boot', 'AWS EC2', 'AWS S3', 'REST API']",https://programmers.co.kr/job_positions/17005
+167,[위메이드XR] 서버 프로그래머,위메이드,"모바일 게임, 게임 서버",23년 05월 31일 23:59까지,정규직,,"경기도 성남시 대왕판교로 644번길 49, 위메이드타워",,['Unreal Engine'],https://programmers.co.kr/job_positions/14416
+168,플랫폼전략 모바일 iOS App개발,코콤,iOS,상시 채용,정규직,3000 ~ 6000 만원,서울시 강서구 마곡중앙8로5길 16,,"['iOS', 'Swift', 'REST API']",https://programmers.co.kr/job_positions/17045
+169,"프론트엔드, 백엔드 개발자",스매치코퍼레이션,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"서울 서초구 법원로4길 11-6, (서초동) ",,"['TypeScript', 'NestJS', 'Python', 'FastAPI', 'ReactJS', 'Next.js', 'Redux.js', 'Tailwind CSS', 'TypeORM', 'Prisma', 'PostgreSQL']",https://programmers.co.kr/job_positions/16992
+170,"[전문연구요원] Software Engineer, Extended Reality",버킷플레이스(오늘의집),"안드로이드, iOS",상시 채용,정규직,,"서울특별시 서초구 서초대로74길 4, 25,27층(서초동, 삼성생명서초타워)",,,https://programmers.co.kr/job_positions/13107
+171,WebUI SW(프론트/백엔드) 개발자,랑데뷰,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,3500 ~ 6000 만원,"서울 서초구 매헌로8길 39, (양재동) D동 306호",,"['jQuery', 'JavaScript', 'Ajax', 'WebGL', 'PHP', 'HTML', 'MySQL', 'Node.js', 'Git', 'Docker', 'CSS', 'ReactJS', 'Spring']",https://programmers.co.kr/job_positions/16979
+172,ROS 기반의 플랫폼 SW 개발자,랑데뷰,"인공지능(AI), 시스템 소프트웨어, 로보틱스 미들웨어",상시 채용,정규직,4000 ~ 6000 만원,"서울 서초구 매헌로8길 39, (양재동) D동 306호",,"['ROS', 'Ubuntu', 'Docker', 'C++', 'Python', 'Git', 'OpenCV']",https://programmers.co.kr/job_positions/16978
+173," [전문연구요원] Software Engineer, Android",버킷플레이스(오늘의집),안드로이드,상시 채용,정규직,,"서울특별시 서초구 서초대로74길 4, 25,27층(서초동, 삼성생명서초타워)",,,https://programmers.co.kr/job_positions/11692
+174,블록체인 엔지니어,알로카도스,블록체인,상시 채용,정규직,4000 ~ 9000 만원,"서울 강남구 테헤란로 503, (삼성동) 패스트파이브 삼성3호점",,['Solidity'],https://programmers.co.kr/job_positions/16048
+175,소프트웨어 엔지니어,에임,"서버/백엔드, 프론트엔드, 데브옵스",상시 채용,정규직,4500 ~ 10000 만원,서울 서초구 강남대로 373 위워크 강남역 1호점 (서초홍우빌딩 12층),,,https://programmers.co.kr/job_positions/15610
+176,클라우드 / AI R&D 연구원 (정부연구과제 전담(전문연구요원 가능)),오케스트로,인공지능(AI),상시 채용,정규직,,"서울특별시 영등포구 여의대로 108, 43층(여의도동, 파크원타워2)",,"['Python', 'R', 'SQL']",https://programmers.co.kr/job_positions/15223
+177,[현대자동차 사내벤처 (주)피트릭스] 유니티(unity 3D) 개발자,피트릭스,"프론트엔드, 게임 클라이언트, VR/AR/3D",상시 채용,정규직,,"서울 강남구 역삼로17길 10, (역삼동) 부강빌딩 1층 피트릭스",,"['C#', 'C++', 'Unity']",https://programmers.co.kr/job_positions/6258
+178,CSMS(Cyber Security Management System) 구축,그리드위즈,"시스템/네트워크, 시스템 소프트웨어, 인터넷 보안",상시 채용,정규직,,"경기 성남시 수정구 대왕판교로 907, (시흥동) 그리드위즈 블루동",,"['Linux', 'Embedded System', 'C++', 'C']",https://programmers.co.kr/job_positions/16772
+179,소프트웨어 스택 개발,그리드위즈,"데이터 엔지니어링, 시스템/네트워크, 임베디드 소프트웨어",상시 채용,정규직,,"경기 성남시 수정구 대왕판교로 907, (시흥동) 그리드위즈 블루동",,"['C', 'C++', 'Embedded System', 'Linux']",https://programmers.co.kr/job_positions/16757
+180,[바람의나라 연] 서버 프로그래머,슈퍼캣,"모바일 게임, 게임 서버",상시 채용,정규직,,"경기 성남시 분당구 분당로 55, (서현동) 퍼스트타워 12, 13F",,,https://programmers.co.kr/job_positions/9879
+181,[바람의나라 연] 전투컨텐츠 프로그래머,슈퍼캣,"모바일 게임, 게임 클라이언트, 게임 서버",상시 채용,정규직,,"경기 성남시 분당구 분당로 55, (서현동) 퍼스트타워 12, 13F",,,https://programmers.co.kr/job_positions/9877
+182,모바일 Android/ iOS App 개발,코콤,"안드로이드, iOS",상시 채용,정규직,,서울시 강서구 마곡중앙8로5길 16,,"['iOS', 'Android']",https://programmers.co.kr/job_positions/15806
+183,포렌식 제품개발자,지엠디소프트,"인공지능(AI), 응용 프로그램, VR/AR/3D",상시 채용,정규직,3800 ~ 8000 만원,"경기 성남시 분당구 판교역로 235, (삼평동) H스퀘어 N동 2층",,"['WPF', 'Windows', 'FFmpeg', 'OpenCV', 'JIRA']",https://programmers.co.kr/job_positions/16660
+184,"[인포보스]솔루션개발팀(Front-end, Back-end / 산업기능요원, 전문연구요원 가능)",인포보스,"서버/백엔드, 프론트엔드, 응용 프로그램",상시 채용,정규직,,서울시 강남구 삼성동 1-4번지 해운빌딩 301호,,"['Python', 'MySQL', 'PHP', 'HTML', 'CSS', 'JavaScript', 'C', 'Java']",https://programmers.co.kr/job_positions/12425
+185,Flutter 앱 개발자 (Android/iOS),비디오몬스터,"안드로이드, iOS",상시 채용,정규직,5000 ~ 7000 만원,"서울 마포구 백범로31길 21, (공덕동) 본관 707호",,"['flutter', 'Dart', 'iOS', 'Swift', 'Java', 'Android', 'Kotlin']",https://programmers.co.kr/job_positions/9869
+186,제조산업을 위한 인공지능 응용 소프트웨어 엔지니어,인텔리즈,"서버/백엔드, 프론트엔드, 머신러닝",상시 채용,정규직,3400 ~ 9000 만원,"서울 성동구 성수일로 89, (성수동1가) ",,"['C++', 'Python', 'Java', 'C#', 'Node.js', 'dlib', 'PyTorch', 'Deep Learning']",https://programmers.co.kr/job_positions/13001
+187,"타입스크립트, 노드제이에스, 그래프큐엘, 마이에스큐엘 개발자(typescript, nodejs, graphQL, MySQL)",오너클랜,"서버/백엔드, 프론트엔드",상시 채용,정규직,,"서울 서초구 강남대로99길 23-8, (잠원동) ",,"['Java', 'MySQL', 'Node.js', 'PHP']",https://programmers.co.kr/job_positions/11056
+188,Data Platform Software Engineer (Senior/Junior),데브시스터즈,데이터 엔지니어링,상시 채용,정규직,,"서울 강남구 선릉로 832, (청담동) ",,"['Python', 'Scala', 'Java', 'Go']",https://programmers.co.kr/job_positions/10133
+189,"AI(딥러닝) 이미지 처리 개발 및 연구(Python, PyTorch, Ubuntu, AI)",어밸브,"머신러닝, 인공지능(AI), 시스템/네트워크",상시 채용,정규직,4000 ~ 10000 만원,"서울 서초구 반포대로9길 7, (서초동) 3층 어밸브",,,https://programmers.co.kr/job_positions/15515
+190,레이더 신호처리 및 알고리즘 S/W 개발직,루미르,"시스템/네트워크, 시스템 소프트웨어, 웹 퍼블리싱",상시 채용,정규직,,"경기 용인시 수지구 신수로 767, (동천동) A동 1103호",,"['C++', 'Python', 'MATLAB', 'C', 'Windows']",https://programmers.co.kr/job_positions/16022
+191,PC Application Software 개발,루미르,"서버/백엔드, 시스템 소프트웨어, 응용 프로그램",상시 채용,정규직,4000 ~ 7000 만원,"경기 용인시 수지구 신수로 767, (동천동) A동 621호",,"['C', 'C++', 'C#']",https://programmers.co.kr/job_positions/9843
+192,Embedded software 개발,루미르,"시스템 소프트웨어, 임베디드 소프트웨어, 응용 프로그램",상시 채용,정규직,4000 ~ 7000 만원,"경기 용인시 수지구 신수로 767, (동천동) A동 621호",,"['RTOS', 'C', 'C++']",https://programmers.co.kr/job_positions/9962
+193,C++ 개발자,스마트캐스트,"프론트엔드, 시스템 소프트웨어, 임베디드 소프트웨어",상시 채용,정규직,3100 ~ 8000 만원,"경기 고양시 일산동구 경의로 235, (백석동) KT 백석빌딩 2층 (주)스마트캐스트",,"['Qt', 'C', 'Git', 'MySQL', 'C++', 'OpenGL', 'SQLite', 'Embedded System']",https://programmers.co.kr/job_positions/13537
+194,"커머스 플랫폼 개발자 (백엔드, Node.js)",퍼즐벤처스,서버/백엔드,상시 채용,정규직,3600 ~ 5000 만원,"서울 송파구 백제고분로27길 24-5, (삼전동) ",,"['Node.js', 'MySQL', 'Git', 'AWS RDS', 'AWS EC2', 'JavaScript']",https://programmers.co.kr/job_positions/11599
+195,백엔드 개발자,가인지캠퍼스,서버/백엔드,상시 채용,정규직,,"서울 마포구 성지길 39, (합정동) 3층",,"['TypeScript', 'GraphQL', 'NestJS', 'MySQL', 'TypeORM', 'React Native']",https://programmers.co.kr/job_positions/15956
+196,프론트엔드 개발자,가인지캠퍼스,프론트엔드,상시 채용,정규직,,"서울 마포구 성지길 39, (합정동) 3층",,"['TypeScript', 'GraphQL', 'React Native', 'Next.js', 'MySQL', 'TypeORM']",https://programmers.co.kr/job_positions/15955
+197,AI 인공지능 개발자,누아,,상시 채용,정규직,,"서울 종로구 청계천로 85, (관철동) 10층",,,https://programmers.co.kr/job_positions/15927
+198,웹(Web) 백엔드 개발자,누아,서버/백엔드,상시 채용,정규직,,"서울 종로구 청계천로 85, (관철동) 10층",,,https://programmers.co.kr/job_positions/15930
+199,안드로이드 개발자,누아,,상시 채용,정규직,,"서울 종로구 청계천로 85, (관철동) 10층",,,https://programmers.co.kr/job_positions/15931
+200,웹(Web) 프론트엔드 개발자,누아,,상시 채용,정규직,,"서울 종로구 청계천로 85, (관철동) 10층",,,https://programmers.co.kr/job_positions/15932
+201,백엔드 개발,아이비베리,"서버/백엔드, 웹 풀스택",상시 채용,정규직,3600 ~ 9200 만원,서울 구로구 디지털로27길 36(구로디지털단지),,"['Python', 'Amazon Web Services(AWS)', 'Git']",https://programmers.co.kr/job_positions/4549
+202,안드로이드 임베디드 단말기 소프트웨어 개발자,코콤,"안드로이드, iOS",상시 채용,정규직,,서울시 강서구 마곡중앙8로5길 16,,,https://programmers.co.kr/job_positions/15805
+203,SAP PP 모듈 운영,아주큐엠에스,ERP,상시 채용,정규직,,"서울 서초구 강남대로 351, (서초동)  청남빌딩 8층 ",,,https://programmers.co.kr/job_positions/15597
+204,비전시스템 S/W개발자,코비스테크놀로지,시스템 소프트웨어,상시 채용,정규직,3200 ~ 6000 만원,"경기 안양시 동안구 엘에스로91번길 16-39, (호계동) 902호",,"['C#', 'C', 'C++']",https://programmers.co.kr/job_positions/15576
+205,계측기기 F/W 개발자,네오시스코리아,임베디드 소프트웨어,상시 채용,정규직,3000 ~ 4000 만원,"대전 유성구 엑스포로339번길 10-11, (문지동) ",,['C'],https://programmers.co.kr/job_positions/15523
+206,(Back-End) 소프트웨어 개발자 ,프래프,"프론트엔드, 웹 풀스택, 안드로이드",상시 채용,정규직,3500 ~ 6000 만원,"서울 강남구 테헤란로 425, (삼성동) 11층",,"['React Native', 'ReactJS', 'JavaScript']",https://programmers.co.kr/job_positions/8702
+207,(Front-End) 소프트웨어 개발자 ,프래프,"프론트엔드, 웹 풀스택, 안드로이드",상시 채용,정규직,3000 ~ 6000 만원,"서울 강남구 테헤란로 425, (삼성동) 11층",,"['JavaScript', 'ReactJS', 'React Native']",https://programmers.co.kr/job_positions/8701
+208,"수옵틱스(광학기기제조기업)_전자 H/W, F/W설계 연구원(서울근무)",수옵틱스,"임베디드 소프트웨어, 개발PM",상시 채용,정규직,,"서울 구로구 디지털로 242, (구로동) ",,,https://programmers.co.kr/job_positions/15478
+209,Backend Developer (스토어 백엔드 개발자),씨디에프브로스,서버/백엔드,상시 채용,정규직,5000 ~ 10000 만원,"서울시 강남구 테헤란로87길 36, 도심공항타워 24층, 2401호 씨디에프브로스",,"['TypeScript', 'Node.js', 'NestJS', 'TypeORM', 'MySQL']",https://programmers.co.kr/job_positions/11174
+210,Agent Developer (C/C++ 개발자),쏘마,"시스템 소프트웨어, 응용 프로그램",상시 채용,정규직,,대한민국 경기도 성남시 분당구 삼평동 판교로 255번길 24 아이엔씨 빌딩 4층 주식회사 쏘마,,['C++'],https://programmers.co.kr/job_positions/9708
+211,Junior Backend Engineer ,트릿지,"서버/백엔드, 웹 풀스택, 데이터 엔지니어링",상시 채용,정규직,,"서울특별시 서초구 방배로 226, 2, 4, 5, 6, 별관2층(방배동, 넥센강남타워)",,"['MySQL', 'Node.js', 'Docker', 'Django', 'Python']",https://programmers.co.kr/job_positions/15444
+212,Software Engineer (전문연구요원),클로버추얼패션,"시스템 소프트웨어, 응용 프로그램",상시 채용,정규직,,서울특별시 강남구 도산대로8길 17-4(논현동),,"['C', 'C++']",https://programmers.co.kr/job_positions/9508
+213,시니어 백엔드 개발자,Riiid!,서버/백엔드,상시 채용,정규직,,,,"['Spring Boot', 'Kotlin']",https://programmers.co.kr/job_positions/15374
+214,QA 엔지니어,아비커스,QA,상시 채용,정규직,5000 ~ 10000 만원,"서울 강남구 논현로85길 70, (역삼동) 11층",,,https://programmers.co.kr/job_positions/13867
+215,비전인지 엔지니어,아비커스,,상시 채용,정규직,5000 ~ 10000 만원,"서울 강남구 논현로85길 70, (역삼동) 11층",,,https://programmers.co.kr/job_positions/13862
+216,자율운항 S/W  통합 엔지니어,아비커스,,상시 채용,정규직,5000 ~ 10000 만원,"서울 강남구 논현로85길 70, (역삼동) 11층",,,https://programmers.co.kr/job_positions/13861
+217,Computer Vision Engineer,아비커스,"서버/백엔드, 머신러닝, 시스템/네트워크",상시 채용,정규직,5000 ~ 10000 만원,"서울 강남구 논현로85길 70, (역삼동) 11층",,"['OpenCV', 'C++', 'Machine Vision', 'Tensorflow']",https://programmers.co.kr/job_positions/4821
+218,Machine Learning Engineer,아비커스,"머신러닝, 인공지능(AI), 데이터 엔지니어링",상시 채용,정규직,5000 ~ 10000 만원,"서울 강남구 논현로85길 70, (역삼동) 11층",,"['Python', 'Machine Learning', 'Deep Learning', 'Tensorflow', 'Azure', 'PyTorch', 'Keras']",https://programmers.co.kr/job_positions/4871
+219,백엔드 엔지니어,아비커스,"서버/백엔드, 웹 풀스택, 안드로이드",상시 채용,정규직,5000 ~ 10000 만원,"서울 강남구 논현로85길 70, (역삼동) 11층",,,https://programmers.co.kr/job_positions/13865
+220,웹 개발자,멕헬스케어,"서버/백엔드, 시스템/네트워크, 크로스 플랫폼",상시 채용,정규직,3000 ~ 6000 만원,"서울 마포구 모래내로7길 12, (성산동) ",,"['MySQL', 'PHP', 'Python']",https://programmers.co.kr/job_positions/15219
+221,플랫폼 사업실_ 자사솔루션 구축 및 유지보수 개발자,인젠트,"프론트엔드, QA, 응용 프로그램",상시 채용,정규직,,"서울 영등포구 국제금융로2길 36, (여의도동) 유화증권빌딩 8,9층",,"['Java', 'SQL', 'Linux']",https://programmers.co.kr/job_positions/11755
+222,플랫폼 개발자,해긴,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"서울 구로구 경인로 662, (신도림동, 디큐브시티) 오피스동 39층 주식회사 해긴",,"['MySQL', 'Redis', 'Vue.js', 'C#', '.NET']",https://programmers.co.kr/job_positions/9016
+223,TA (Technical Artist) / VR게임,데브즈유나이티드게임즈,"VR/AR/3D, 그래픽스",상시 채용,정규직,,"서울 강남구 학동로 105, (논현동) ",,,https://programmers.co.kr/job_positions/14829
+224,3D 모델러 / VR게임,데브즈유나이티드게임즈,"VR/AR/3D, 그래픽스",상시 채용,정규직,,"서울 강남구 학동로 105, (논현동) ",,['3Ds Max'],https://programmers.co.kr/job_positions/14827
+225,Junior Data Engineer,트릿지,"서버/백엔드, 데이터 엔지니어링",상시 채용,정규직,4000 ~ 8000 만원,"서울특별시 서초구 방배로 226, 2, 4, 5, 6, 별관2층(방배동, 넥센강남타워)",,"['Python', 'Django', 'Apache Hadoop', 'Apache Kafka', 'PostgreSQL', 'Node.js']",https://programmers.co.kr/job_positions/14660
+226,Data Acquisition Engineer,트릿지,"서버/백엔드, 데이터 엔지니어링",상시 채용,정규직,,"서울특별시 서초구 방배로 226, 2, 4, 5, 6, 별관2층(방배동, 넥센강남타워)",,"['Python', 'Node.js', 'Django', 'Docker']",https://programmers.co.kr/job_positions/14657
+227,".NET 기반 개발, 네트워크 프로그램 개발, C/C++/Java 개발자",알티베이스,"서버/백엔드, 시스템/네트워크, 시스템 소프트웨어",상시 채용,정규직,3000 ~ 6000 만원,"서울 구로구 디지털로 306, (구로동) 대륭포스트타워2차 10층 1012호",,"['C', 'C#', 'Java']",https://programmers.co.kr/job_positions/14328
+228,QA Engineer(QA 엔지니어)(병역특례 가능),AB180,QA,상시 채용,정규직,,"서울특별시 서초구 강남대로61길 17, 3층(서초동, 밀라텔 쉐르빌)",,"['Python', 'Kotlin', 'Appium', 'Selenium', 'Cucumber', 'AWS Lambda', 'AWS S3']",https://programmers.co.kr/job_positions/13604
+229,[토스뱅크] Server Developer (Internal Product),비바리퍼블리카(토스),"서버/백엔드, 시스템 소프트웨어",상시 채용,정규직,,"서울특별시 강남구 테헤란로 131, 13층(역삼동, 한국지식재산센터))",,"['Apache Kafka', 'Jenkins', 'Spinnaker', 'Docker', 'Git', 'Consul', 'Nginx', 'HAProxy', 'Kubernetes', 'Apache ZooKeeper', 'Memcached', 'Redis', 'Apache Hadoop', 'MongoDB', 'MySQL', 'Hibernate', 'JPA(Java Persistent API)', 'Spring Cloud', 'Spring Boot', 'Spring', 'Netty', 'Gradle', 'Java', 'Kotlin']",https://programmers.co.kr/job_positions/14301
+230,소프트웨어 개발자,핀그램,"머신러닝, 인공지능(AI)",상시 채용,정규직,4500 ~ 10000 만원,"경기 용인시 기흥구 흥덕1로 13, (영덕동) 흥덕IT밸리 타워동 2207호 ",,"['iOS', 'Android', 'Java', 'Python']",https://programmers.co.kr/job_positions/8411
+231,전자제어 개발자,태하,"시스템/네트워크, 시스템 소프트웨어, 임베디드 소프트웨어",상시 채용,정규직,3000 ~ 8000 만원,경기도 남양주시 와부읍 수레로661번안길3,,"['C#', 'C']",https://programmers.co.kr/job_positions/14308
+232,[토스뱅크] Server Developer (Platform),비바리퍼블리카(토스),"서버/백엔드, 시스템 소프트웨어",상시 채용,정규직,,"서울특별시 강남구 테헤란로 131, 13층(역삼동, 한국지식재산센터))",,"['Apache Kafka', 'Jenkins', 'Spinnaker', 'Docker', 'Git', 'Consul', 'Nginx', 'HAProxy', 'Kubernetes', 'Apache ZooKeeper', 'Memcached', 'Redis', 'Apache Hadoop', 'MongoDB', 'MySQL', 'Hibernate', 'JPA(Java Persistent API)', 'Spring Cloud', 'Spring Boot', 'Spring', 'Netty', 'Gradle', 'Java', 'Kotlin']",https://programmers.co.kr/job_positions/14302
+233,[토스뱅크] Server Developer (Product),비바리퍼블리카(토스),"서버/백엔드, 시스템 소프트웨어",상시 채용,정규직,,"서울특별시 강남구 테헤란로 131, 13층(역삼동, 한국지식재산센터))",,"['Kotlin', 'Java', 'Gradle', 'Netty', 'Spring', 'Spring Boot', 'Spring Cloud', 'JPA(Java Persistent API)', 'Hibernate', 'MySQL', 'MongoDB', 'Apache Hadoop', 'Redis', 'Memcached', 'Apache ZooKeeper', 'Kubernetes', 'HAProxy', 'Nginx', 'Consul', 'Git', 'Docker', 'Spinnaker', 'Jenkins', 'Apache Kafka']",https://programmers.co.kr/job_positions/14300
+234,SW 모뎀개발자,블루버드,시스템 소프트웨어,상시 채용,정규직,4000 ~ 6000 만원,"서울 강남구 일원로 115, (일원동), 삼성생명일원역빌딩 A동 3층 ",,,https://programmers.co.kr/job_positions/12148
+235,SW BSP 개발자,블루버드,"시스템 소프트웨어, 임베디드 소프트웨어",상시 채용,정규직,4000 ~ 6000 만원,"서울 강남구 일원로 115, (일원동), 삼성생명일원역빌딩 A동 3층 ",,,https://programmers.co.kr/job_positions/12145
+236,'바바요(babayo)' OTT 플랫폼 프론트 개발자 (React),아이에이치큐,프론트엔드,상시 채용,정규직,3000 ~ 10000 만원,서울특별시 강서구 강서로 501-8(가양동),,"['React Admin', 'React Native']",https://programmers.co.kr/job_positions/13800
+237,'바바요(babayo)'  OTT 플랫폼 모바일 개발자 (React-Native),아이에이치큐,프론트엔드,상시 채용,정규직,3000 ~ 10000 만원,서울특별시 강서구 강서로 501-8(가양동),,['React Native'],https://programmers.co.kr/job_positions/13822
+238,소프트웨어 엔지니어 - 자율주행 데브코스 수강생 전용,로아스,"시스템 소프트웨어, 로보틱스 미들웨어, 응용 프로그램",상시 채용,정규직,3000 ~ 6000 만원,"경기 안양시 동안구 엘에스로116번길 39, (호계동) 사무동 402호 (호계동, 엘에스엠트론하이테크센터)",,"['Java', 'Linux', 'Linux kernel', 'Docker', 'ROS', 'Python', 'C', 'C++']",https://programmers.co.kr/job_positions/13748
+239,자율주행 Perception 개발자 - 자율주행 데브코스 수강생 전용,에스티피씨,"인공지능(AI), 시스템 소프트웨어, 로보틱스 미들웨어",상시 채용,정규직,3000 ~ 6000 만원,"경기 성남시 분당구 성남대로 69, (구미동) 1층 108호",,"['C++', 'C', 'ROS', 'Linux', 'Deep Learning', 'Tensorflow']",https://programmers.co.kr/job_positions/13733
+240,프론트엔드 개발자,알에스인터렉티브,"서버/백엔드, 프론트엔드, 안드로이드",상시 채용,정규직,3000 ~ 6000 만원,"서울 마포구 양화로 178-5, (동교동) 1001호",,"['React Native', 'ReactJS', 'Android', 'JavaScript']",https://programmers.co.kr/job_positions/13749
+241,Unity 개발자,무브먼츠,게임 클라이언트,상시 채용,정규직,3000 ~ 6000 만원,"서울 서초구 서초대로77길 17, (서초동) 12층 무브먼츠",,"['C#', 'Git', 'REST API']",https://programmers.co.kr/job_positions/11646
+242,"React 웹 프론트엔드 개발자, 부산",나인하이어,프론트엔드,상시 채용,정규직,3000 ~ 5000 만원,"부산 해운대구 센텀중앙로 97, (재송동) 센텀스카이비즈 에이-28층",,"['ReactJS', 'Redux-Saga', 'TypeScript', 'HTML', 'CSS']",https://programmers.co.kr/job_positions/11751
+243,SW 안드로이드 개발자,블루버드,시스템 소프트웨어,상시 채용,정규직,4000 ~ 6000 만원,"서울 강남구 일원로 115, (일원동), 삼성생명일원역빌딩 A동 3층 ",,,https://programmers.co.kr/job_positions/12149
+244,임베디드 소프트웨어 개발자,지큐브,"시스템 소프트웨어, 임베디드 소프트웨어, 응용 프로그램",상시 채용,정규직,3500 ~ 7500 만원,"경기 성남시 수정구 창업로 42, (시흥동) ",,"['C', 'C++', 'Linux', 'Linux kernel']",https://programmers.co.kr/job_positions/13457
+245,데이터 개발자,쿤텍,"서버/백엔드, 웹 풀스택, 데이터 엔지니어링",상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,"['Python', 'R', 'Java', 'AWS S3', 'Azure', 'GCP(Google Cloud Platform)', 'AWS EKS', 'Kubernetes']",https://programmers.co.kr/job_positions/12730
+246,클라우드 데이터 엔지니어(Data Engineer),쿤텍,"인공지능(AI), 데이터 엔지니어링, 데브옵스",상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,"['SQL', 'Python', 'Apache Spark', 'Java', 'Microsoft Azure', 'AWS EC2']",https://programmers.co.kr/job_positions/10895
+247,AI/DATA Engineer,쿤텍,"인공지능(AI), 데이터 엔지니어링, 데브옵스",상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,"['Python', 'R', 'Azure', 'Machine Learning', 'GCP(Google Cloud Platform)', 'AWS EC2', 'AWS S3', 'AWS Lambda']",https://programmers.co.kr/job_positions/10007
+248,공공정책사업실 R&D 개발자,한국클라우드,인공지능(AI),상시 채용,정규직,,"서울 금천구 서부샛길 606, (가산동) B동 432호",,"['Python', 'Java']",https://programmers.co.kr/job_positions/13105
+249,(프로그래머스 자율주행 데브코스 수료생용 공고)SLAM Engineer,프로그래머스 KDT 데브코스 자율주행 1기,,상시 채용,정규직,,,,,https://programmers.co.kr/job_positions/7607
+250,소프트웨어 엔지니어(보안솔루션),라온시큐어,인터넷 보안,상시 채용,정규직,,"서울 강남구 테헤란로 145, (역삼동) 13~18층",,"['Java', 'JSP', 'HTML', 'Vue.js', 'jQuery', 'PKI(Public key infrastructure)']",https://programmers.co.kr/job_positions/10987
+251,[라온화이트햇] 소프트웨어 엔지니어(SSO/EAM/IM),라온시큐어,인터넷 보안,상시 채용,정규직,,"서울 강남구 테헤란로 145, (역삼동) 13~18층",,"['SSO', 'Oracle', 'MySQL', 'Java']",https://programmers.co.kr/job_positions/10995
+252,[라온화이트햇] 소프트웨어 엔지니어(블록체인/인증),라온시큐어,"인터넷 보안, 블록체인",상시 채용,정규직,,"서울 강남구 테헤란로 145, (역삼동) 13~18층",,"['Spring', 'Java', 'iOS', 'PKI(Public key infrastructure)']",https://programmers.co.kr/job_positions/10997
+253,Frontend UI 개발자,휴라,프론트엔드,상시 채용,정규직,,"대전 유성구 반석로 10, (반석동) 501호, 506호",,"['C#', 'WPF', 'Unity', 'flutter', 'ASP.NET']",https://programmers.co.kr/job_positions/12871
+254,산업기능요원 개발자,엑스이허브,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"서울 강남구 논현로149길 67-10, (논현동) ",,,https://programmers.co.kr/job_positions/5897
+255,Software Developer,Scanline VFX Korea,,상시 채용,계약직(1년 이상),,"서울시 마포구 매봉산로 37, DMC산학협력연구센터 904호",,"['Python', 'C++']",https://programmers.co.kr/job_positions/8005
+256,[인텔리전스랩스] 선행개발실 백엔드 개발자(Go/Python),넥슨코리아,"서버/백엔드, 웹 풀스택",상시 채용,정규직,,경기도 성남시 분당구 판교로256번길 7 (삼평동),,"['Go', 'Python', 'MySQL']",https://programmers.co.kr/job_positions/12664
+257,Unity 클라이언트 개발자,이큐포올,"안드로이드, iOS, 모바일 게임",상시 채용,정규직,3000 ~ 6000 만원,"서울 강남구 논현로76길 11, (역삼동) 4층",,['Unity'],https://programmers.co.kr/job_positions/12435
+258,머신러닝 개발자,아이트럭,머신러닝,상시 채용,정규직,,"서울 서초구 동작대로 230, (방배동) 화련회관 10층",,"['Python', 'Numpy', 'Pandas', 'Scikit-Learn']",https://programmers.co.kr/job_positions/12196
+259,프론트엔드 개발자,아이트럭,프론트엔드,상시 채용,정규직,,"서울 서초구 동작대로 230, (방배동) 화련회관 10층",,"['TypeScript', 'ReactJS', 'Next.js', 'Redux.js', 'Redux-Thunk', 'Sass(SCSS)', 'Azure Emotion', 'Material-UI']",https://programmers.co.kr/job_positions/12195
+260,백엔드 개발자,아이트럭,서버/백엔드,상시 채용,정규직,,"서울 서초구 동작대로 230, (방배동) 화련회관 10층",,"['Node.js', 'TypeScript', 'REST API', 'ExpressJS', 'MySQL', 'Sequelize.js', 'AWS EC2', 'AWS RDS', 'AWS S3']",https://programmers.co.kr/job_positions/12194
+261,넷킬러 기술지원 담당자,넷킬러,"시스템/네트워크, 시스템 소프트웨어, 인터넷 보안",상시 채용,정규직,,"서울 중구 삼일대로 343, (저동1가) 위워크 8층",,"['GCP(Google Cloud Platform)', 'JavaScript', 'Linux']",https://programmers.co.kr/job_positions/12006
+262,GNSS/GPS (위성항법) 솔루션 개발자,피피솔,응용 프로그램,상시 채용,정규직,,"서울특별시 금천구 서부샛길 606 대성디폴리스지식산업센터, B동 2311호",,['MATLAB'],https://programmers.co.kr/job_positions/11730
+263,LMS / CMS 개발자  ,이노솔루션,"서버/백엔드, 프론트엔드",상시 채용,정규직,3000 ~ 6000 만원,"서울 마포구 연남로1길 44, (연남동) ",,"['HTML', 'JavaScript', 'jQuery', 'MySQL', 'PHP', 'CSS', 'CodeIgniter']",https://programmers.co.kr/job_positions/11814
+264,클라우드 보안 엔지니어,쿤텍,"시스템/네트워크, 시스템 소프트웨어, 인터넷 보안",상시 채용,정규직,,"경기도 성남시 수정구 창업로54, LH 성장기업센터 232호",,"['Linux', 'Python', 'Windows Server']",https://programmers.co.kr/job_positions/11618
+265,SPOT 로봇 제어 응용 프로그램 개발자,컨워스,"로보틱스 미들웨어, 사물인터넷(IoT), 응용 프로그램",상시 채용,정규직,4000 ~ 6000 만원,"서울 서대문구 연세로 50, 공학원 417호",,"['Python', 'Docker', 'AWS EC2', 'WebSocket', 'WebRTC']",https://programmers.co.kr/job_positions/11412
+266,[잔디소프트] MMORPG 개발 툴 프로그래머,잔디소프트,게임 클라이언트,상시 채용,정규직,,"서울 영등포구 선유로52길 11, 6층 (당산동6가) ",,"['C++', 'Lua', 'Python', 'JavaScript', 'C']",https://programmers.co.kr/job_positions/11357
+267,[토스뱅크] Internal Product Developer (고객 상담 시스템),비바리퍼블리카(토스),"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"서울 강남구 테헤란로 142, (역삼동) ",,"['Java', 'JSP', 'MyBatis', 'MySQL', 'Oracle', 'JavaScript', 'jQuery', 'Docker', 'Kubernetes', 'Microservice Architecture', 'Linux', 'SQL', 'Redis', 'Apache Kafka']",https://programmers.co.kr/job_positions/11369
+268,[인텔리전스랩스] 매치메이킹 서버 개발자,넥슨코리아,"서버/백엔드, 게임 서버",상시 채용,정규직,,경기 성남시 분당구 판교로256번길 7,,"['Go', 'Redis', 'Python', 'Elasticsearch', 'AWS ECS', 'MySQL', 'Terraform']",https://programmers.co.kr/job_positions/9328
+269,맞춤형 솔루션 SW 개발자,쎄딕,"시스템 소프트웨어, 응용 프로그램",상시 채용,정규직,3200 ~ 6000 만원,"서울 금천구 가산디지털1로 145, (가산동) 1202호",,"['WPF', 'C#', 'MySQL', 'C++', 'MariaDB']",https://programmers.co.kr/job_positions/10994
+270,인플루언서 마케팅 - 네이티브 앱 개발자,TAGby,"안드로이드, iOS",상시 채용,정규직,,"서울 강남구 테헤란로 123, (역삼동) ",,"['React Native', 'flutter']",https://programmers.co.kr/job_positions/3672
+271,프론트엔드 개발자 모집,릴리커버 ,"프론트엔드, 웹 풀스택",상시 채용,정규직,2800 ~ 6000 만원,"대구 동구 동대구로 475, (신천동) 12층",,"['JavaScript', 'Vue.js', 'REST API', 'HTML', 'HTML5', 'CSS', 'CSS3', 'Git']",https://programmers.co.kr/job_positions/10418
+272,백엔드 경력 개발자 모집,릴리커버 ,"서버/백엔드, 인공지능(AI), 데이터 엔지니어링",상시 채용,정규직,2800 ~ 6000 만원,"대구 동구 동대구로 475, (신천동) 12층",,"['Python', 'MariaDB', 'REST API', 'PostgreSQL', 'Git', 'Tensorflow', 'Flask']",https://programmers.co.kr/job_positions/10417
+273,UX/UI 개발,루미르,"서버/백엔드, 프론트엔드, 응용 프로그램",상시 채용,정규직,4000 ~ 7000 만원,"경기 용인시 수지구 신수로 767, (동천동) A동 621호",,"['Python', 'C', 'C++', 'Java']",https://programmers.co.kr/job_positions/9963
+274,OpenGL/GLSL 개발자,컨워스,"서버/백엔드, 프론트엔드",상시 채용,정규직,5000 ~ 8000 만원,"서울 서대문구 연세로 50, 공학원 419호",,"['OpenGL', 'WebGL']",https://programmers.co.kr/job_positions/9838
+275,3D/2D 지도 프론트엔드 개발자,컨워스,프론트엔드,상시 채용,정규직,3000 ~ 6000 만원,"서울 서대문구 연세로 50, 공학원 419호",,"['HTML', 'CSS', 'JavaScript', 'ReactJS', 'jQuery', 'Node.js']",https://programmers.co.kr/job_positions/9827
+276,브리치  React Native  앱  개발자,브리치,"안드로이드, iOS",상시 채용,정규직,3000 ~ 6000 만원,"서울 강남구 봉은사로18길 85, (역삼동) L1 , 브리치",,"['ReactJS', 'JavaScript', 'React Native']",https://programmers.co.kr/job_positions/8981
+277,프론트엔드&백엔드 개발자,브리치,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,3500 ~ 8000 만원,"서울 강남구 봉은사로18길 85, (역삼동) L1 , 브리치",,"['AngularJS', 'Git', 'HTML', 'Java', 'JavaScript', 'MySQL', 'PHP', 'Python', 'ReactJS', 'Vue.js']",https://programmers.co.kr/job_positions/8943
+278,웹서버개발자,핀크,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"서울 중구 남대문로9길 40, (다동) 22층",,"['Git', 'Java', 'JavaScript', 'Spring', 'MySQL', 'jQuery', 'Python', 'ReactJS', 'Redis', 'PHP']",https://programmers.co.kr/job_positions/8884
+279,Back-end서버개발자,핀크,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,,"서울 중구 남대문로9길 40, (다동) 22층",,"['Git', 'Java', 'JavaScript', 'jQuery', 'MySQL', 'Node.js', 'PHP', 'Python', 'ReactJS', 'Spring', 'Vue.js']",https://programmers.co.kr/job_positions/8883
+280,Back-end 개발(PHP),코멘토,서버/백엔드,상시 채용,정규직,,"서울 중구 한강대로 416, (남대문로5가) 서울스퀘어 15층 101호",,"['PHP', 'Laravel', 'MongoDB']",https://programmers.co.kr/job_positions/8844
+281,C/C++ 개발자 (유선센서),네오리진,"시스템/네트워크, 시스템 소프트웨어",상시 채용,정규직,,서울특별시 강남구 학동로 155 (논현동),,"['Linux', 'C++', 'C']",https://programmers.co.kr/job_positions/5426
+282,종근당 천안공장 전산운영,벨아이앤에스,"안드로이드, iOS, 응용 프로그램",상시 채용,정규직,,충남 천안시 서북구 성거읍 망향로 797-48 ,,['SAP'],https://programmers.co.kr/job_positions/8771
+283,Vrew 데스크탑 앱 개발자,보이저엑스,"서버/백엔드, 프론트엔드, 인공지능(AI)",상시 채용,정규직,4800 ~ 20000 만원,"서울 서초구 서초대로38길 12, (서초동, 마제스타시티, 힐스테이트 서리풀) 마제스타시티타워2, 9층",,"['Python', 'Node.js', 'Docker', 'Git', 'JavaScript', 'CSS', 'ReactJS', 'Webpack']",https://programmers.co.kr/job_positions/3703
+284,모바일 앱 개발자,보이저엑스,"안드로이드, iOS",상시 채용,정규직,4800 ~ 20000 만원,"서울 서초구 서초대로38길 12, (서초동, 마제스타시티, 힐스테이트 서리풀) 마제스타시티타워2, 9층",,['iOS'],https://programmers.co.kr/job_positions/3825
+285,QA,TAGby,QA,상시 채용,정규직,,"서울 강남구 테헤란로 507, (삼성동) 8F",,,https://programmers.co.kr/job_positions/3165
+286,Web Developer(Python),TAGby,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,3000 ~ 9999 만원,"서울 강남구 테헤란로 507, (삼성동) 8F",,['Python'],https://programmers.co.kr/job_positions/1956
+287,Software Engineer (Engine 개발),밀리만코리아,"서버/백엔드, 응용 프로그램",상시 채용,정규직,5000 ~ 7000 만원,"서울 중구 세종대로 136, (태평로1가) 22층",,,https://programmers.co.kr/job_positions/7148
+288,Software Engineer (Application 개발),밀리만코리아,"프론트엔드, 응용 프로그램",상시 채용,정규직,5000 ~ 7000 만원,"서울 중구 세종대로 136, (태평로1가) 22층",,,https://programmers.co.kr/job_positions/7147
+289,[IT사업부 연구소] SW Back-End 엔지니어,이성,"서버/백엔드, 시스템 소프트웨어, 응용 프로그램",상시 채용,정규직,3000 ~ 7000 만원,서울시 금천구 가산디지털1로 19 대륭테크노타운18차,,"['Linux', 'Python', 'Node.js']",https://programmers.co.kr/job_positions/7125
+290,QT/GTK C++ 개발자,쓰리에스소프트,응용 프로그램,상시 채용,정규직,,"서울 서초구 마방로6길 3, (양재동) ",,['C++'],https://programmers.co.kr/job_positions/5810
+291,Senior Software Engineer,데이블,"프론트엔드, 웹 풀스택, 시스템 소프트웨어",상시 채용,정규직,,"서울 강남구 테헤란로 507, (삼성동) 4층",,"['Python', 'MySQL', 'Redis']",https://programmers.co.kr/job_positions/6519
+292,C & C++ 응용프로그램 개발자,비플,응용 프로그램,상시 채용,정규직,3000 ~ 5500 만원,"서울 강남구 테헤란로78길 16, (대치동) 노벨빌딩 7층",,"['MySQL', 'C++', 'C']",https://programmers.co.kr/job_positions/5743
+293,Cloud/VDI Golang 개발,쓰리에스소프트,"서버/백엔드, 시스템/네트워크, 시스템 소프트웨어",상시 채용,정규직,,"서울 서초구 마방로6길 3, (양재동) ",,,https://programmers.co.kr/job_positions/5801
+294,클라우드기반 의료플랫폼 AI(영상/음성/텍스트 인식 등)개발자,바텍 네트웍스,"머신러닝, 인공지능(AI)",상시 채용,정규직,4000 ~ 8000 만원,"경기도 화성시 삼성1로2길 13, (석우동)",,"['Tensorflow', 'Deep Learning']",https://programmers.co.kr/job_positions/2219
+295,앱 개발자 ,세무통,"안드로이드, iOS",상시 채용,계약직(1년 이상),3000 ~ 6000 만원,"서울 마포구 매봉산로 18, (상암동) 502호",,"['Java', 'Android', 'iOS', 'REST API', 'Swift']",https://programmers.co.kr/job_positions/4065
+296,솔루션 개발자,동방정보통신,"시스템/네트워크, 시스템 소프트웨어, 응용 프로그램",상시 채용,,3000 ~ 6000 만원,"서울 마포구 독막로 320, (도화동) 601호",,"['Java', 'C', 'C++', 'MySQL', 'Linux', 'JavaScript']",https://programmers.co.kr/job_positions/3483
+297,병특 전문연구요원 개발자,솔트룩스,"서버/백엔드, 프론트엔드, 인공지능(AI)",상시 채용,,3800 ~ 4500 만원,"서울특별시 강남구 언주로 538, 4층, 5층동(역삼동, 대웅빌딩)",,"['Java', 'Deep Learning', 'NLP']",https://programmers.co.kr/job_positions/2662
+298,백엔드 웹 개발자,Xinics,"서버/백엔드, 웹 풀스택",상시 채용,,,"서울특별시 구로구 디지털로31길 53, 1101호(구로동, 이엔씨벤처드림타워5차)",,"['MySQL', 'PHP', 'Laravel']",https://programmers.co.kr/job_positions/1215
+299,Back-end 개발(PHP),코멘토,서버/백엔드,상시 채용,정규직,,"서울 중구 한강대로 416, (남대문로5가) 서울스퀘어 15층 101호",,"['PHP', 'Laravel', 'MongoDB']",https://programmers.co.kr/job_positions/8844
+300,C/C++ 개발자 (유선센서),네오리진,"시스템/네트워크, 시스템 소프트웨어",상시 채용,정규직,,서울특별시 강남구 학동로 155 (논현동),,"['Linux', 'C++', 'C']",https://programmers.co.kr/job_positions/5426
+301,종근당 천안공장 전산운영,벨아이앤에스,"안드로이드, iOS, 응용 프로그램",상시 채용,정규직,,충남 천안시 서북구 성거읍 망향로 797-48 ,,['SAP'],https://programmers.co.kr/job_positions/8771
+302,Vrew 데스크탑 앱 개발자,보이저엑스,"서버/백엔드, 프론트엔드, 인공지능(AI)",상시 채용,정규직,4800 ~ 20000 만원,"서울 서초구 서초대로38길 12, (서초동, 마제스타시티, 힐스테이트 서리풀) 마제스타시티타워2, 9층",,"['Python', 'Node.js', 'Docker', 'Git', 'JavaScript', 'CSS', 'ReactJS', 'Webpack']",https://programmers.co.kr/job_positions/3703
+303,모바일 앱 개발자,보이저엑스,"안드로이드, iOS",상시 채용,정규직,4800 ~ 20000 만원,"서울 서초구 서초대로38길 12, (서초동, 마제스타시티, 힐스테이트 서리풀) 마제스타시티타워2, 9층",,['iOS'],https://programmers.co.kr/job_positions/3825
+304,QA,TAGby,QA,상시 채용,정규직,,"서울 강남구 테헤란로 507, (삼성동) 8F",,,https://programmers.co.kr/job_positions/3165
+305,Web Developer(Python),TAGby,"서버/백엔드, 프론트엔드, 웹 풀스택",상시 채용,정규직,3000 ~ 9999 만원,"서울 강남구 테헤란로 507, (삼성동) 8F",,['Python'],https://programmers.co.kr/job_positions/1956
+306,Software Engineer (Engine 개발),밀리만코리아,"서버/백엔드, 응용 프로그램",상시 채용,정규직,5000 ~ 7000 만원,"서울 중구 세종대로 136, (태평로1가) 22층",,,https://programmers.co.kr/job_positions/7148
+307,Software Engineer (Application 개발),밀리만코리아,"프론트엔드, 응용 프로그램",상시 채용,정규직,5000 ~ 7000 만원,"서울 중구 세종대로 136, (태평로1가) 22층",,,https://programmers.co.kr/job_positions/7147
+308,[IT사업부 연구소] SW Back-End 엔지니어,이성,"서버/백엔드, 시스템 소프트웨어, 응용 프로그램",상시 채용,정규직,3000 ~ 7000 만원,서울시 금천구 가산디지털1로 19 대륭테크노타운18차,,"['Linux', 'Python', 'Node.js']",https://programmers.co.kr/job_positions/7125
+309,QT/GTK C++ 개발자,쓰리에스소프트,응용 프로그램,상시 채용,정규직,,"서울 서초구 마방로6길 3, (양재동) ",,['C++'],https://programmers.co.kr/job_positions/5810
+310,Senior Software Engineer,데이블,"프론트엔드, 웹 풀스택, 시스템 소프트웨어",상시 채용,정규직,,"서울 강남구 테헤란로 507, (삼성동) 4층",,"['Python', 'MySQL', 'Redis']",https://programmers.co.kr/job_positions/6519
+311,C & C++ 응용프로그램 개발자,비플,응용 프로그램,상시 채용,정규직,3000 ~ 5500 만원,"서울 강남구 테헤란로78길 16, (대치동) 노벨빌딩 7층",,"['MySQL', 'C++', 'C']",https://programmers.co.kr/job_positions/5743
+312,Cloud/VDI Golang 개발,쓰리에스소프트,"서버/백엔드, 시스템/네트워크, 시스템 소프트웨어",상시 채용,정규직,,"서울 서초구 마방로6길 3, (양재동) ",,,https://programmers.co.kr/job_positions/5801
+313,클라우드기반 의료플랫폼 AI(영상/음성/텍스트 인식 등)개발자,바텍 네트웍스,"머신러닝, 인공지능(AI)",상시 채용,정규직,4000 ~ 8000 만원,"경기도 화성시 삼성1로2길 13, (석우동)",,"['Tensorflow', 'Deep Learning']",https://programmers.co.kr/job_positions/2219
+314,앱 개발자 ,세무통,"안드로이드, iOS",상시 채용,계약직(1년 이상),3000 ~ 6000 만원,"서울 마포구 매봉산로 18, (상암동) 502호",,"['Java', 'Android', 'iOS', 'REST API', 'Swift']",https://programmers.co.kr/job_positions/4065
+315,솔루션 개발자,동방정보통신,"시스템/네트워크, 시스템 소프트웨어, 응용 프로그램",상시 채용,,3000 ~ 6000 만원,"서울 마포구 독막로 320, (도화동) 601호",,"['Java', 'C', 'C++', 'MySQL', 'Linux', 'JavaScript']",https://programmers.co.kr/job_positions/3483
+316,병특 전문연구요원 개발자,솔트룩스,"서버/백엔드, 프론트엔드, 인공지능(AI)",상시 채용,,3800 ~ 4500 만원,"서울특별시 강남구 언주로 538, 4층, 5층동(역삼동, 대웅빌딩)",,"['Java', 'Deep Learning', 'NLP']",https://programmers.co.kr/job_positions/2662
+317,백엔드 웹 개발자,Xinics,"서버/백엔드, 웹 풀스택",상시 채용,,,"서울특별시 구로구 디지털로31길 53, 1101호(구로동, 이엔씨벤처드림타워5차)",,"['MySQL', 'PHP', 'Laravel']",https://programmers.co.kr/job_positions/1215
