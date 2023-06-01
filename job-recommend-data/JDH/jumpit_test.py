@@ -251,7 +251,7 @@ def classify_skill(skill):
                    'Solidity', 'Spa',  'Spinnaker', 'Storybook',  'Sybase',  'SLAM', 'TCL', 'Tableau','TeamCity', 'Tomcat', 'Truffle',
                    'TypeORM','UML', 'Ubuntu', 'Unreal Engine', 'VM웨어', 'Visual Basic', 'Visual Studio', 'Visual Studio Code','Vuetify.js',
                    'Web3.py','web3.js', 'WebGL', 'WebRTC', 'Webpack', 'WinForm', 'Xcode', 'Xilinx', 'Yarn', 'gRPC', 'DevExpress' ]:
-        pass 
+        pass
     else:
         return skill
 
@@ -370,14 +370,17 @@ with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
                 skill = element.text
                 classified_skill = classify_skill(skill)
             
-                if classified_skill is not None:
-                    stack.append(classified_skill)
-                    filtering_skill = classified_skill
-                    
-                if position in position_stack:
-                    position_stack[position].add(filtering_skill)
+                if classified_skill is None:
+                    pass
                 else:
-                    position_stack[position] = {filtering_skill}
+                    if classified_skill not in stack:
+                        stack.append(classified_skill)
+                
+                    
+                    if position in position_stack:
+                     position_stack[position].add(classified_skill)
+                    else:
+                      position_stack[position] = set([classified_skill])
             
         except NoSuchElementException:
             stack = []
