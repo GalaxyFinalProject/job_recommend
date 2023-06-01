@@ -2,12 +2,13 @@ import pandas as pd
 import numpy as np
 import re
 import csv
+import os
+import datetime
 
 # 각각 크롤링한 csv 불러오기
-df1=pd.read_csv(r'C:\Users\Playdata\Desktop\programers_cp949_3.csv', encoding='cp949')
+df1=pd.read_csv(r'C:\Users\Playdata\Desktop\programers_cp949_1.csv', encoding='cp949')
 df2=pd.read_csv(r"C:\Users\Playdata\Desktop\wanted_cp949_1.csv", encoding='cp949')
 df3=pd.read_csv(r"C:\Users\Playdata\Desktop\jumpit_cp949_2.csv", encoding='cp949')
-
 
 # 직무&기술스택보기 위한 부분
 # 세 개의 CSV 파일 합치기
@@ -50,8 +51,7 @@ with open(r"C:\Users\Playdata\Desktop\position_stack3.csv", 'r') as csvfile:
         else:
             combined_position_stack[position] = {stack_item}
 
-#최종 저장
-import os
+#position_stack 분류 저장
 directory = r'C:\Users\Playdata\Desktop\\' 
 
 filename1 = os.path.join(directory, 'combined_position_stack.csv')
@@ -61,8 +61,7 @@ with open(filename1, 'w', newline='') as csvfile:
     writer.writerow(['Position', 'Stack'])  # 헤더 작성
     for position, stack in combined_position_stack.items():
         for stack_item in stack:
-            writer.writerow([position, stack_item])            
-
+            writer.writerow([position, stack_item])
 
 
 
@@ -73,15 +72,10 @@ df = pd.concat([df, df3])
 df =df.drop('Unnamed: 0',axis=1)
 
 # 직무 전처리
-import ast
-# 문자열을 리스트로 변환하고 원하는 형식으로 변경하는 함수
-def format_list(string):
-    formatted_lst = [item.strip() for item in string.split(',')]  # 원하는 형식으로 변경
-    return formatted_lst
-
-# '직무' 컬럼의 데이터 형식 변경
-df['직무'] = df['직무'].apply(format_list)
-
+df['직무'] = df['직무'].str.split(', ')
+df.to_csv(r'C:\Users\Playdata\Desktop\df_pos.csv', index=False, encoding='cp949')
+df=pd.read_csv(r'C:\Users\Playdata\Desktop\df_pos.csv', encoding='cp949')
+df['직무'] = df['직무'].str.replace("'", '"')
 
 # 기술스택 전처리
 # np.where(condition, x, y)를 활용해서 condition이 참일 경우 x를, 아닌 경우 y로!
@@ -89,18 +83,18 @@ df['기술스택'] = df['기술스택'].str.replace("'", '"')
 df['기술스택'] = np.where((df['기술스택'].isnull()) | (df['기술스택'] == "[]"), """[""]""", df['기술스택'])
 
 # 마감일 전처리 
-df['마감일'] = df['마감일'].str.replace('상시', '')
-df['마감일'] = df['마감일'].str.replace('상시 ', '')
-df['마감일'] = df['마감일'].str.replace('채용', '상시 채용')
-df['마감일'] = df['마감일'].str.replace(' 상시 채용', '상시 채용')
+# 마감일 전처리 
+df['마감일'] = df['마감일'].str.replace('상시', '상시 채용')
+df['마감일'] = df['마감일'].str.replace('채용 채용', '채용')
 df['마감일'] = df['마감일'].fillna('상시 채용')
 
 # 날짜 형식 2023-04-12
-import datetime
 
 def format_date(date_str):
     if date_str.startswith('상시 채용'):
         return date_str
+#     elif date_str.startswith('상시'):
+#         return date_str
     elif ':' in date_str:
         date_obj = datetime.datetime.strptime(date_str, '%y년 %m월 %d일 %H:%M까지')
         formatted_date = date_obj.strftime('%Y-%m-%d')
@@ -128,9 +122,6 @@ df['마감일'] = df['마감일'].apply(format_date)
 # df['마감일'] = df['마감일'].apply(format_date)
 
 
-# 연봉 전처리
-df['연봉'] = df['연봉'].fillna('추후 협의')
-
 # 근무지 전처리
 df['근무지'] = df['근무지'].str.replace('주소 ', '')
 df['근무지'] = df['근무지'].str.replace('대한민국 ', '')
@@ -157,7 +148,6 @@ df['근무지'] = df['근무지'].str.replace('입니다', '')
 df['근무지'] = df['근무지'].str.replace('대구 대전', '대전')
 df['근무지'] = df['근무지'].str.replace('서울 06237', '')
 df['근무지'] = df['근무지'].str.replace(' 서울', '서울')
-df['근무지'] = df['근무지'].str.replace('서울 onetkorea137@gmail.com', '')
 df['근무지'] = df['근무지'].str.replace(r'서울 \(06159\)\s*', '')
 df['근무지'] = df['근무지'].str.replace(r'서울 13449\)\s*', '')
 df['근무지'] = df['근무지'].str.replace(r'\(07807\)\s*', '')
@@ -176,7 +166,7 @@ df['근무지'] = df['근무지'].str.replace('서울 서초동', '서울 서초
 df['근무지'] = df['근무지'].str.replace('서울 마포대로', '서울 마포구 마포대로')
 # df['근무지'] = df['근무지'].str.replace('서울 강남대로', '')
 df['근무지'] = df['근무지'].str.replace('서울 반포대로', '서울 서초구 반포대로')
-df['근무지'] = df['근무지'].str.replace('서울 원격 근무', '')
+df['근무지'] = df['근무지'].str.replace('서울 원격 근무', '원격 근무')
 df['근무지'] = df['근무지'].str.replace('서울 개포로', '서울 강남구 개포로')
 df['근무지'] = df['근무지'].str.replace('서울 삼성로', '서울 강남구 삼성로')
 df['근무지'] = df['근무지'].str.replace('서울 여의도', '서울 영등포구 여의도동')
@@ -194,13 +184,14 @@ df['근무지'] = df['근무지'].str.replace('서울 양화로', '서울 마포
 df['근무지'] = df['근무지'].str.replace('서울 발산역', '서울 강서구 마곡동')
 df['근무지'] = df['근무지'].str.replace('서울 양재역', '서울 서초구 양재역')
 # '근무지' 컬럼의 데이터 형식 변경
+df.loc[df['근무지'].str.contains('Seoul, Republic of Korea', na=False), '근무지'] = None
+df.loc[df['근무지'].str.contains('서울 대치로 223', na=False), '근무지'] = None
+df.loc[df['근무지'].str.contains('원격 근무', na=False), '근무지'] = None
+df.loc[df['근무지'].str.contains('onetkorea137@gmail.com', na=False), '근무지'] = None
 
-df.loc[df['근무지'].str.contains('Seoul, Republic of Korea', na=False), '근무지'] = ''
-df.loc[df['근무지'].str.contains('서울 대치로 223', na=False), '근무지'] = ''
-
-
-df['근무지'] = df['근무지'].fillna('')  # 결측치를 빈 문자열로 대체
+df.dropna(subset=['근무지'], inplace=True)  # 결측치 가진 데이터 삭제
 df['근무지'] = df['근무지'].astype(str)  # 데이터 타입을 문자열로 변환
+
 
 df['근무지'] = df['근무지'].apply(lambda x: x.split(' ', 1)[1] if len(x.split(' ')) > 1 and x.split(' ')[0] == x.split(' ')[1] else x)
 
@@ -330,19 +321,5 @@ final_data = pd.concat([final_data, same_df], ignore_index=True)
 
 final_data = final_data.drop_duplicates(subset='링크')
 
-# 저장
-final_data.to_csv(r'C:\Users\Playdata\Desktop\final.csv', index=False, encoding='cp949')
-
-
-# 직무 마지막 전처리
-df4=pd.read_csv(r"C:\Users\Playdata\Desktop\final.csv", encoding='cp949')
-# 데이터프레임의 열에 대해 원하는 형식으로 변경하는 함수
-def format_value(value):
-    formatted_value = value.replace('\'"', '"').replace('"\'', '"')  # 작은따옴표와 큰따옴표를 큰따옴표로 변경
-    return formatted_value
-
-# '직무' 컬럼의 데이터 형식 변경
-df4['직무'] = df4['직무'].apply(format_value)
-
-df4.to_csv(r'C:\Users\Playdata\Desktop\final_true.csv', index=True, encoding='cp949')
-df4.to_csv(r'C:\Users\Playdata\Desktop\final_flase.csv', index=True, encoding='cp949')
+final_data.to_csv(r'C:\Users\Playdata\Desktop\final_true.csv', index=True, encoding='cp949')
+final_data.to_csv(r'C:\Users\Playdata\Desktop\final_flase.csv', index=True, encoding='cp949')
