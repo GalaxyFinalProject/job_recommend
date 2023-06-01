@@ -286,13 +286,13 @@ def classify_skill(skill):
                    'Solidity', 'Spa',  'Spinnaker', 'Storybook',  'Sybase',  'SLAM', 'TCL', 'Tableau','TeamCity', 'Tomcat', 'Truffle',
                    'TypeORM','UML', 'Ubuntu', 'Unreal Engine', 'VM웨어', 'Visual Basic', 'Visual Studio', 'Visual Studio Code','Vuetify.js',
                    'Web3.py','web3.js', 'WebGL', 'WebRTC', 'Webpack', 'WinForm', 'Xcode', 'Xilinx', 'Yarn', 'gRPC', 'DevExpress' ]:
-        return '기술이 아님' 
+        pass
     else:
         return skill
     
 
 # 데이터 프레임
-job_postings_df = pd.DataFrame(columns=['공고명', '회사명', '직무', '마감일', '고용형태', '연봉', '근무지', '학력', '기술스택','링크'])
+job_postings_df = pd.DataFrame(columns=['공고명', '회사명', '직무', '마감일', '근무지', '기술스택', '링크'])
 
 driver = webdriver.Chrome()
 driver.get('https://career.programmers.co.kr/job?page=1&min_career=0&order=recent')
@@ -396,14 +396,6 @@ for position, url in position_url.items():
             deadline = soup.find("div", text="지원 마감")
             deadline = deadline.find_next_sibling("div").text if deadline and deadline.find_next_sibling("div") else None
 
-            # 고용 형태 정보 추출
-            employment_type = soup.find("div", text="고용 형태")
-            employment_type = employment_type.find_next_sibling("div").text if employment_type and employment_type.find_next_sibling("div") else None
-
-            # 연봉 정보 추출
-            salary = soup.find("div", text="연봉")
-            salary = salary.find_next_sibling("div").text if salary and salary.find_next_sibling("div") else None
-
             # 근무 위치 정보 추출
             work_location = soup.find("div", text="근무 위치")
             work_location = work_location.find_next_sibling("div").text if work_location and work_location.find_next_sibling("div") else None
@@ -417,19 +409,22 @@ for position, url in position_url.items():
                     skill = li_tag.text
                     classified_skill = classify_skill(skill)
 
-                    if classified_skill not in stack:
-                        stack.append(classified_skill)
-
-                    if position in position_stack:
-                        position_stack[position].add(classified_skill)
+                    if classified_skill in None:
+                        pass
                     else:
-                        position_stack[position] = set([classified_skill])
+                        if classified_skill not in stack:
+                            stack.append(classified_skill)
+
+                        if position in position_stack:
+                            position_stack[position].add(classified_skill)
+                        else:
+                            position_stack[position] = set([classified_skill])
             else:
                 stack = None
 
 
             # 추출한 정보를 데이터프레임에 추가
-            job_postings_df.loc[len(job_postings_df)] = [title, company, position, deadline, employment_type, salary, work_location, None, stack, URL]
+            job_postings_df.loc[len(job_postings_df)] = [title, company, position, deadline, None, stack, URL]
             print(f"현재까지 모인 {position} 공고:{n+1}개!")
 
             n += 1

@@ -288,13 +288,13 @@ def classify_skill(skill):
                    'Solidity', 'Spa',  'Spinnaker', 'Storybook',  'Sybase',  'SLAM', 'TCL', 'Tableau','TeamCity', 'Tomcat', 'Truffle',
                    'TypeORM','UML', 'Ubuntu', 'Unreal Engine', 'VM웨어', 'Visual Basic', 'Visual Studio', 'Visual Studio Code','Vuetify.js',
                    'Web3.py','web3.js', 'WebGL', 'WebRTC', 'Webpack', 'WinForm', 'Xcode', 'Xilinx', 'Yarn', 'gRPC', 'DevExpress' ]:
-        return '기술이 아님' 
+        pass 
     else:
         return skill
     
 
 # 저장할 데이터프레임 미리 만들어놓기
-job_postings_df = pd.DataFrame(columns=['공고명', '회사명', '직무', '마감일', '고용형태', '연봉', '근무지', '학력', '기술스택','링크'])
+job_postings_df = pd.DataFrame(columns=['공고명', '회사명', '직무', '마감일', '근무지', '기술스택', '링크'])
 
 driver = webdriver.Chrome()
 
@@ -449,16 +449,19 @@ for i in range(0,len(positions)):
                     skill = element.text
                     classified_skill = classify_skill(skill)
 
-                    if classified_skill not in stack:
-                        stack.append(classified_skill)
-
-                    if position in position_stack:
-                        position_stack[position].add(classified_skill)
+                    if classified_skill in None:
+                        pass
                     else:
-                        position_stack[position] = set([classified_skill])
+                        if classified_skill not in stack:
+                            stack.append(classified_skill)
+
+                        if position in position_stack:
+                            position_stack[position].add(classified_skill)
+                        else:
+                            position_stack[position] = set([classified_skill])
 
                 #추출한 정보를 데이터프레임에 추가
-                job_postings_df.loc[len(job_postings_df)] = [title, company, position, deadline, None, None, work_location, None, stack, URL]
+                job_postings_df.loc[len(job_postings_df)] = [title, company, position, deadline, work_location, stack, URL]
                 print(f"{position}의 {n}번째 공고 정보 끝!")
                 n+=1
 
