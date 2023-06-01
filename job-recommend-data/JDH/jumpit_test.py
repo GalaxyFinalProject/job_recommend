@@ -16,6 +16,7 @@ from selenium.common.exceptions import NoSuchElementException
 import csv
 import pandas as pd
 import numpy as np
+import re
 
 # 기술 분류
 def classify_skill(skill):
@@ -250,7 +251,7 @@ def classify_skill(skill):
                    'Solidity', 'Spa',  'Spinnaker', 'Storybook',  'Sybase',  'SLAM', 'TCL', 'Tableau','TeamCity', 'Tomcat', 'Truffle',
                    'TypeORM','UML', 'Ubuntu', 'Unreal Engine', 'VM웨어', 'Visual Basic', 'Visual Studio', 'Visual Studio Code','Vuetify.js',
                    'Web3.py','web3.js', 'WebGL', 'WebRTC', 'Webpack', 'WinForm', 'Xcode', 'Xilinx', 'Yarn', 'gRPC', 'DevExpress' ]:
-        return '기술이 아님' 
+        pass 
     else:
         return skill
 
@@ -330,12 +331,13 @@ for i in pos_num:
     time.sleep(2)
 
 
-csv_save_path = 'C:/myPyCode/final_project/jumpit_page_2.csv'
-position_save_path = 'C:/myPyCode/final_project/jumpit_position_stack.csv'
+csv_save_path = 'C:/myPyCode/final_project/jumpit_page_fix.csv'
+position_save_path = 'C:/myPyCode/final_project/jumpit_position_stack_fix.csv'
+
 position_stack = {}
 with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
     writer = csv.writer(file)
-    writer.writerow(['공고명', '회사명', '직무', '마감일', '고용형태', '연봉', '근무지', '학력', '기술스택', '링크'])
+    writer.writerow(['공고명', '회사명', '직무', '마감일', '근무지', '기술스택', '링크'])
     
     for orig_url, position in add_list:
         driver.get(orig_url)
@@ -345,19 +347,19 @@ with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
         company = driver.find_element(By.CSS_SELECTOR, 'div.position_title_box_desc > a').text
 
         try:
-            deadline = driver.find_element(By.CSS_SELECTOR, 'dl.sc-itWPBs:nth-child(4) > dd').text
+            deadline_text = driver.find_element(By.CSS_SELECTOR, 'dl.sc-itWPBs:nth-child(4) > dd').text
+            if re.match(r"\d{4}-\d{2}-\d{2}", deadline_text):
+                deadline = deadline_text  # 날짜 형식이라면 해당 값을 그대로 사용
+            else:
+                deadline = "상시 채용"
         except NoSuchElementException:
-            deadline = None
+            deadline = "상시 채용"
 
         try:    
             element = driver.find_element(By.XPATH, '//*[@id="root"]/main/div/div[2]/div/section[3]/dl[4]/dd/ul/li')
             work_location = element.text.replace('지도보기', '').replace('주소복사', '')
         except NoSuchElementException:
             work_location = None
-        try:
-            grade = driver.find_element(By.CSS_SELECTOR, 'dl.sc-itWPBs:nth-child(3) > dd:nth-child(2)').text
-        except NoSuchElementException:
-            grade = None
         try:
             skill_elements = driver.find_elements(By.XPATH, '/html/body/div[1]/main/div/div[2]/div/section[2]/dl[1]/dd/pre/div')
             # skill = [element.text for element in skill_elements]
@@ -368,28 +370,27 @@ with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
                 skill = element.text
                 classified_skill = classify_skill(skill)
             
-                if classified_skill not in stack:
+                if classified_skill is not None:
                     stack.append(classified_skill)
+                    filtering_skill = classified_skill
                     
                 if position in position_stack:
-                    position_stack[position].add(classified_skill)
+                    position_stack[position].add(filtering_skill)
                 else:
-                    position_stack[position] = {classified_skill}
+                    position_stack[position] = {filtering_skill}
             
         except NoSuchElementException:
-            stack = None
-        salary = None
-        employment_type = None
+            stack = []
         link = orig_url
         
-        writer.writerow([title, company, position, deadline, employment_type, salary, work_location, grade, stack, link])
+        writer.writerow([title, company, position, deadline, work_location, stack, link])
             
 driver.quit()
 with open(position_save_path, 'w', newline='', encoding='cp949') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(position_stack.keys())
     writer.writerow(position_stack.values())
-csv_save_path = 'C:/myPyCode/final_project/jumpit_page_2.csv'
+csv_save_path = 'C:/myPyCode/final_project/jumpit_page_fix.csv'
 df=pd.read_csv(csv_save_path, encoding='cp949')
 df['근무지'] = df['근무지'].str.replace(r'^\(\d+\)\s*', '', regex=True)
 df['근무지'] = df['근무지'].str.replace(r'\[.*?\]', '', regex=True)
@@ -412,5 +413,5 @@ df['근무지'] = df['근무지'].str.replace('전라남도', '전남', regex=Tr
 df['기술스택'] = df['기술스택'].str.replace("'", '"')
 df['기술스택'] = np.where((df['기술스택'].isnull()) | (df['기술스택'] == "[]"), """[""]""", df['기술스택'])
 #csv 저장
-csv_save_path_updated = 'C:/myPyCode/final_project/jumpit_page_2_updated.csv'
+csv_save_path_updated = 'C:/myPyCode/final_project/jumpit_page_fix_updated.csv'
 df.to_csv(csv_save_path_updated, index=False, encoding='cp949')
