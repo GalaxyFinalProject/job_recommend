@@ -1,0 +1,147 @@
+.main {
+    display: flex;
+    width: 1400px;
+    margin-bottom: 19px;
+}
+
+
+.contents {
+    width: 80%;
+}
+
+
+.sidebar {
+    display: block;
+    width: 20%;
+
+}
+
+.jobList {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid #FFFFFF;
+    box-shadow: 10px 5px 14px rgba(163, 163, 163, 0.25);
+    border-radius: 30px;
+}
+
+.jobskill {
+    border: 2px solid #FFFFFF;
+    box-shadow: 10px 5px 14px rgba(163, 163, 163, 0.25);
+    border-radius: 30px;
+    width: 100%;
+}
+
+.Jobskillbtn {
+    color: #8B8B8B;
+    border: none;
+    background-color: white;
+    display: block;
+    width: 60%;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.JobskillbtnClick {
+    border: none;
+    background-color: white;
+    display: block;
+    width: 60%;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+    background-color: #F8F8F8;
+    font-weight: bold;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+
+}
+
+.Jobskillbtn:hover {
+    color: black;
+    background-color: #F8F8F8;
+    font-weight: bold;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+
+}
+
+.jobPosting {
+    display: inline-flex;
+    margin: 18px;
+    width: 30%;
+    height: 300px;
+}
+
+.icon_size {
+    width: 36px;
+    height: 36px;
+    margin: 10px;
+}
+
+.boxSize {
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+    filter: drop-shadow(18px 5px 30px rgba(0, 0, 0, 0.25));
+}
+
+.boxSize:hover {
+    background-color: #f1f1f1;
+}
+
+.search {
+    display: flex;
+    justify-content: end;
+    font-size: 1rem;
+}
+
+.pageNation li {
+    list-style: none;
+}
+
+.pageWrap {
+    text-align: center;
+    font-size: 0;
+}
+
+.pageNation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+.pageNation a {
+    display: block;
+    margin: 0 3px;
+    float: left;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.pageNation a:hover {
+    background-color: gray;
+    color: white;
+}
