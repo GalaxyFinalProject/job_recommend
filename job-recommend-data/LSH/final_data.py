@@ -73,6 +73,12 @@ df =df.drop('Unnamed: 0',axis=1)
 
 # 직무 전처리
 df['직무'] = df['직무'].str.split(', ')
+
+# 웹개발 하나만 있는 경우
+df['직무'] = df['직무'].apply(lambda x: ["프론트엔드", "백엔드"] if isinstance(x, list) and x == ["웹개발"] else x)
+# 웹개발이 포함되어 있는 경우 웹개발을 삭제
+df['직무'] = df['직무'].apply(lambda x: [job for job in x if job != "웹개발"])
+
 df.to_csv(r'C:\Users\Playdata\Desktop\df_pos.csv', index=False, encoding='cp949')
 df=pd.read_csv(r'C:\Users\Playdata\Desktop\df_pos.csv', encoding='cp949')
 df['직무'] = df['직무'].str.replace("'", '"')
