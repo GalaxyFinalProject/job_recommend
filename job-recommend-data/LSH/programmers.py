@@ -14,7 +14,7 @@ def classify_position(position):
         return '게임개발'
     elif position in ['머신러닝', '인공지능', '머신러닝 엔지니어']:
         return 'AI/ML'
-    elif position in ['웹 개발자','웹 풀스택','PHP 개발자','루비온레일즈 개발자']:
+    elif position in ['웹 개발자','웹 풀스택']:
         return '웹개발'
     elif position in ['데이터 엔지니어','데이터 엔지니어링','빅데이터 엔지니어','BI 엔지니어']:
         return '데이터 엔지니어'
@@ -30,7 +30,7 @@ def classify_position(position):
 #         return '멀티미디어 엔지니어'
 #     elif position in ['소프트웨어 엔지니어','.NET 개발자']:
 #         return '소프트웨어'
-    elif position in ['서버/백엔드', '서버 개발자', '자바 개발자', 'C,C++ 개발자','파이썬 개발자','Node.js 개발자','DBA']:
+    elif position in ['서버/백엔드', 'PHP 개발자', '루비온레일즈 개발자', '서버 개발자', '자바 개발자', 'C,C++ 개발자','파이썬 개발자','Node.js 개발자','DBA']:
         return '백엔드'
     elif position in ['프론트엔드', '프론트엔드 개발자']:
         return '프론트엔드'
@@ -42,10 +42,10 @@ def classify_position(position):
 #         return '개발PM'
 #     elif position in ['QA', 'QA, 테스트 엔지니어']:
 #         return 'QA'
-    elif position in ['블록체인 플랫폼 엔지니어','블록체인']:
-        return '블록체인'
-    elif position in ['VR/AR/3D','VR 엔지니어']:
-        return 'VR/AR'
+    # elif position in ['블록체인 플랫폼 엔지니어','블록체인']:
+    #     return '블록체인'
+    # elif position in ['VR/AR/3D','VR 엔지니어']:
+    #     return 'VR/AR'
 #     elif position in ['기술지원']:
 #         return '기술지원' 
 #     elif position in ['데이터 사이언티스트']:
