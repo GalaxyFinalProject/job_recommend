@@ -291,8 +291,8 @@ time.sleep(1)
 
 
 add_list = []
-pos = ['백엔드', '프론트엔드', '웹개발', '모바일', '모바일', '게임개발', '게임개발', 'DBA', '데이터 엔지니어', 'AL/ML', 'DevOps', 'VR/AR/3D', '블록체인']
-pos_num = [2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 20, 21]
+pos = ['백엔드', '프론트엔드', '웹개발', '모바일', '모바일', '게임개발', '게임개발', 'DBA', '데이터 엔지니어', 'AL/ML', 'DevOps',]
+pos_num = [2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13]
 pos_dict = dict(zip(pos_num, pos))  # 딕셔너리 생성
 
 for i in pos_num:
@@ -357,7 +357,7 @@ with open(csv_save_path, 'w', newline='', encoding='cp949') as file:
 
         try:    
             element = driver.find_element(By.XPATH, '//*[@id="root"]/main/div/div[2]/div/section[3]/dl[4]/dd/ul/li')
-            work_location = element.text.replace('지도보기', '').replace('주소복사', '')
+            work_location = element.text.replace('지도보기', '').replace('주소복사', '').replace('\.', '')
         except NoSuchElementException:
             work_location = None
         try:
@@ -393,7 +393,7 @@ with open(position_save_path, 'w', newline='', encoding='cp949') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(position_stack.keys())
     writer.writerow(position_stack.values())
-csv_save_path = 'C:/myPyCode/final_project/jumpit_page_fix.csv'
+
 df=pd.read_csv(csv_save_path, encoding='cp949')
 df['근무지'] = df['근무지'].str.replace(r'^\(\d+\)\s*', '', regex=True)
 df['근무지'] = df['근무지'].str.replace(r'\[.*?\]', '', regex=True)
