@@ -13,33 +13,46 @@ import lombok.Setter;
 public class RecruitEntity {
 	
 	@Id
+	@Column(name = "company_code")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long company_code;
+	private Long companyCode;
 	
-	@Column
-	private String recruit_name;
+	@Column(name = "company_name")
+	private String companyName;
 	
-	@Column
-	private String recruit_skill;
+	@Column(name = "recruit_name")
+	private String recruitName;
 	
-	@Column
-	private String recruit_link;
+	@Column(name = "recruit_skill")
+	private String recruitSkill;
 	
-	@Column
-	private Integer recruit_rank;
+	@Column(name = "recruit_link")
+	private String recruitLink;
 	
-	@Column
-	private String recruit_date; 
+	@Column(name = "recruit_rank")
+	private String recruitRank;
+	
+	@Column(name = "recruit_date")
+	private String recruitDate; 
+	
+	@Column(name = "recruit_address")
+	private String recruitAddress; 
+	
+	@Column(name = "recruit_job")
+	private String recruitJob; 
+	
 	
 	public static RecruitEntity toRecruitEntity(RecruitDTO recruitDTO) {
 		RecruitEntity recruitEntity = new RecruitEntity();
-		recruitEntity.setCompany_code(recruitDTO.getCompany_code());
-		recruitEntity.setRecruit_name(recruitDTO.getRecruit_name());
-		recruitEntity.setRecruit_skill(recruitDTO.getRecruit_skill());
-		recruitEntity.setRecruit_link(recruitDTO.getRecruit_link());
-		recruitEntity.setRecruit_rank(recruitDTO.getRecruit_rank());
-		recruitEntity.setRecruit_date(recruitDTO.getRecruit_date());
-		
+		recruitEntity.setCompanyCode(recruitDTO.getCompanyCode());
+		recruitEntity.setCompanyName(recruitDTO.getCompanyName());
+		recruitEntity.setRecruitName(recruitDTO.getRecruitName());
+		recruitEntity.setRecruitSkill(recruitDTO.getRecruitSkill());
+		recruitEntity.setRecruitLink(recruitDTO.getRecruitLink());
+		recruitEntity.setRecruitRank(recruitDTO.getRecruitRank());
+		recruitEntity.setRecruitDate(recruitDTO.getRecruitDate());
+		recruitEntity.setRecruitAddress(recruitDTO.getRecruitAddress());
+		recruitEntity.setRecruitJob(recruitDTO.getRecruitJob());
 		return recruitEntity;
 
 	}

@@ -1,0 +1,74 @@
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+}
+
+.modalBackground {
+    /* 화면에 꽉 차게 하는 코드 */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 250;
+    cursor: pointer;
+}
+
+.modalWrapper {
+    /* 화면에 꽉 차게 하는 코드(여기서는 너비를 꽉 채우는 용도) */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    /* 위아래 너비를 준 상태에서 가로 50%, 세로 50%를 이동시킬 수 있다 (= 한가운데 배치) */
+    transform: translate(-50%, -50%);
+
+    /* 위의 overlay 배경보다 한 단계 더 높게 배치 */
+    z-index: 300;
+}
+
+/* 실제 모달창 */
+.modal {
+    display: -webkit-box;
+    flex-direction: column;
+    position: relative;
+    width: 700px;
+    height: 250px;
+    border-radius: 0 0 10px 10px;
+    background-color: #ffffff;
+}
+
+.modalHeader {
+    width: 700px;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px 10px 0 0;
+    background-color: #ffffff;
+}
+
+.modal .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    cursor: pointer;
+}
+
+.Login {
+    width: 40%;
+    height: 40%;
+    margin: auto auto;
+    background-color: #F8F8F8;
+    filter: drop-shadow(18px 5px 30px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.kakaoLogin {
+    margin-top: 22px;
+    margin-left: 60px;
+    font-size: 20px;
+    font-weight: bold;
+}
