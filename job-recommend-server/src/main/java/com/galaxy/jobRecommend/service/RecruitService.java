@@ -2,7 +2,6 @@ package com.galaxy.jobRecommend.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -31,16 +30,18 @@ public class RecruitService {
         return recruitDTOList;
     }
 	
-	public RecruitDTO findById(Long company_code) {
-        // 하나 조회할때 optional로 감싸줌
-        Optional<RecruitEntity> optionalRecruitEntity = recruitRepository.findById(company_code);
-        if (optionalRecruitEntity.isPresent()){
-            return RecruitDTO.toRecruitDTO(optionalRecruitEntity.get()); // optional을 벗겨내서 entity -> dto 변환
-        }else {
-            return null;
+	public List<RecruitDTO> searchPosts(String recruit_name){
+		
+		List<RecruitEntity> recruitEntityList = recruitRepository.findByrecruitNameContains(recruit_name);
+		List<RecruitDTO> recruitDTOList = new ArrayList<>();
+		System.out.println(recruitEntityList);
+		if(recruitEntityList.isEmpty()) return recruitDTOList;
+		
+		for(RecruitEntity recruitEntity : recruitEntityList){
+        	recruitDTOList.add(RecruitDTO.toRecruitDTO(recruitEntity));
         }
-
-
-    }
+		
+		return recruitDTOList;
+	}
 
 }

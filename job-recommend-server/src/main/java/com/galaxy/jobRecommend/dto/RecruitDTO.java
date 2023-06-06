@@ -13,21 +13,27 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @ToString
 public class RecruitDTO {
-	private Long company_code;
-	private String recruit_name;
-	private String recruit_skill;
-	private String recruit_link;
-	private Integer recruit_rank;
-	private String recruit_date;
+	private Long companyCode;
+	private String companyName;
+	private String recruitName;
+	private String recruitSkill;
+	private String recruitLink;
+	private String recruitRank;
+	private String recruitDate;
+	private String recruitJob;
+	private String recruitAddress;
 	
 	public static RecruitDTO toRecruitDTO(RecruitEntity recruitEntity){
 		RecruitDTO recruitDTO = new RecruitDTO();
-		recruitDTO.setCompany_code(recruitEntity.getCompany_code());
-		recruitDTO.setRecruit_name(recruitEntity.getRecruit_name());
-		recruitDTO.setRecruit_skill(recruitEntity.getRecruit_skill());
-		recruitDTO.setRecruit_link(recruitEntity.getRecruit_link());
-		recruitDTO.setRecruit_rank(recruitEntity.getRecruit_rank());
-		recruitDTO.setRecruit_date(recruitEntity.getRecruit_date());
+		recruitDTO.setCompanyCode(recruitEntity.getCompanyCode());
+		recruitDTO.setCompanyName(recruitEntity.getCompanyName());
+		recruitDTO.setRecruitName(recruitEntity.getRecruitName());
+		recruitDTO.setRecruitSkill(recruitEntity.getRecruitSkill());
+		recruitDTO.setRecruitLink(recruitEntity.getRecruitLink());
+		recruitDTO.setRecruitRank(recruitEntity.getRecruitRank());
+		recruitDTO.setRecruitDate(recruitEntity.getRecruitDate());
+		recruitDTO.setRecruitJob(recruitEntity.getRecruitJob());
+		recruitDTO.setRecruitAddress(recruitEntity.getRecruitAddress());
 
         return recruitDTO;
     }
