@@ -60,11 +60,11 @@ def classify_skill(skill):
                  'AWS Simple Queue Service(AWS SQS)','Amazon Web Service','Amazon Web Services(AWS)','AWS App Mesh',
                  'AWS Cloud Development Kit','AWS CodeCommit','AWS IoT Device Management','AWS Shell','Amazon API Gateway',
                  'Amazon CloudFront','Amazon Connect','Amazon DynamoDB','Amazon EC2','Amazon EKS','Amazon RDS','Amazon RDS for PostgreSQL',
-                 'Amazon Route 53','Amazon S3','aws','amazon dynamodb', 'Yocto','aws batch', 'EC2' ,'EMR']:
+                 'Amazon Route 53','Amazon S3','aws','amazon dynamodb','Amazon SQS', 'Yocto','aws batch', 'EC2' ,'EMR']:
         return 'AWS'
     elif skill in ['Kotlin','Android','Android Studio','Android OS','Android SDK', 'android os']:
         return 'Kotlin'
-    elif skill in ['Angular','AngularJS','angular 2']:
+    elif skill in ['Angular','AngularJS','angular 2','Angular 2']:
         return 'Angular'
     elif skill in ['Apache','Apache HTTP Server','Apache Tomcat','Apache Traffic Server', 'apache tomcat']:
         return 'Apache'
@@ -81,12 +81,12 @@ def classify_skill(skill):
     elif skill in ['C#']:
         return 'C#'
     elif skill in [ 'C', 'C / C++','C++','c','c++','Mfc','Mantis','Embedded C']:
-        return 'C / C++'
+        return 'C/C++'
     elif skill in ['AutoCAD','CAD']:
         return 'CAD'
     elif skill in [ 'CSS','CSS3','css 3','CSS 3','Tailwind CSS']:
         return 'CSS'
-    elif skill in [ 'ElasticSearch','Elasticsearch', 'elasticsearch ']:
+    elif skill in [ 'ElasticSearch','Elasticsearch', 'elasticsearch ','elasticsearch']:
         return 'ElasticSearch'
     elif skill in [ 'FPGA','FPGA 프로토 타이핑']:
         return 'FPGA'
@@ -179,7 +179,7 @@ def classify_skill(skill):
         return 'Tensorflow'
     elif skill in ['Django','django','DRF(Django REST framework)']:
         return 'Django'
-    elif skill in ['jQuery', 'jquery ']:
+    elif skill in ['jQuery', 'jquery ', 'jquery']:
         return 'jQuery'
     elif skill in ['Keras', 'keras']:
         return 'Keras'
@@ -282,10 +282,11 @@ def classify_skill(skill):
                    'Klaytn', 'Laravel', 'LiDAR', 'Lua', 'MES', 'MFC', 'ML', 'MVC', 'MVVM', 'MXNET', 'Machine Learning', 'Machine Vision', 
                    'Material-UI', 'Maven', 'Memcached', 'Moodle', 'MyBatis', 'NFC', 'NLP', 'NVIDIA TensorRT', 'Netty','OOP','OpenFlow',
                    'OpenMP', 'OpenStack','Oracle', 'Oracle Database', 'Perl', 'PowerBuilder', 'Prisma', 'Qt','RHEL', 'ROS','RS232', 'RTOS',
-                   'RabbitMQ', 'STL', 'STP',  'SVG','Scala', 'Scikit-Learn', 'Servlets', 'Shader', 'Simulink', 'Sketch', 'Socket.IO', 
+                   'RabbitMQ', 'STL', 'STP',  'SVG','Scala', 'Scikit-Learn', 'scikit-learn', 'Servlets', 'Shader', 'Simulink', 'Sketch', 'Socket.IO', 
                    'Solidity', 'Spa',  'Spinnaker', 'Storybook',  'Sybase',  'SLAM', 'TCL', 'Tableau','TeamCity', 'Tomcat', 'Truffle',
                    'TypeORM','UML', 'Ubuntu', 'Unreal Engine', 'VM웨어', 'Visual Basic', 'Visual Studio', 'Visual Studio Code','Vuetify.js',
-                   'Web3.py','web3.js', 'WebGL', 'WebRTC', 'Webpack', 'WinForm', 'Xcode', 'Xilinx', 'Yarn', 'gRPC', 'DevExpress' ]:
+                   'Web3.py','web3.js', 'WebGL', 'WebRTC', 'Webpack', 'WinForm', 'Xcode', 'Xilinx', 'Yarn', 'gRPC', 'DevExpress',
+                  '고객 중심', 'Windows 서비스', 'EMC 규정 준수', '의료 장비', 'UX 디자인', '의료 영상', '비즈니스 분석', '설계', '보안 운영', '의료 기기'  ]:
         return None
     else:
         return skill
