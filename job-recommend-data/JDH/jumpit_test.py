@@ -46,7 +46,7 @@ def classify_skill(skill):
     elif skill in ['C#']:
         return 'C#'
     elif skill in [ 'C', 'C / C++','C++','c','c++','Mfc','Mantis','Embedded C']:
-        return 'C/C++'
+        return 'C / C++'
     elif skill in ['AutoCAD','CAD']:
         return 'CAD'
     elif skill in [ 'CSS','CSS3','css 3','CSS 3','Tailwind CSS']:
