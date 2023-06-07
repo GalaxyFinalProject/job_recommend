@@ -4,6 +4,7 @@ import re
 import csv
 import datetime
 import os
+import ast
 
 # 각각 크롤링한 csv 불러오기
 df1=pd.read_csv(r'C:\Users\Playdata\Desktop\programers_cp949_1.csv', encoding='cp949')
@@ -76,84 +77,123 @@ def preprocess_dataframe(df):
 df1 = preprocess_dataframe(df1)
 df2 = preprocess_dataframe(df2)
 df3 = preprocess_dataframe(df3)
-df=preprocess_dataframe(df)
 
+# 두 공고에 모두 있는 회사명 데이터 빼내기 filtered_df
+def preprocess_and_compare_links(df,intersection):
+    # 공통으로 있는 회사만 필터링
+    filtered_df = df[df['회사명'].isin(intersection)]
+    # NaN인 기술스택을 '[]'로 대체
+    filtered_df.loc[filtered_df['기술스택'].apply(lambda x: isinstance(x, float)), '기술스택'] = filtered_df.loc[filtered_df['기술스택'].apply(lambda x: isinstance(x, float)), '기술스택'].apply(lambda x: '[]' if pd.isnull(x) else x)
+    # 공고명에서 '신입'과 ()로 둘러싸인 부분 삭제
+    filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r' \(신입.*?\)|신입|\[신입.*?\] |\[코스닥상장사\] |채용', '', x))
+    filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r'\(신입/경력\)', '', x))
+
+    # 중복되지 않은 데이터를 추출
+    df = df[~df['링크'].isin(filtered_df['링크'])]
+    
+    return df,filtered_df
+
+df=pd.concat([df1,df2])
 intersection = pd.Series(list(set(df1['회사명'].unique()) & set(df2['회사명'].unique())))
-
-filtered_df = df[df['회사명'].isin(intersection)]
-
-# 공고명에서 '신입'과 ()로 둘러싸인 부분 삭제
-filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r' \(신입.*?\)|신입|\[신입.*?\] |\[코스닥상장사\] |채용', '', x))
-filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r'\(신입/경력\)', '', x))
-
-pro_wanted_df = df[~df['링크'].isin(filtered_df['링크'])]
+df, filtered_df = preprocess_and_compare_links(df, intersection)
 
 # 회사가 같고, 링크는 다르고, 한 공고문이 다른 공고문을 완전히 포함하고 있을 때 
 # 중복된 공고명을 가진 그룹 찾기
 grouped = filtered_df.groupby('회사명')
+def find_exact_matches(grouped, url_a, url_b):
+    exact_match_df = pd.DataFrame(columns=grouped.first().columns)
+    for _, group in grouped:
+        if len(group) > 1:
+            for i in range(len(group)):
+                a_group = group.iloc[i]
+                for j in range(i + 1, len(group)):
+                    b_group = group.iloc[j]
+                    if ((a_group['링크'].startswith(url_a) and b_group['링크'].startswith(url_b))
+                        or (a_group['링크'].startswith(url_b) and b_group['링크'].startswith(url_a))):
+                        if a_group['공고명'].replace(" ", "") == b_group['공고명'].replace(" ", ""):
+                            if a_group['기술스택'] != b_group['기술스택']:
+                                combined_tech_stack = set()
 
-# 완전히 일치하는 경우를 찾는 코드
-exact_match_df = pd.DataFrame(columns=filtered_df.columns)
-for _, group in grouped:
-    if len(group) > 1:
-        for i in range(len(group)):
-            prog_group = group.iloc[i]
-            for j in range(i + 1, len(group)):
-                wanted_group = group.iloc[j]
-                if ((prog_group['링크'].startswith('https://programmers.co.kr') and wanted_group['링크'].startswith('https://www.wanted.co.kr'))
-                    or (prog_group['링크'].startswith('https://www.wanted.co.kr') and wanted_group['링크'].startswith('https://programmers.co.kr'))):
-                    if prog_group['공고명'].replace(" ", "") == wanted_group['공고명'].replace(" ", ""):
-                        exact_match_df = exact_match_df.append(prog_group)
-                        exact_match_df = exact_match_df.append(wanted_group)
+                                if isinstance(a_group['기술스택'], str):
+                                    a_group['기술스택'] = ast.literal_eval(a_group['기술스택'])
+                                    for a_stack in a_group['기술스택']:
+                                        combined_tech_stack.add(a_stack)
 
-# 포함관계인 경우를 찾는 코드
-included_df = pd.DataFrame(columns=filtered_df.columns)
-for _, group in grouped:
-    if len(group) > 1:
-        for i in range(len(group)):
-            prog_group = group.iloc[i]
-            for j in range(i + 1, len(group)):
-                wanted_group = group.iloc[j]
-                if ((prog_group['링크'].startswith('https://programmers.co.kr') and wanted_group['링크'].startswith('https://www.wanted.co.kr'))
-                    or (prog_group['링크'].startswith('https://www.wanted.co.kr') and wanted_group['링크'].startswith('https://programmers.co.kr'))):
-                    if (prog_group['공고명'].replace(" ", "") in wanted_group['공고명'].replace(" ", "") 
-                    or wanted_group['공고명'].replace(" ", "") in prog_group['공고명'].replace(" ", "")):
-                        included_df = included_df.append(prog_group)
-                        included_df = included_df.append(wanted_group)
+                                if isinstance(b_group['기술스택'], str):
+                                    b_group['기술스택'] = ast.literal_eval(b_group['기술스택'])
+                                    for b_stack in b_group['기술스택']:
+                                        combined_tech_stack.add(b_stack)
+                                    
+                                combined_tech_stack = list(combined_tech_stack) 
+
+                                a_group['기술스택'] = combined_tech_stack
+                                b_group['기술스택'] = combined_tech_stack
+
+                            exact_match_df = exact_match_df.append(a_group)
+                            exact_match_df = exact_match_df.append(b_group)
+
+    return exact_match_df
+
+# 포함관계인 공고문 찾기
+def find_included_matches(grouped, url_a, url_b):
+    included_df = pd.DataFrame(columns=grouped.first().columns)
+    for _, group in grouped:
+        if len(group) > 1:
+            for i in range(len(group)):
+                a_group = group.iloc[i]
+                for j in range(i + 1, len(group)):
+                    b_group = group.iloc[j]
+                    if ((a_group['링크'].startswith(url_a) and b_group['링크'].startswith(url_b))
+                        or (a_group['링크'].startswith(url_b) and b_group['링크'].startswith(url_a))):
+                        if (a_group['공고명'].replace(" ", "") in b_group['공고명'].replace(" ", "") 
+                        or b_group['공고명'].replace(" ", "") in a_group['공고명'].replace(" ", "")):
+                            if a_group['기술스택'] != b_group['기술스택']:
+                                combined_tech_stack = set()
+
+                                if isinstance(a_group['기술스택'], str):
+                                    a_group['기술스택'] = ast.literal_eval(a_group['기술스택'])
+                                    for a_stack in a_group['기술스택']:
+                                        combined_tech_stack.add(a_stack)
+
+                                if isinstance(b_group['기술스택'], str):
+                                    b_group['기술스택'] = ast.literal_eval(b_group['기술스택'])
+                                    for b_stack in b_group['기술스택']:
+                                        combined_tech_stack.add(b_stack)
+
+                                combined_tech_stack = list(combined_tech_stack) 
+
+                                a_group['기술스택'] = combined_tech_stack
+                                b_group['기술스택'] = combined_tech_stack
+
+                            included_df = included_df.append(a_group)
+                            included_df = included_df.append(b_group)
+    return included_df
+
+exact_match_df = find_exact_matches(grouped, 'https://programmers.co.kr', 'https://www.wanted.co.kr')
+included_df = find_included_matches(grouped, 'https://programmers.co.kr', 'https://www.wanted.co.kr')
 
 solo_df = filtered_df[~filtered_df['링크'].isin(exact_match_df['링크'])]
 solo_df = solo_df[~solo_df['링크'].isin(included_df['링크'])]
 
-# 원티드와 프로그래머스의 경우, 원티드를 대표로 함
-exact_match_df = exact_match_df[exact_match_df['링크'].str.startswith('https://www.wanted.co.kr')]
-included_df = included_df[included_df['링크'].str.startswith('https://www.wanted.co.kr')]
+exact_match_df['기술스택'] = exact_match_df['기술스택'].apply(lambda x: str(x))
+included_df['기술스택'] = included_df['기술스택'].apply(lambda x: str(x))
 
 duplicates_df = pd.merge(exact_match_df, included_df, how='outer')
 
+duplicates_df = duplicates_df[duplicates_df['링크'].str.startswith('https://programmers.co.kr')]
+
 # solo_df를 더함
-pro_wanted_df = pro_wanted_df.append(duplicates_df, ignore_index=True)
+final_df = df.append(solo_df, ignore_index=True)
 
-# filtered_results를 더함
-pro_wanted_df = pro_wanted_df.append(solo_df, ignore_index=True)
+# duplicates_df를 더함
+pro_wanted_df = final_df.append(duplicates_df, ignore_index=True)
 
-pro_wanted_df.to_csv(r'C:\Users\Playdata\Desktop\pro_wanted_df.csv', index=False, encoding='cp949')
-
-# 점핏까지
-# df 합치기
+# 점핏 합치기
 df = pd.concat([pro_wanted_df, df3])
-df =df.drop('Unnamed: 0',axis=1)
 df['근무지'] = df['근무지'].str.replace('\n·', '')
-
 intersection = pd.Series(list(set(pro_wanted_df['회사명'].unique()) & set(df3['회사명'].unique())))
 
-filtered_df = df[df['회사명'].isin(intersection)]
-
-# 공고명에서 '신입'과 ()로 둘러싸인 부분 삭제
-filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r' \(신입.*?\)|신입|\[신입.*?\] |\[코스닥상장사\] |채용', '', x))
-filtered_df['공고명'] = filtered_df['공고명'].apply(lambda x: re.sub(r'\(신입/경력\)', '', x))
-
-final_df = df[~df['링크'].isin(filtered_df['링크'])]
-
+df,filtered_df=preprocess_and_compare_links(df,intersection)
 
 # 회사가 같고, 링크는 다르고, 한 공고문이 다른 공고문을 완전히 포함하고 있을 때 
 # 중복된 공고명을 가진 그룹 찾기
@@ -170,6 +210,24 @@ for _, group in grouped:
                 if ((prog_group['링크'].startswith('https://programmers.co.kr') and jumpit_group['링크'].startswith('https://www.jumpit.co.kr'))
                     or (prog_group['링크'].startswith('https://www.jumpit.co.kr') and jumpit_group['링크'].startswith('https://programmers.co.kr'))):
                     if prog_group['공고명'].replace(" ", "") == jumpit_group['공고명'].replace(" ", ""):
+                        if prog_group['기술스택'] != jumpit_group['기술스택']:
+                            combined_tech_stack = set()
+
+                            if isinstance(prog_group['기술스택'], str):
+                                prog_group['기술스택'] = ast.literal_eval(prog_group['기술스택'])
+                                for p_stack in prog_group['기술스택']:
+                                    combined_tech_stack.add(p_stack)
+
+                            if isinstance(jumpit_group['기술스택'], str):
+                                jumpit_group['기술스택'] = ast.literal_eval(jumpit_group['기술스택'])
+                                for j_stack in jumpit_group['기술스택']:
+                                    combined_tech_stack.add(j_stack)
+                                    
+                            combined_tech_stack=list(combined_tech_stack) 
+                            
+                            prog_group['기술스택'] = combined_tech_stack
+                            jumpit_group['기술스택'] = combined_tech_stack
+                            
                         exact_match_df = exact_match_df.append(prog_group)
                         exact_match_df = exact_match_df.append(jumpit_group)
 for _, group in grouped:
@@ -181,6 +239,24 @@ for _, group in grouped:
                 if ((wanted_group['링크'].startswith('https://www.wanted.co.kr') and jumpit_group['링크'].startswith('https://www.jumpit.co.kr'))
                     or (wanted_group['링크'].startswith('https://www.jumpit.co.kr') and jumpit_group['링크'].startswith('https://www.wanted.co.kr'))):
                     if wanted_group['공고명'].replace(" ", "") == jumpit_group['공고명'].replace(" ", ""):
+                        if wanted_group['기술스택'] != jumpit_group['기술스택']:
+                            combined_tech_stack = set()
+
+                            if isinstance(wanted_group['기술스택'], str):
+                                wanted_group['기술스택'] = ast.literal_eval(wanted_group['기술스택'])
+                                for w_stack in wanted_group['기술스택']:
+                                    combined_tech_stack.add(w_stack)
+
+                            if isinstance(jumpit_group['기술스택'], str):
+                                jumpit_group['기술스택'] = ast.literal_eval(jumpit_group['기술스택'])
+                                for j_stack in jumpit_group['기술스택']:
+                                    combined_tech_stack.add(j_stack)
+                                    
+                            combined_tech_stack=list(combined_tech_stack) 
+                            
+                            prog_group['기술스택'] = combined_tech_stack
+                            jumpit_group['기술스택'] = combined_tech_stack
+                            
                         exact_match_df = exact_match_df.append(wanted_group)
                         exact_match_df = exact_match_df.append(jumpit_group)
 
@@ -196,6 +272,23 @@ for _, group in grouped:
                     or (prog_group['링크'].startswith('https://www.jumpit.co.kr') and jumpit_group['링크'].startswith('https://programmers.co.kr'))):
                     if (prog_group['공고명'].replace(" ", "") in jumpit_group['공고명'].replace(" ", "") 
                     or jumpit_group['공고명'].replace(" ", "") in prog_group['공고명'].replace(" ", "")):
+                        if prog_group['기술스택'] != jumpit_group['기술스택']:
+                            combined_tech_stack = set()
+
+                            if isinstance(prog_group['기술스택'], str):
+                                prog_group['기술스택'] = ast.literal_eval(prog_group['기술스택'])
+                                for p_stack in prog_group['기술스택']:
+                                    combined_tech_stack.add(p_stack)
+
+                            if isinstance(jumpit_group['기술스택'], str):
+                                jumpit_group['기술스택'] = ast.literal_eval(jumpit_group['기술스택'])
+                                for j_stack in jumpit_group['기술스택']:
+                                    combined_tech_stack.add(j_stack)
+                                    
+                            combined_tech_stack=list(combined_tech_stack) 
+                            
+                            prog_group['기술스택'] = combined_tech_stack
+                            jumpit_group['기술스택'] = combined_tech_stack
                         included_df = included_df.append(prog_group)
                         included_df = included_df.append(jumpit_group)
 for _, group in grouped:
@@ -208,24 +301,42 @@ for _, group in grouped:
                     or (wanted_group['링크'].startswith('https://www.jumpit.co.kr') and jumpit_group['링크'].startswith('https://www.wanted.co.kr'))):
                     if (wanted_group['공고명'].replace(" ", "") in jumpit_group['공고명'].replace(" ", "") 
                     or jumpit_group['공고명'].replace(" ", "") in wanted_group['공고명'].replace(" ", "")):
+                        if wanted_group['기술스택'] != jumpit_group['기술스택']:
+                            combined_tech_stack = set()
+
+                            if isinstance(wanted_group['기술스택'], str):
+                                wanted_group['기술스택'] = ast.literal_eval(wanted_group['기술스택'])
+                                for w_stack in wanted_group['기술스택']:
+                                    combined_tech_stack.add(w_stack)
+
+                            if isinstance(jumpit_group['기술스택'], str):
+                                jumpit_group['기술스택'] = ast.literal_eval(jumpit_group['기술스택'])
+                                for j_stack in jumpit_group['기술스택']:
+                                    combined_tech_stack.add(j_stack)
+                                    
+                            combined_tech_stack=list(combined_tech_stack) 
+                            
+                            prog_group['기술스택'] = combined_tech_stack
+                            jumpit_group['기술스택'] = combined_tech_stack
+                            
                         included_df = included_df.append(wanted_group)
                         included_df = included_df.append(jumpit_group)
 
 solo_df = filtered_df[~filtered_df['링크'].isin(exact_match_df['링크'])]
 solo_df = solo_df[~solo_df['링크'].isin(included_df['링크'])]
 
-# 원티드와 프로그래머스의 경우,점핏을 대표로 함
-exact_match_df = exact_match_df[exact_match_df['링크'].str.startswith('https://www.jumpit.co.kr')]
-included_df = included_df[included_df['링크'].str.startswith('https://www.jumpit.co.kr')]
+exact_match_df['기술스택'] = exact_match_df['기술스택'].apply(lambda x: str(x))
+included_df['기술스택'] = included_df['기술스택'].apply(lambda x: str(x))
 
 duplicates_df = pd.merge(exact_match_df, included_df, how='outer')
 
+duplicates_df = duplicates_df[duplicates_df['링크'].str.startswith('https://www.jumpit.co.kr')]
+
 # solo_df를 더함
-final_df = final_df.append(duplicates_df, ignore_index=True)
+df = df.append(solo_df, ignore_index=True)
 
-# filtered_results를 더함
-final_df = final_df.append(solo_df, ignore_index=True)
-
+# duplicates_df를 더함
+final_df = df.append(duplicates_df, ignore_index=True)
 
 # 직무 전처리
 df = final_df
