@@ -10,9 +10,9 @@ import numpy as np
 def classify_position(position):
 #     if position in ['시스템 네트워크','시스템, 네트워크 관리자', '시스템 소프트웨어', '로보틱스 미들웨어', '사물인터넷(IoT)']:
 #         return '시스템/네트워크'
-    if position in ['모바일 게임', '게임 클라이언트', '게임 서버']:
-        return '게임개발'
-    elif position in ['머신러닝', '인공지능', '머신러닝 엔지니어']:
+    # if position in ['모바일 게임', '게임 클라이언트', '게임 서버']:
+    #     return '게임개발'
+    if position in ['머신러닝', '인공지능', '머신러닝 엔지니어']:
         return 'AI/ML'
     elif position in ['웹 개발자','웹 풀스택']:
         return '웹개발'
