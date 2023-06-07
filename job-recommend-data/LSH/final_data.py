@@ -359,6 +359,55 @@ df['근무지'] = df['근무지'].astype(str)  # 데이터 타입을 문자열�
 
 df['근무지'] = df['근무지'].apply(lambda x: x.split(' ', 1)[1] if len(x.split(' ')) > 1 and x.split(' ')[0] == x.split(' ')[1] else x)
 
+# 회사와 평점
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+# 회사명 중복값없이 리스트로 받기
+company_list=df['회사명'].unique().tolist()
+
+# 회사명과 평점으로 구성된 데이터 프레임
+company_star_df = pd.DataFrame(columns=['회사명', '평점'])
+
+# 크롤링 시작
+driver = webdriver.Chrome()
+
+driver.get('https://www.jobplanet.co.kr/search?query=+&category=search_new&search_keyword_hint_id=&_rs_con=seach&_rs_act=keyword_search')
+time.sleep(3)  # 3초 동안 대기
+
+for company in company_list:
+    # 검색 버튼 누르기
+    input_button = driver.find_element(By.XPATH, '//*[@id="search_bar_search_query"]')
+    input_button.send_keys(company)
+    time.sleep(2)
+    star=None
+
+    elements = driver.find_elements(By.CSS_SELECTOR, 'ul > li.company')
+    if len(elements)==0:
+        pass
+    else:
+        submit_button=driver.find_element(By.CSS_SELECTOR, '#search_form > div > button')
+        submit_button.click()
+        time.sleep(2)  # 2초 동안 대기
+        if len(elements)==1:
+            star=driver.find_element(By.XPATH,'//*[@id="mainContents"]/div[1]/div/div[2]/div[1]/div/span[3]').text        
+        else:
+            cards = driver.find_elements(By.CLASS_NAME, 'result_card')
+            for card in cards:
+                jp_company = card.text.split()[0].replace("(주)", "")
+                if company == jp_company:
+                    star = card.text.split()[2]
+                    break
+
+    print(company,star)    
+    company_star_df.loc[len(company_star_df)] = [company, star]
+    # 검색창 지우기
+    input_button = driver.find_element(By.XPATH, '//*[@id="search_bar_search_query"]')  # input_button 웹 요소를 다시 찾음
+    input_button.clear()
+
+# 기존 데이터프레임에 평점 추가
+df = df.merge(company_star_df, on='회사명', how='left')
 
 # 저장
 df.to_csv(r'C:\Users\Playdata\Desktop\final_true.csv', index=True, encoding='cp949')
