@@ -12,45 +12,25 @@ df2=pd.read_csv(r"C:\Users\Playdata\Desktop\wanted_cp949_1.csv", encoding='cp949
 df3=pd.read_csv(r"C:\Users\Playdata\Desktop\jumpit_cp949_2.csv", encoding='cp949')
 
 # 직무&기술스택 보기
+def add_positions_from_csv(file_path, combined_position_stack):
+    with open(file_path, 'r') as csvfile:
+        reader = csv.reader(csvfile)
+        next(reader)  # 헤더 건너뛰기
+        for row in reader:
+            position = row[0]
+            stack_item = row[1]
+            if position in combined_position_stack:
+                combined_position_stack[position].add(stack_item)
+            else:
+                combined_position_stack[position] = {stack_item}
+    return combined_position_stack
+
+combined_position_stack = {}  
+
 # 세 개의 CSV 파일 합치기
-combined_position_stack = {}
-
-# 첫 번째 CSV 파일 읽어오기
-with open(r"C:\Users\Playdata\Desktop\position_stack1.csv", 'r') as csvfile:
-    reader = csv.reader(csvfile)
-    next(reader)  # 헤더 건너뛰기
-    for row in reader:
-        position = row[0]
-        stack_item = row[1]
-        if position in combined_position_stack:
-            combined_position_stack[position].add(stack_item)
-        else:
-            combined_position_stack[position] = {stack_item}
-            
-# 두 번째 CSV 파일 읽어오기
-with open(r"C:\Users\Playdata\Desktop\position_stack2.csv", 'r') as csvfile:
-    reader = csv.reader(csvfile)
-    next(reader)  # 헤더 건너뛰기
-    for row in reader:
-        position = row[0]
-        stack_item = row[1]
-        if position in combined_position_stack:
-            combined_position_stack[position].add(stack_item)
-        else:
-            combined_position_stack[position] = {stack_item}
-
-            
-# 세 번째 CSV 파일 읽어오기
-with open(r"C:\Users\Playdata\Desktop\position_stack3.csv", 'r') as csvfile:
-    reader = csv.reader(csvfile)
-    next(reader)  # 헤더 건너뛰기
-    for row in reader:
-        position = row[0]
-        stack_item = row[1]
-        if position in combined_position_stack:
-            combined_position_stack[position].add(stack_item)
-        else:
-            combined_position_stack[position] = {stack_item}
+combined_position_stack = add_positions_from_csv(r"C:\Users\Playdata\Desktop\position_stack1.csv", combined_position_stack)
+combined_position_stack = add_positions_from_csv(r"C:\Users\Playdata\Desktop\position_stack2.csv", combined_position_stack)
+combined_position_stack = add_positions_from_csv(r"C:\Users\Playdata\Desktop\position_stack3.csv", combined_position_stack)
 
 #최종 저장
 directory = r'C:\Users\Playdata\Desktop\\' 
