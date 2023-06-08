@@ -1682,9 +1682,17 @@ function MyLoginPage() {
                     console.log(useCityCountry);
                     await axios.post("/user/save/list", { 'socialId': UserInfo.socialId, 'platfomType': UserInfo.platformType, 'userLikeAddress': JSON.stringify(useCityCountry), 'userLikeSkill': JSON.stringify(skillList), 'userLikeJob': JSON.stringify(JobList) }).then((response) => {
                         console.log(response.data);
+                        dispatch(setUser({
+                            socialId: UserInfo.socialId,
+                            platformType: UserInfo.platformType,
+                            userLikeAddress: useCityCountry,
+                            userLikeSkill: skillList,
+                            userLikeJob: JobList,
+                        }));
                     }).catch((e) => {
                         console.log(e);
                     })
+
                 }}>저장</button>
                 <button className={styles.saveBtn} onClick={() => {
                     setJobList([]);

@@ -2,13 +2,12 @@
     display: flex;
     width: 1400px;
     margin-bottom: 19px;
+    font-family: 'SUITE-Regular';
 }
-
 
 .contents {
     width: 80%;
 }
-
 
 .sidebar {
     display: block;
@@ -99,7 +98,7 @@
 }
 
 .boxSize:hover {
-    background-color: #f1f1f1;
+    background-color: #8B8B8B;
 }
 
 .search {

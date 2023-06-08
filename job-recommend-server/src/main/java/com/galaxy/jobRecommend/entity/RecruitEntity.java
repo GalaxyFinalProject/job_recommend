@@ -30,7 +30,7 @@ public class RecruitEntity {
 	private String recruitLink;
 	
 	@Column(name = "recruit_rank")
-	private String recruitRank;
+	private float recruitRank;
 	
 	@Column(name = "recruit_date")
 	private String recruitDate; 
@@ -39,9 +39,12 @@ public class RecruitEntity {
 	private String recruitAddress; 
 	
 	@Column(name = "recruit_job")
-	private String recruitJob; 
-	
-	
+	private String recruitJob;
+
+	@Column(name = "recruit_score")
+	private float recruitScore;
+
+
 	public static RecruitEntity toRecruitEntity(RecruitDTO recruitDTO) {
 		RecruitEntity recruitEntity = new RecruitEntity();
 		recruitEntity.setCompanyCode(recruitDTO.getCompanyCode());
@@ -53,6 +56,7 @@ public class RecruitEntity {
 		recruitEntity.setRecruitDate(recruitDTO.getRecruitDate());
 		recruitEntity.setRecruitAddress(recruitDTO.getRecruitAddress());
 		recruitEntity.setRecruitJob(recruitDTO.getRecruitJob());
+		recruitEntity.setRecruitScore(recruitDTO.getRecruitScore());
 		return recruitEntity;
 
 	}
