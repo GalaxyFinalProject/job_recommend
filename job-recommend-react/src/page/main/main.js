@@ -6,7 +6,6 @@ import { FaReact, FaVuejs, FaHtml5, FaCss3Alt, FaAngular, FaNodeJs, FaJava, FaPy
 import { DiGoogleCloudPlatform, DiSpark } from "react-icons/di";
 import { IoIosSearch } from "react-icons/io";
 import { CgCPlusPlus } from "react-icons/cg";
-import { FiChevronLeft, FiChevronsLeft, FiChevronRight, FiChevronsRight } from "react-icons/fi";
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -31,8 +30,6 @@ function MainPage() {
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
 
     // 현재 페이지의 아이템 목록 가져오기
     currentItems = selectSkill.slice(startIndex, endIndex);
@@ -483,7 +480,7 @@ function MainPage() {
                                         })
                                     }
                                     <div style={{ fontSize: '1.3rem', fontWeight: 'bold', textAlign: 'center', marginTop: '10px', marginLeft: '10px', marginRight: '10px', minHeight: '62.4px', maxHeight: '62.4px', overflow: 'hidden' }}>{currentItems[i].recruitName}</div>
-                                    <div style={{ fontSize: '0.9rem', color: '#000080', fontWeight: 'bold', textAlign: 'center', marginTop: '10px' }}>{selectSkill[i].companyName}</div>
+                                    <div style={{ fontSize: '0.9rem', color: '#000080', fontWeight: 'bold', textAlign: 'center', marginTop: '10px' }}>{currentItems[i].companyName}</div>
                                     <div style={{ fontSize: '0.8rem', color: 'red', textAlign: 'center', marginTop: '15px' }}>마감일 : {currentItems[i].recruitDate}</div>
                                     <div style={{ fontSize: '0.7rem', fontWeight: 'bold', textAlign: 'center', marginTop: '15px', marginLeft: '15px', marginRight: '15px', marginBottom: '15px' }}>{currentItems[i].recruitAddress}</div>
                                     <div style={{ marginLeft: '5rem', marginRight: '5rem', maxHeight: '120px', overflow: 'hidden' }}>
@@ -495,7 +492,7 @@ function MainPage() {
                                                 return (
                                                     <>
                                                         {(a == 'TypeScript') ? <SiTypescript className={styles.icon_size}></SiTypescript> : null}
-                                                        {(a == 'React') ? <FaPython className={styles.icon_size}></FaPython> : null}
+                                                        {(a == 'React') ? <FaReact className={styles.icon_size}></FaReact> : null}
                                                         {(a == 'JavaScript') ? <SiJavascript className={styles.icon_size}></SiJavascript> : null}
                                                         {(a == 'svelte') ? <SiSvelte className={styles.icon_size}></SiSvelte> : null}
                                                         {(a == 'Next.js') ? <TbBrandNextjs className={styles.icon_size}></TbBrandNextjs> : null}

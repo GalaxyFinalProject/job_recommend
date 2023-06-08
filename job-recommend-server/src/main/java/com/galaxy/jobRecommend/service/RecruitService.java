@@ -40,7 +40,6 @@ public class RecruitService {
 		for(RecruitEntity recruitEntity : recruitEntityList){
         	recruitDTOList.add(RecruitDTO.toRecruitDTO(recruitEntity));
         }
-		
 		return recruitDTOList;
 	}
 

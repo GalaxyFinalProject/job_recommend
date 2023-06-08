@@ -18,10 +18,11 @@ public class RecruitDTO {
 	private String recruitName;
 	private String recruitSkill;
 	private String recruitLink;
-	private String recruitRank;
+	private float recruitRank;
 	private String recruitDate;
 	private String recruitJob;
 	private String recruitAddress;
+	private float recruitScore;
 	
 	public static RecruitDTO toRecruitDTO(RecruitEntity recruitEntity){
 		RecruitDTO recruitDTO = new RecruitDTO();
@@ -34,6 +35,7 @@ public class RecruitDTO {
 		recruitDTO.setRecruitDate(recruitEntity.getRecruitDate());
 		recruitDTO.setRecruitJob(recruitEntity.getRecruitJob());
 		recruitDTO.setRecruitAddress(recruitEntity.getRecruitAddress());
+		recruitDTO.setRecruitScore(recruitEntity.getRecruitScore());
 
         return recruitDTO;
     }

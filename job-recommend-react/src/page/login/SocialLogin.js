@@ -83,19 +83,22 @@ const SocialKakao = (props) => {
     const kakaoClientId = 'b7f6e8738ec96fa09b0c87754fc81d13'
     let dispatch = useDispatch();
     let userShow = useSelector(state => state.LoginUser);
-    let skill_list = [];
+    let all = {};
+    let skillList = [];
     const kakaoOnSuccess = async (data) => {
-        let idToken = data.response.access_token // 인가코드 백엔드로 전달
         console.log(data.profile.id);
         await axios.post("/user/save", {
             'socialId': data.profile.id,
             'platfomType': 'kakao',
         }).then((response) => {
             console.log(response.data);
-            skill_list = response.data;
+            all = response.data;
             dispatch(setUser({
                 socialId: data.profile.id,
                 platformType: 'kakao',
+                userLikeAddress: JSON.parse(all.userLikeAddress),
+                userLikeSkill: JSON.parse(all.userLikeSkill),
+                userLikeJob: JSON.parse(all.userLikeJob),
             }));
             localStorage.setItem("user", JSON.stringify(userShow));
             props.setLoginCheck(true);
@@ -104,9 +107,10 @@ const SocialKakao = (props) => {
             console.log(e);
         })
         console.log(userShow);
-        console.log(skill_list);
-        for (let i = 0; i < skill_list.length; i++) {
-            dispatch(addSkill(skill_list[i]));
+        localStorage.setItem("user", JSON.stringify(userShow));
+        skillList = JSON.parse(all.userLikeSkill);
+        for (let i = 0; i < skillList.length; i++) {
+            dispatch(addSkill(skillList[i]));
         }
     }
     const kakaoOnFailure = (error) => {

@@ -5,6 +5,8 @@ import MainPage from './page/main/main';
 import SocialLogin from './page/login/SocialLogin';
 import { useEffect, useState } from 'react';
 import MyLoginPage from './page/myLogin/myLogin';
+import TopButton from './component/TopButton';
+import axios from 'axios';
 
 function App() {
   let [loginModalView, setLoginModalView] = useState(false);
@@ -36,10 +38,15 @@ function App() {
                 }
                 {
                   loginCheck == true ?
-                    <Nav.Link onClick={() => {
-                      localStorage.removeItem('user');
-                      setLoginCheck(false);
-                      navigate('/');
+                    <Nav.Link onClick={async () => {
+                      await axios.post("/api/logout")
+                        .then((response) => {
+                          localStorage.removeItem('user');
+                          setLoginCheck(false);
+                          navigate('/');
+                        }).catch((e) => {
+                          console.log(e);
+                        })
                     }}>Logout</Nav.Link> :
                     <Nav.Link onClick={() => {
                       if (loginModalView == false) setLoginModalView(true);
@@ -50,6 +57,7 @@ function App() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        <TopButton></TopButton>
         <Routes>
           <Route path="/" element={<MainPage></MainPage>}></Route>
           <Route path="/mypage" element={<MyLoginPage></MyLoginPage>}></Route>
