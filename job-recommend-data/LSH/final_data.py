@@ -520,5 +520,11 @@ for company in company_list:
 # 기존 데이터프레임에 평점 추가
 df = df.merge(company_star_df, on='회사명', how='left')
 
+# 지역 추가
+df['지역']=df['근무지'].apply(lambda address: " ".join(address.split(" ")[:2]))
+
+# 데이터프레임 칼럼 정리
+df=df[['공고명','회사명','직무','마감일','근무지','기술스택','링크','평점','지역']]
+
 # 저장
 df.to_csv(r'C:\Users\Playdata\Desktop\final_true.csv', index=True, encoding='cp949')
