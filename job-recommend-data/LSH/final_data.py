@@ -9,7 +9,7 @@ import ast
 # 각각 크롤링한 csv 불러오기
 df1=pd.read_csv(r'C:\Users\Playdata\Desktop\programers_cp949_1.csv', encoding='cp949')
 df2=pd.read_csv(r"C:\Users\Playdata\Desktop\wanted_cp949_1.csv", encoding='cp949')
-df3=pd.read_csv(r"C:\Users\Playdata\Desktop\jumpit_cp949_2.csv", encoding='cp949')
+df3=pd.read_csv(r"C:\Users\Playdata\Desktop\jumpit_cp949_1.csv", encoding='cp949')
 
 # 직무&기술스택 보기
 def add_positions_from_csv(file_path, combined_position_stack):
