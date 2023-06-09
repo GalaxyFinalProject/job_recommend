@@ -81,6 +81,9 @@ public class HelloController {
         	userService.save(user);
             NowUser = user;
         }
+        else{
+            NowUser = UserEntity.toUserEntity(userDTO);
+        }
         return "Success"; // 클라이언트에게 응답 데이터 반환
     }
 	
@@ -122,8 +125,11 @@ public class HelloController {
     @ResponseBody
     @GetMapping(value ="/api/list")
     public List<RecruitDTO> findAll() throws ParseException {
+
         List<RecruitDTO> recruitDTOList = recruitService.findAll();
         List<RecruitDTO> recruitDTOSelect = new ArrayList<>();
+        System.out.println(NowUser);
+
         for(RecruitDTO recruitDTO : recruitDTOList){
         	for(int i=0;i<skillList.size();i++) {
         		JSONParser parser = new JSONParser(recruitDTO.getRecruitSkill());
@@ -175,10 +181,8 @@ public class HelloController {
       	}
         recruitDTOSelect.sort((r1, r2) -> Float.compare(r2.getRecruitScore(), r1.getRecruitScore()));
         for(RecruitDTO recruitDTO : recruitDTOSelect){
-            System.out.println(recruitDTO.getRecruitScore());
             recruitDTO.setRecruitScore(0);
         }
-        System.out.println(recruitDTOSelect);
         return recruitDTOSelect;
     }
     @ResponseBody

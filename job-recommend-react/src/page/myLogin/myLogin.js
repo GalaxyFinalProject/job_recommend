@@ -1680,7 +1680,7 @@ function MyLoginPage() {
                     console.log(skillList);
                     console.log(JobList);
                     console.log(useCityCountry);
-                    await axios.post("/user/save/list", { 'socialId': UserInfo.socialId, 'platfomType': UserInfo.platformType, 'userLikeAddress': JSON.stringify(useCityCountry), 'userLikeSkill': JSON.stringify(skillList), 'userLikeJob': JSON.stringify(JobList) }).then((response) => {
+                    await axios.post("/user/save/list", { 'socialId': userShow.socialId, 'platfomType': userShow.platformType, 'userLikeAddress': JSON.stringify(useCityCountry), 'userLikeSkill': JSON.stringify(skillList), 'userLikeJob': JSON.stringify(JobList) }).then((response) => {
                         console.log(response.data);
                         dispatch(setUser({
                             socialId: UserInfo.socialId,
