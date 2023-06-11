@@ -12,6 +12,7 @@ function App() {
   let [loginModalView, setLoginModalView] = useState(false);
   let [loginCheck, setLoginCheck] = useState(false);
   const navigate = useNavigate();
+
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
     if (loggedInUser) {
@@ -28,7 +29,7 @@ function App() {
       <div className='main'>
         <Navbar bg="white" expand="lg" className='nav-size'>
           <Container>
-            <Navbar.Brand className='right-sort' as={Link} to="/"><img src='/logo.png' style={{ width: '256px' }} /></Navbar.Brand>
+            <Navbar.Brand className='right-sort' href='/'><img src='/logo.png' style={{ width: '256px' }} /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse>
               <Nav className="left-sort">
