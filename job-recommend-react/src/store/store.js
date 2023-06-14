@@ -6,7 +6,6 @@ const initialState = {
     userLikeAddress: [],
     userLikeSkill: [],
     userLikeJob: [],
-
 }
 
 let userSkill = createSlice({
@@ -48,5 +47,5 @@ export default configureStore({
     }
 })
 
-export const { addSkill, removeSkill, clearLanguage, clearUser } = userSkill.actions;
-export const { setUser } = LoginUser.actions;
+export const { addSkill, removeSkill, clearLanguage } = userSkill.actions;
+export const { setUser, clearUser } = LoginUser.actions;

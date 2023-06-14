@@ -7,6 +7,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSkill, clearLanguage, setUser } from "../../store/store";
+import { useNavigate } from "react-router-dom";
 
 function SocialLogin(props) {
     const clientId = '667126112550-delatng25tbmu1liv0f4kpqok78to0td.apps.googleusercontent.com'
@@ -31,16 +32,18 @@ function SocialLogin(props) {
 function LoginPage(props) {
     let dispatch = useDispatch();
     let userShow = useSelector(state => state.LoginUser);
+    const navigate = useNavigate();
+
     let all = {};
     let skillList = [];
     const login = useGoogleLogin({
         onSuccess: async (tokenResponse) => {
+            console.log(tokenResponse);
             let idToken = tokenResponse.access_token // 인가코드 백엔드로 전달
 
             const userProfileResponse = await axios.get('https://www.googleapis.com/oauth2/v3/userinfo', {
                 headers: { Authorization: `Bearer ${idToken}` }
             });
-            console.log(userProfileResponse.data.sub);  // User's email address
 
             await axios.post("/user/save", {
                 'socialId': userProfileResponse.data.sub,
@@ -52,21 +55,24 @@ function LoginPage(props) {
                 dispatch(setUser({
                     socialId: userProfileResponse.data.sub,
                     platformType: 'google',
-                    userLikeAddress: JSON.parse(all.userLikeAddress),
-                    userLikeSkill: JSON.parse(all.userLikeSkill),
-                    userLikeJob: JSON.parse(all.userLikeJob),
+                    userLikeAddress: IsJsonString(all.userLikeAddress) ? JSON.parse(all.userLikeAddress) : null,
+                    userLikeSkill: IsJsonString(all.userLikeAddress) ? JSON.parse(all.userLikeSkill) : null,
+                    userLikeJob: IsJsonString(all.userLikeAddress) ? JSON.parse(all.userLikeJob) : null,
                 }));
+                navigate('/mypage');
                 props.setLoginCheck(true);
                 props.setLoginModalView(false);
             }).catch((e) => {
                 console.log(e);
             })
-            console.log(userShow);
-            localStorage.setItem("user", JSON.stringify(userShow));
-            skillList = JSON.parse(all.userLikeSkill);
-            for (let i = 0; i < skillList.length; i++) {
-                dispatch(addSkill(skillList[i]));
+
+            if (all.userLikeSkill != null) {
+                skillList = JSON.parse(all.userLikeSkill);
+                for (let i = 0; i < skillList.length; i++) {
+                    dispatch(addSkill(skillList[i]));
+                }
             }
+
         },
     });
     return (
@@ -86,7 +92,7 @@ const SocialKakao = (props) => {
     let all = {};
     let skillList = [];
     const kakaoOnSuccess = async (data) => {
-        console.log(data.profile.id);
+        console.log(data);
         await axios.post("/user/save", {
             'socialId': data.profile.id,
             'platfomType': 'kakao',
@@ -100,14 +106,11 @@ const SocialKakao = (props) => {
                 userLikeSkill: JSON.parse(all.userLikeSkill),
                 userLikeJob: JSON.parse(all.userLikeJob),
             }));
-            localStorage.setItem("user", JSON.stringify(userShow));
             props.setLoginCheck(true);
             props.setLoginModalView(false);
         }).catch((e) => {
             console.log(e);
         })
-        console.log(userShow);
-        localStorage.setItem("user", JSON.stringify(userShow));
         skillList = JSON.parse(all.userLikeSkill);
         for (let i = 0; i < skillList.length; i++) {
             dispatch(addSkill(skillList[i]));
@@ -126,5 +129,12 @@ const SocialKakao = (props) => {
         </>
     )
 }
-
+function IsJsonString(str) {
+    try {
+        var json = JSON.parse(str);
+        return (typeof json === 'object');
+    } catch (e) {
+        return false;
+    }
+}
 export default SocialLogin;

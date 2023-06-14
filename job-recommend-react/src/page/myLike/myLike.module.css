@@ -1,0 +1,30 @@
+.main {
+    width: 1400px;
+    margin-left: 150px;
+}
+
+.jobPosting {
+    display: inline-flex;
+    margin: 18px;
+    width: 331.19px;
+    height: 375px;
+    cursor: pointer;
+}
+
+.icon_size {
+    width: 36px;
+    height: 36px;
+    margin: 10px;
+}
+
+.boxSize {
+    display: block;
+    background-color: #F8F8F8;
+    width: 100%;
+    border-radius: 30px;
+    filter: drop-shadow(18px 5px 30px rgba(0, 0, 0, 0.25));
+}
+
+.boxSize:hover {
+    background-color: #8B8B8B;
+}

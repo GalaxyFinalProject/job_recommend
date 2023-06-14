@@ -3,6 +3,7 @@ import styles from './main.module.css';
 import { SiTensorflow, SiPytorch, SiApachekafka, SiElasticsearch, SiOpencv, SiApachehadoop, SiTypescript, SiJavascript, SiSvelte, SiFlutter, SiJquery, SiSpring, SiNestjs, SiGoland, SiKotlin, SiExpress, SiMysql, SiMongodb, SiDjango, SiGraphql, SiFirebase, SiKubernetes, SiMicrosoftazure, SiTerraform } from "react-icons/si";
 import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
 import { FaReact, FaVuejs, FaHtml5, FaCss3Alt, FaAngular, FaNodeJs, FaJava, FaPython, FaPhp, FaAws, FaLinux, FaDocker, FaSwift, FaUnity, FaRProject, FaArrowLeft } from "react-icons/fa";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { DiGoogleCloudPlatform, DiSpark } from "react-icons/di";
 import { IoIosSearch } from "react-icons/io";
 import { CgCPlusPlus } from "react-icons/cg";
@@ -14,6 +15,7 @@ import Pagination from 'react-bootstrap/Pagination';
 function MainPage() {
 
     let dispatch = useDispatch();
+    let userShow = useSelector(state => state.LoginUser);
     let skillList = useSelector(state => state.userSkill);
     const [frontEnd, setfrontEnd] = useState(false);
     const [backEnd, setbackEnd] = useState(false);
@@ -24,6 +26,7 @@ function MainPage() {
     const [selectSkill, setSelectSkill] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     let [currentItems, setCurrentItems] = useState([]);
+    let [userLikeList, setUserLikeList] = useState([]);
 
     const itemsPerPage = 9; // 페이지당 아이템 수
     const totalItems = selectSkill.length; // 총 아이템 수
@@ -34,7 +37,19 @@ function MainPage() {
     // 현재 페이지의 아이템 목록 가져오기
     currentItems = selectSkill.slice(startIndex, endIndex);
 
-    let searchData = "";
+    let [searchData, setSearchData] = useState();
+
+    const LikePostSkill = async () => {
+        await axios.post("/user/skilLikeList", {
+            'socialId': userShow.socialId,
+            'platfomType': userShow.platformType,
+        }).then((response) => {
+            setUserLikeList(response.data);
+        }).catch((e) => {
+            console.log(e);
+        })
+    };
+
     const postSkill = async () => {
         const data = JSON.stringify(skillList);
         await axios.post("/api/skill", { data }).then((response) => {
@@ -69,10 +84,18 @@ function MainPage() {
         setCurrentPage(pageNumber);
     };
     useEffect(() => {
+        LikePostSkill();
         postSkill();
-        GetSkill();
-        if (skillList.length == 0) ALLSkill();
+        if (skillList.length == 0) {
+            ALLSkill();
+        }
+        else {
+            console.log(skillList.length);
+            GetSkill();
+        }
     }, [skillList]);
+    useEffect(() => {
+    }, [userLikeList]);
 
     return (
         <div className={styles.main}>
@@ -436,7 +459,7 @@ function MainPage() {
             </div>
             <div className={styles.contents}>
                 <div className={styles.search}>
-                    <IoIosSearch style={{ color: '#8B8B8B', width: '35px', height: '35px', marginRight: '10px' }} onClick={async () => {
+                    <IoIosSearch style={{ color: 'white', width: '35px', height: '35px', backgroundColor: '#8b8b8b', cursor: 'pointer' }} onClick={async () => {
                         let total = [];
                         let data = searchData;
                         await axios.post("search", { data }).then((response) => {
@@ -447,9 +470,24 @@ function MainPage() {
                         }).catch((e) => {
                             console.log(e);
                         })
+                        setSearchData('');
                     }}></IoIosSearch>
-                    <input type='text' placeholder='공고 찾기' style={{ border: '0', outline: 'none', paddingBottom: '15px' }} onChange={(e) => { searchData = e.target.value; }}></input>
-                    <Pagination>
+                    <input type='text' placeholder='공고 찾기' value={searchData} className={styles.InputSearch} onChange={(e) => { setSearchData(e.target.value) }} onKeyDown={async (e) => {
+                        if (e.key === 'Enter') {
+                            let total = [];
+                            let data = searchData;
+                            await axios.post("search", { data }).then((response) => {
+                                for (let i = 0; i < (response.data).length; i++) {
+                                    total.push((response.data)[i]);
+                                }
+                                setSelectSkill(total);
+                            }).catch((e) => {
+                                console.log(e);
+                            })
+                            setSearchData('');
+                        }
+                    }}></input>
+                    <Pagination >
                         <Pagination.Prev
                             onClick={() => {
                                 handlePageChange(currentPage - 1);
@@ -469,7 +507,9 @@ function MainPage() {
                         if (IsJsonString(currentItems[i].recruitSkill) == true) currentItems[i].recruitSkill = JSON.parse(currentItems[i].recruitSkill);
                         return (
                             <div className={styles.jobPosting}>
-                                <div className={styles.boxSize} onClick={() => { window.open(currentItems[i].recruitLink) }}>
+                                <div className={styles.boxSize} onClick={() => {
+                                    window.open(currentItems[i].recruitLink);
+                                }}>
                                     {
                                         (currentItems[i].recruitJob).map((a, i) => {
                                             return (
@@ -479,10 +519,46 @@ function MainPage() {
                                             );
                                         })
                                     }
+                                    <div className={styles.likeJobList} >
+                                        {
+                                            userLikeList.find(userLike => userLike.companyCode === currentItems[i].companyCode) ?
+                                                <AiFillStar color='blue' onClick={async (event) => {
+                                                    event.stopPropagation();
+                                                    if (userShow.socialId != "") {
+                                                        await axios.post("/user/skilLike", {
+                                                            'socialId': userShow.socialId,
+                                                            'platfomType': userShow.platformType,
+                                                            'companyCode': currentItems[i].companyCode,
+                                                        }).then((response) => {
+                                                            console.log(response);
+                                                        }).catch((e) => {
+                                                            console.log(e);
+                                                        })
+                                                        LikePostSkill();
+                                                    }
+                                                }}></AiFillStar> :
+                                                <AiOutlineStar onClick={async (event) => {
+                                                    event.stopPropagation();
+                                                    if (userShow.socialId != "") {
+                                                        await axios.post("/user/skilLike", {
+                                                            'socialId': userShow.socialId,
+                                                            'platfomType': userShow.platformType,
+                                                            'companyCode': currentItems[i].companyCode,
+                                                        }).then((response) => {
+                                                            console.log(response);
+                                                        }).catch((e) => {
+                                                            console.log(e);
+                                                        })
+                                                        LikePostSkill();
+                                                    }
+                                                }}></AiOutlineStar>
+                                        }
+                                    </div>
+
                                     <div style={{ fontSize: '1.3rem', fontWeight: 'bold', textAlign: 'center', marginTop: '10px', marginLeft: '10px', marginRight: '10px', minHeight: '62.4px', maxHeight: '62.4px', overflow: 'hidden' }}>{currentItems[i].recruitName}</div>
                                     <div style={{ fontSize: '0.9rem', color: '#000080', fontWeight: 'bold', textAlign: 'center', marginTop: '10px' }}>{currentItems[i].companyName}</div>
                                     <div style={{ fontSize: '0.8rem', color: 'red', textAlign: 'center', marginTop: '15px' }}>마감일 : {currentItems[i].recruitDate}</div>
-                                    <div style={{ fontSize: '0.7rem', fontWeight: 'bold', textAlign: 'center', marginTop: '15px', marginLeft: '15px', marginRight: '15px', marginBottom: '15px' }}>{currentItems[i].recruitAddress}</div>
+                                    <div style={{ fontSize: '0.7rem', fontWeight: 'bold', textAlign: 'center', margin: '15px' }}>{currentItems[i].recruitAddress}</div>
                                     <div style={{ marginLeft: '5rem', marginRight: '5rem', maxHeight: '120px', overflow: 'hidden' }}>
                                         {
                                             currentItems[i].recruitSkill.map((a, i) => {

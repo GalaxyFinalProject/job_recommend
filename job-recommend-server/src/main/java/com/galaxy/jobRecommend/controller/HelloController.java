@@ -1,5 +1,9 @@
 package com.galaxy.jobRecommend.controller;
 
+import com.galaxy.jobRecommend.dto.UserLikeDTO;
+import com.galaxy.jobRecommend.entity.RecruitEntity;
+import com.galaxy.jobRecommend.entity.UserLikeEntity;
+import com.galaxy.jobRecommend.service.UserLikeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,32 +27,12 @@ import lombok.RequiredArgsConstructor;
 public class HelloController {
 	private final RecruitService recruitService;
 	private final UserService userService;
+    private final UserLikeService userLikeService;
 	ArrayList<String> skillList = new ArrayList<>();
     UserEntity NowUser;
 	@ResponseBody
-	@PostMapping("/user/save")    // name값을 requestparam에 담아온다
+	@PostMapping("/user/save")
     public UserEntity save(@RequestBody UserDTO userDTO) throws ParseException {
-//        if(userService.saveIdCheck(userDTO)==null)
-//        {
-//    		System.out.println("MemberController.save");
-//            System.out.println("memberDTO = " + userDTO);
-//        	userService.save(userDTO);
-//        }
-//        else {
-//        	UserEntity user = userService.saveIdCheck(userDTO);
-//        	System.out.println("check = " + user.getUserLikeSkill());
-//        	if(user.getUserLikeSkill() != null) {
-//        		JSONParser parser = new JSONParser(user.getUserLikeSkill());
-//                Object obj = parser.parse();
-//
-//                ArrayList<String> arrList = (ArrayList<String>) obj;
-//                skillList = arrList;
-//                return skillList; // 클라이언트에게 응답 데이터 반환
-//        	}
-//        	else return null;
-//        }
-//        return null;
-		
 		if(userService.saveIdCheck(userDTO)==null)
         {
     		System.out.println("MemberController.save");
@@ -64,7 +48,25 @@ public class HelloController {
         }
         return null;
     }
-	
+
+    @ResponseBody
+    @PostMapping("/user/skilLike")    // name값을 requestparam에 담아온다
+    public String likeSave(@RequestBody UserLikeDTO userLikeDTO) {
+        if(userLikeService.saveIdCheck(userLikeDTO)==null)
+        {
+            System.out.println("userLikeDTO.save");
+            System.out.println("userLikeDTO = " + userLikeDTO);
+            userLikeService.save(userLikeDTO);
+
+        }
+        else
+        {
+            System.out.println("userLikeDTO.save");
+            userLikeService.deleteLike(userLikeDTO);
+        }
+        return "Success";
+    }
+
 	@ResponseBody
 	@PostMapping("/user/save/list")    // name값을 requestparam에 담아온다
     public String Listsave(@RequestBody UserDTO userDTO) {
@@ -122,6 +124,7 @@ public class HelloController {
             this.data = data;
         }
     }
+
     @ResponseBody
     @GetMapping(value ="/api/list")
     public List<RecruitDTO> findAll() throws ParseException {
@@ -203,5 +206,14 @@ public class HelloController {
     	List<RecruitDTO> recruitDTOList = recruitService.searchPosts(requestData.getData());
     	System.out.println(recruitDTOList);
     	return recruitDTOList;
+    }
+
+    @ResponseBody
+    @PostMapping("/user/skilLikeList")
+    public List<RecruitEntity> userFindLikeList(@RequestBody UserLikeDTO userLikeDTO){
+        System.out.println(userLikeDTO);
+        List<RecruitEntity> recruitDTOList = recruitService.getRecruitsBySocialIdAndPlatformType(userLikeDTO.getSocialId(), userLikeDTO.getPlatfomType());
+
+        return recruitDTOList;
     }
 }

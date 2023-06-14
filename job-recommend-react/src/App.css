@@ -2,20 +2,37 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  padding-right: 20px;
-  padding-top: 20px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.right-sort {
+  float: left;
+  margin-left: -15px;
 }
 
 .main {
-  width: 1400px;
+  width: 1400px !important;
   margin-left: auto;
   margin-right: auto;
   font-family: 'SUITE-Regular';
 }
 
+.navList {
+  background-color: white;
+}
+
+.navList:hover {
+  border: 4px solid #8b8b8b;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
 .nav-size {
   font-size: 1.5em;
   margin-bottom: 10px;
+  position: absolute;
 }
 
 .footer {
@@ -25,4 +42,14 @@
 
 .item {
   margin-left: 170px;
+}
+
+@media (max-width: 1400px) {
+  .navbar-collapse {
+    display: flex !important;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
 }

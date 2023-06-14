@@ -43,4 +43,7 @@ public class RecruitService {
 		return recruitDTOList;
 	}
 
+	public List<RecruitEntity> getRecruitsBySocialIdAndPlatformType(String socialId, String platformType) {
+		return recruitRepository.findRecruitsBySocialIdAndPlatformType(socialId, platformType);
+	}
 }
