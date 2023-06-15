@@ -54,14 +54,14 @@ function MyLoginPage() {
                         {skillList.includes('svelte') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('svelte')); }}>svelte</div> : null}
                         {skillList.includes('Next.js') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Next.js')); }}>Next.js</div> : null}
                         {skillList.includes('HTML') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('HTML')); }}>HTML</div> : null}
-                        {skillList.includes('Vue.js') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Vue.js')); }}>Vue.js</div> : null}
+                        {skillList.includes('Vue.JS') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Vue.JS')); }}>Vue.js</div> : null}
                         {skillList.includes('CSS') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('CSS')); }}>CSS</div> : null}
                         {skillList.includes('jQuery') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('jQuery')); }}>jQuery</div> : null}
                         {skillList.includes('Angular') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Angular')); }}>Angular</div> : null}
                         {skillList.includes('Node.js') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Node.js')); }}>Node.js</div> : null}
                         {skillList.includes('Java') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Java')); }}>Java</div> : null}
                         {skillList.includes('Spring') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Spring')); }}>Spring</div> : null}
-                        {skillList.includes('Nest.Js') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Nest.Js')); }}>Nest.Js</div> : null}
+                        {skillList.includes('Nest.js') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Nest.js')); }}>Nest.Js</div> : null}
                         {skillList.includes('Go') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Go')); }}>Go</div> : null}
                         {skillList.includes('Kotlin') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('Kotlin')); }}>Kotlin</div> : null}
                         {skillList.includes('ExpressJS') ? <div className={styles.likeSkillList} onClick={() => { dispatch(removeSkill('ExpressJS')); }}>ExpressJS</div> : null}
@@ -122,8 +122,8 @@ function MyLoginPage() {
                             else dispatch(removeSkill('HTML'));
                         }}>HTML</p>
                         <p onClick={() => {
-                            if (skillList.includes('Vue.js') == false) dispatch(addSkill('Vue.js'));
-                            else dispatch(removeSkill('Vue.js'));
+                            if (skillList.includes('Vue.JS') == false) dispatch(addSkill('Vue.JS'));
+                            else dispatch(removeSkill('Vue.JS'));
                         }}>Vue.js</p>
                         <p onClick={() => {
                             if (skillList.includes('CSS') == false) dispatch(addSkill('CSS'));
@@ -150,8 +150,8 @@ function MyLoginPage() {
                             else dispatch(removeSkill('Spring'));
                         }}>Spring</p>
                         <p onClick={() => {
-                            if (skillList.includes('Nest.Js') == false) dispatch(addSkill('Nest.Js'));
-                            else dispatch(removeSkill('Nest.Js'));
+                            if (skillList.includes('Nest.js') == false) dispatch(addSkill('Nest.js'));
+                            else dispatch(removeSkill('Nest.js'));
                         }}>Nest.Js</p>
                         <p onClick={() => {
                             if (skillList.includes('Go') == false) dispatch(addSkill('Go'));
@@ -1634,48 +1634,48 @@ function MyLoginPage() {
                         <IoIosSearch style={{ width: '35px', height: '35px', marginRight: '10px', marginTop: '10px' }}></IoIosSearch>
                     </div>
                     <div className={styles.dropdownContent} style={useJobShow == true ? { backgroundColor: '#ddd', display: 'block' } : null}>
-                        <a onClick={() => {
+                        <p onClick={() => {
                             if (JobList.includes('프론트엔드') == false) {
                                 JobList.push('프론트엔드');
                                 setJobList(JobList);
                             }
                             else JobList.splice(JobList.findIndex((item) => item === '프론트엔드'), 1);
-                        }}>프론트엔드</a>
-                        <a onClick={() => {
+                        }}>프론트엔드</p>
+                        <p onClick={() => {
                             if (JobList.includes('백엔드') == false) {
                                 JobList.push('백엔드');
                                 setJobList(JobList);
                             }
                             else JobList.splice(JobList.findIndex((item) => item === '백엔드'), 1);
-                        }}>백엔드</a>
-                        <a onClick={() => {
+                        }}>백엔드</p>
+                        <p onClick={() => {
                             if (JobList.includes('DevOps') == false) {
                                 JobList.push('DevOps');
                                 setJobList(JobList);
                             }
                             else JobList.splice(JobList.findIndex((item) => item === 'DevOps'), 1);
-                        }}>DevOps</a>
-                        <a onClick={() => {
+                        }}>DevOps</p>
+                        <p onClick={() => {
                             if (JobList.includes('모바일') == false) {
                                 JobList.push('모바일');
                                 setJobList(JobList);
                             }
                             else JobList.splice(JobList.findIndex((item) => item === '모바일'), 1);
-                        }}>모바일</a>
-                        <a onClick={() => {
+                        }}>모바일</p>
+                        <p onClick={() => {
                             if (JobList.includes('AI/ML') == false) {
                                 JobList.push('AI/ML');
                                 setJobList(JobList);
                             }
                             else JobList.splice(JobList.findIndex((item) => item === 'AI/ML'), 1);
-                        }}>AI/ML</a>
-                        <a onClick={() => {
+                        }}>AI/ML</p>
+                        <p onClick={() => {
                             if (JobList.includes('데이터 엔지니어') == false) {
                                 JobList.push('데이터 엔지니어');
                                 setJobList(JobList);
                             }
                             else JobList.splice(JobList.findIndex((item) => item === '데이터 엔지니어'), 1);
-                        }}>데이터 엔지니어</a>
+                        }}>데이터 엔지니어</p>
                     </div>
                 </div>
             </div>

@@ -63,7 +63,7 @@ function MyLikePage() {
                                 <div onClick={() => { window.open(likeItems[i].recruitLink) }} style={{ marginLeft: '5rem', marginRight: '5rem', maxHeight: '120px', overflow: 'hidden' }}>
                                     {
                                         likeItems[i].recruitSkill.map((a, i) => {
-                                            let language = ['TypeScript', 'React', 'JavaScript', 'svelte', 'Next.js', 'HTML', 'Vue.js', 'CSS', 'jQuery', 'Angular', 'Node.js', 'Java', 'Spring', 'Nest.Js',
+                                            let language = ['TypeScript', 'React', 'JavaScript', 'svelte', 'Next.js', 'HTML', 'Vue.JS', 'CSS', 'jQuery', 'Angular', 'Node.js', 'Java', 'Spring', 'Nest.js',
                                                 'Go', 'Kotlin', 'ExpressJS', 'MySQL', 'MongoDB', 'Python', 'Django', 'PHP', 'GraphQL', 'Firebase', 'AWS', 'Linux', 'Kubernetes', 'Docker', 'GCP', 'Azure', 'Terraform',
                                                 'Flutter', 'Swift', 'React Native', 'Unity', 'Tensorflow', 'PyTorch', 'C / C++', 'OpenCV', 'R', 'Hadoop', 'Spark', 'Kafka', 'ElasticSearch'];
                                             return (
@@ -74,14 +74,14 @@ function MyLikePage() {
                                                     {(a == 'svelte') ? <SiSvelte className={styles.icon_size}></SiSvelte> : null}
                                                     {(a == 'Next.js') ? <TbBrandNextjs className={styles.icon_size}></TbBrandNextjs> : null}
                                                     {(a == 'HTML') ? <FaHtml5 className={styles.icon_size}></FaHtml5> : null}
-                                                    {(a == 'Vue.js') ? <FaVuejs className={styles.icon_size}></FaVuejs> : null}
+                                                    {(a == 'Vue.JS') ? <FaVuejs className={styles.icon_size}></FaVuejs> : null}
                                                     {(a == 'CSS') ? <FaCss3Alt className={styles.icon_size}></FaCss3Alt> : null}
                                                     {(a == 'jQuery') ? <SiJquery className={styles.icon_size}></SiJquery> : null}
                                                     {(a == 'Angular') ? <FaAngular className={styles.icon_size}></FaAngular> : null}
                                                     {(a == 'Node.js') ? <FaNodeJs className={styles.icon_size}></FaNodeJs> : null}
                                                     {(a == 'Java') ? <FaJava className={styles.icon_size}></FaJava> : null}
                                                     {(a == 'Spring') ? <SiSpring className={styles.icon_size}></SiSpring> : null}
-                                                    {(a == 'Nest.Js') ? <SiNestjs className={styles.icon_size}></SiNestjs> : null}
+                                                    {(a == 'Nest.js') ? <SiNestjs className={styles.icon_size}></SiNestjs> : null}
                                                     {(a == 'Go') ? <SiGoland className={styles.icon_size}></SiGoland> : null}
                                                     {(a == 'Kotlin') ? <SiKotlin className={styles.icon_size}></SiKotlin> : null}
                                                     {(a == 'ExpressJS') ? <SiExpress className={styles.icon_size}></SiExpress> : null}

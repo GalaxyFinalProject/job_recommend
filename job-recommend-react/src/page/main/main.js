@@ -194,9 +194,9 @@ function MainPage() {
                                 else dispatch(removeSkill('HTML'));
 
                             }}><FaHtml5></FaHtml5>HTML</button>
-                            <button className={skillList.includes('Vue.js') ? styles.JobskillbtnClick : styles.Jobskillbtn} onClick={() => {
-                                if (skillList.includes('Vue.js') == false) dispatch(addSkill('Vue.js'));
-                                else dispatch(removeSkill('Vue.js'));
+                            <button className={skillList.includes('Vue.JS') ? styles.JobskillbtnClick : styles.Jobskillbtn} onClick={() => {
+                                if (skillList.includes('Vue.JS') == false) dispatch(addSkill('Vue.JS'));
+                                else dispatch(removeSkill('Vue.JS'));
 
                             }}><FaVuejs></FaVuejs>Vue</button>
                             <button className={skillList.includes('CSS') ? styles.JobskillbtnClick : styles.Jobskillbtn} onClick={() => {
@@ -234,9 +234,9 @@ function MainPage() {
                                 else dispatch(removeSkill('Spring'));
 
                             }}><SiSpring></SiSpring>Spring</button>
-                            <button className={skillList.includes('Nest.Js') ? styles.JobskillbtnClick : styles.Jobskillbtn} onClick={() => {
-                                if (skillList.includes('Nest.Js') == false) dispatch(addSkill('Nest.Js'));
-                                else dispatch(removeSkill('Nest.Js'));
+                            <button className={skillList.includes('Nest.js') ? styles.JobskillbtnClick : styles.Jobskillbtn} onClick={() => {
+                                if (skillList.includes('Nest.js') == false) dispatch(addSkill('Nest.js'));
+                                else dispatch(removeSkill('Nest.js'));
 
                             }}><SiNestjs></SiNestjs>NestJs</button>
                             <button className={skillList.includes('Node.js') ? styles.JobskillbtnClick : styles.Jobskillbtn} onClick={() => {
@@ -562,7 +562,7 @@ function MainPage() {
                                     <div style={{ marginLeft: '5rem', marginRight: '5rem', maxHeight: '120px', overflow: 'hidden' }}>
                                         {
                                             currentItems[i].recruitSkill.map((a, i) => {
-                                                let language = ['TypeScript', 'React', 'JavaScript', 'svelte', 'Next.js', 'HTML', 'Vue.js', 'CSS', 'jQuery', 'Angular', 'Node.js', 'Java', 'Spring', 'Nest.Js',
+                                                let language = ['TypeScript', 'React', 'JavaScript', 'svelte', 'Next.js', 'HTML', 'Vue.JS', 'CSS', 'jQuery', 'Angular', 'Node.js', 'Java', 'Spring', 'Nest.js',
                                                     'Go', 'Kotlin', 'ExpressJS', 'MySQL', 'MongoDB', 'Python', 'Django', 'PHP', 'GraphQL', 'Firebase', 'AWS', 'Linux', 'Kubernetes', 'Docker', 'GCP', 'Azure', 'Terraform',
                                                     'Flutter', 'Swift', 'React Native', 'Unity', 'Tensorflow', 'PyTorch', 'C / C++', 'OpenCV', 'R', 'Hadoop', 'Spark', 'Kafka', 'ElasticSearch'];
                                                 return (
@@ -573,14 +573,14 @@ function MainPage() {
                                                         {(a == 'svelte') ? <SiSvelte className={styles.icon_size}></SiSvelte> : null}
                                                         {(a == 'Next.js') ? <TbBrandNextjs className={styles.icon_size}></TbBrandNextjs> : null}
                                                         {(a == 'HTML') ? <FaHtml5 className={styles.icon_size}></FaHtml5> : null}
-                                                        {(a == 'Vue.js') ? <FaVuejs className={styles.icon_size}></FaVuejs> : null}
+                                                        {(a == 'Vue.Js') ? <FaVuejs className={styles.icon_size}></FaVuejs> : null}
                                                         {(a == 'CSS') ? <FaCss3Alt className={styles.icon_size}></FaCss3Alt> : null}
                                                         {(a == 'jQuery') ? <SiJquery className={styles.icon_size}></SiJquery> : null}
                                                         {(a == 'Angular') ? <FaAngular className={styles.icon_size}></FaAngular> : null}
                                                         {(a == 'Node.js') ? <FaNodeJs className={styles.icon_size}></FaNodeJs> : null}
                                                         {(a == 'Java') ? <FaJava className={styles.icon_size}></FaJava> : null}
                                                         {(a == 'Spring') ? <SiSpring className={styles.icon_size}></SiSpring> : null}
-                                                        {(a == 'Nest.Js') ? <SiNestjs className={styles.icon_size}></SiNestjs> : null}
+                                                        {(a == 'Nest.js') ? <SiNestjs className={styles.icon_size}></SiNestjs> : null}
                                                         {(a == 'Go') ? <SiGoland className={styles.icon_size}></SiGoland> : null}
                                                         {(a == 'Kotlin') ? <SiKotlin className={styles.icon_size}></SiKotlin> : null}
                                                         {(a == 'ExpressJS') ? <SiExpress className={styles.icon_size}></SiExpress> : null}

@@ -24,7 +24,7 @@ const languageList = [
   { value: "javascript", label: "JavaScript" },
   { value: "typescript", label: "TypeScript" },
   { value: "react", label: "React.js" },
-  { value: "vue", label: "Vue.js" },
+  { value: "vue", label: "Vue.Js" },
   { value: "node.js", label: "Node.js" },
   { value: "python", label: "Python" },
   { value: "django", label: "Django" },
